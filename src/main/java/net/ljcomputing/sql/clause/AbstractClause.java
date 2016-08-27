@@ -77,6 +77,6 @@ public abstract class AbstractClause {
    * @param predicate the predicate
    */
   public void addPredicate(final StringBuffer buf, final Predicate predicate) {
-    buf.append(predicate.toPredicate());
+    buf.append(predicate.toString());
   }
 }

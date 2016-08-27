@@ -86,9 +86,9 @@ digraph G {
 	c684:p -> c693:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.identifier.Column NAVASSOC net.ljcomputing.sql.identifier.Table
 	c691:p -> c693:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sql.clause.AbstractClause DEPEND net.ljcomputing.sql.identifier.Table
-	c677:p -> c693:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.clause.AbstractClause DEPEND net.ljcomputing.sql.identifier.Column
 	c677:p -> c691:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.clause.AbstractClause DEPEND net.ljcomputing.sql.identifier.Table
+	c677:p -> c693:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

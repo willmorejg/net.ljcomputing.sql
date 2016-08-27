@@ -42,10 +42,10 @@ public class Where extends AbstractClause implements Clause {
   }
 
   /**
-   * @see net.ljcomputing.sql.clause.Clause#toClause()
+   * @see java.lang.Object#toString()
    */
   @Override
-  public String toClause() {
+  public String toString() {
     final StringBuffer buf = new StringBuffer(Keywords.Where.toString()).append(Literal.Space);
 
     for (int p = 0; p < predicates.length;) {
@@ -53,7 +53,10 @@ public class Where extends AbstractClause implements Clause {
       addPredicate(buf, predicate);
       p++;
 
+      //do we have any more predicates?
       if (p != predicates.length) {
+        //the predicate counter is incremented, 
+        //but we are still looking at the most current predicate in the loop
         if(predicate.hasConjunction()) {
           final Conjunction conjunction = predicate.getConjunction();
           buf.append(Literal.Space).append(conjunction.toString());

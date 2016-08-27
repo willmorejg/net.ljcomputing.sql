@@ -23,11 +23,4 @@ package net.ljcomputing.sql.clause;
  *
  */
 public interface Clause {
-
-  /**
-   * SQL clause to a String that is part of a SQL statement.
-   *
-   * @return the string
-   */
-  String toClause();
 }

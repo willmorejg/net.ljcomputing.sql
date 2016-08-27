@@ -42,10 +42,10 @@ public class Delete extends AbstractClause implements Clause {
   }
 
   /**
-   * @see net.ljcomputing.sql.clause.Clause#toClause()
+   * @see java.lang.Object#toString()
    */
   @Override
-  public String toClause() {
+  public String toString() {
     final StringBuffer buf = new StringBuffer(Keywords.Delete.toString()).append(Literal.Space)
         .append(Keywords.From).append(Literal.Space);
     final String name = table.getName();

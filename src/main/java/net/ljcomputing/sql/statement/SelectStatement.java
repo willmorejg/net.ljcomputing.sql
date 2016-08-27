@@ -48,7 +48,8 @@ public class SelectStatement implements Statement {
   }
   
   /**
-   * Adds a predicate.
+   * Adds a predicate. 
+   * NOTE: the conjunction is IGNORED for the LAST predicate added.
    *
    * @param predicate the predicate
    */
@@ -57,15 +58,15 @@ public class SelectStatement implements Statement {
   }
   
   /**
-   * @see net.ljcomputing.sql.statement.Statement#toStatement()
+   * @see java.lang.Object#toString()
    */
   @Override
-  public final String toStatement() {
-    final StringBuffer buf = new StringBuffer(select.toClause());
+  public final String toString() {
+    final StringBuffer buf = new StringBuffer(select.toString());
     
     if (!predicates.isEmpty()) {
       final Where where = new Where(predicates.toArray(new Predicate[predicates.size()]));
-      buf.append(where.toClause());
+      buf.append(where.toString());
     }
     
     return buf.toString();

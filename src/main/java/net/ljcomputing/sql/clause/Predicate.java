@@ -27,13 +27,6 @@ import net.ljcomputing.sql.literal.Conjunction;
 public interface Predicate {
   
   /**
-   * SQL predicate.
-   *
-   * @return the string
-   */
-  String toPredicate();
-  
-  /**
    * Gets the conjunction.
    *
    * @return the conjunction

@@ -64,11 +64,10 @@ public abstract class AbstractPredicate implements Predicate {
   }
   
   /**
-   * SQL predicate.
-   *
-   * @return the string
+   * @see java.lang.Object#toString()
    */
-  public final String toPredicate() {
+  @Override
+  public final String toString() {
     final StringBuffer buf = new StringBuffer();
     final Column column = expression.getColumn();
     final String columnName = column.getName();

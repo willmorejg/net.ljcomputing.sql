@@ -16,7 +16,10 @@
 
 package net.ljcomputing.sql;
 
+import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import net.ljcomputing.sql.clause.Delete;
 import net.ljcomputing.sql.clause.EqualsPredicate;
@@ -36,52 +39,81 @@ import net.ljcomputing.sql.statement.SelectStatement;
  * @author James G. Willmore
  *
  */
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Tester {
 
   @Test
-  public void test() {
+  @Ignore
+  public void test1() {
     for (final Keywords token : Keywords.values()) {
       System.out.println(token);
     }
+  }
 
+  @Test
+  @Ignore
+  public void test2() {
     for (final Literal token : Literal.values()) {
       System.out.println(token);
     }
+  }
 
+  @Test
+  @Ignore
+  public void test3() {
     for (final Operand token : Operand.values()) {
       System.out.println(token);
     }
-
+  }
+  
+  @Test
+  @Ignore
+  public void test4() {
     final Table table1 = new Table("foo", "fo");
     final Column col1 = new Column(table1, "bar", "br");
 
     final Table table2 = new Table("xray", "xa");
     final Column col2 = new Column(table2, "baz", "bz");
     
-    //--
     final Select select = new Select(col1, col2);
-    System.out.println(select.toClause());
+    System.out.println(select);
 
     final Delete delete = new Delete(table1);
-    System.out.println(delete.toClause());
+    System.out.println(delete);
 
     final Update update = new Update(table2);
-    System.out.println(update.toClause());
+    System.out.println(update);
 
-    final Predicate predicate1 = new EqualsPredicate(col1, Literal.Question, Conjunction.Or);
-    System.out.println(predicate1.toPredicate());
+    final Predicate predicate1 = new EqualsPredicate(col1, Literal.Question);//, Conjunction.Or);
+    System.out.println(predicate1);
 
     final Predicate predicate2 = new EqualsPredicate(col2, Literal.Question);
-    System.out.println(predicate2.toPredicate());
+    System.out.println(predicate2);
 
     final Where where = new Where(predicate1, predicate2);
-    System.out.println(where.toClause());
+    System.out.println(where);
+  }
+
+  @Test
+  public void test5() {
+    final Table table1 = new Table("foo", "fo");
+    final Column col1 = new Column(table1, "bar", "br");
+
+    final Table table2 = new Table("xray", "xa");
+    final Column col2 = new Column(table2, "baz", "bz");
+
+    final Predicate predicate1 = new EqualsPredicate(col1, Literal.Question, Conjunction.Or);
+
+    final SelectStatement nestedSelect = new SelectStatement(col2);
+    final StringBuffer nestedBuf = new StringBuffer(Literal.LeftParen.toString())
+        .append(nestedSelect).append(Literal.RightParen.toString());
     
-    //--
+    final Predicate predicate2 = new EqualsPredicate(col2, nestedBuf.toString());
+//    final Predicate predicate2 = new EqualsPredicate(col2, Literal.Question);
+
     final SelectStatement selectStatement = new SelectStatement(col1, col2);
     selectStatement.addPredicate(predicate1);
     selectStatement.addPredicate(predicate2);
-    System.out.println(selectStatement.toStatement());
+    System.out.println(selectStatement);
   }
-
 }

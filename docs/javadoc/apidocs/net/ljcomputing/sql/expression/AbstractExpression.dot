@@ -53,13 +53,13 @@ digraph G {
 	c233:p -> c235:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.expression.AbstractExpression NAVASSOC net.ljcomputing.sql.literal.Operand
 	c233:p -> c242:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sql.expression.Expression DEPEND net.ljcomputing.sql.literal.Operand
-	c232:p -> c242:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.expression.Expression DEPEND net.ljcomputing.sql.identifier.Column
 	c232:p -> c235:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sql.expression.AbstractExpression DEPEND net.ljcomputing.sql.literal.Operand
-	c233:p -> c242:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.expression.Expression DEPEND net.ljcomputing.sql.literal.Operand
+	c232:p -> c242:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.expression.AbstractExpression DEPEND net.ljcomputing.sql.identifier.Column
 	c233:p -> c235:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.expression.AbstractExpression DEPEND net.ljcomputing.sql.literal.Operand
+	c233:p -> c242:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

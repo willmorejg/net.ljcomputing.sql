@@ -42,10 +42,10 @@ public class Update extends AbstractClause implements Clause {
   }
 
   /**
-   * @see net.ljcomputing.sql.clause.Clause#toClause()
+   * @see java.lang.Object#toString()
    */
   @Override
-  public String toClause() {
+  public String toString() {
     final StringBuffer buf = new StringBuffer(Keywords.Update.toString()).append(Literal.Space);
     final String name = table.getName();
 

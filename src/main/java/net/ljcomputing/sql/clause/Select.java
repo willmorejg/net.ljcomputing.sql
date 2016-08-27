@@ -50,10 +50,10 @@ public class Select extends AbstractClause implements Clause {
   }
 
   /**
-   * @see net.ljcomputing.sql.clause.Clause#toClause()
+   * @see java.lang.Object#toString()
    */
   @Override
-  public String toClause() {
+  public String toString() {
     final StringBuffer buf = new StringBuffer(Keywords.Select.toString()).append(Literal.Space);
     addColumns(buf);
     buf.append(Keywords.From.toString()).append(Literal.Space);
