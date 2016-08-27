@@ -22,6 +22,7 @@ package net.ljcomputing.sql.identifier;
  * @author James G. Willmore
  *
  */
+@SuppressWarnings("PMD.AtLeastOneConstructor")
 public abstract class AbstractIdentifier implements Identifier {
 
   /** The name of the identifier. */

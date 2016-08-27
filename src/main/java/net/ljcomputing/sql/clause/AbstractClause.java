@@ -27,6 +27,7 @@ import net.ljcomputing.sql.literal.Literal;
  * @author James G. Willmore
  *
  */
+@SuppressWarnings({"PMD.AbstractClassWithoutAbstractMethod", "PMD.AtLeastOneConstructor"})
 public abstract class AbstractClause {
 
   /**
