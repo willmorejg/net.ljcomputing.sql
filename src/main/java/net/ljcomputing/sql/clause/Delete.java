@@ -37,6 +37,7 @@ public class Delete extends AbstractClause implements Clause {
    * @param table the table
    */
   public Delete(final Table table) {
+    super();
     this.table = table;
   }
 

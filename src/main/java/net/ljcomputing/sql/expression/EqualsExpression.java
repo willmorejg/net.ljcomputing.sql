@@ -33,7 +33,7 @@ public class EqualsExpression extends AbstractExpression implements Expression {
    *
    * @param column the column
    */
-  public EqualsExpression(Column column) {
+  public EqualsExpression(final Column column) {
     super(column, Operand.Equals);
   }
 }

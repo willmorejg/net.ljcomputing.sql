@@ -36,6 +36,7 @@ public class Where extends AbstractClause implements Clause {
    * @param predicates the predicates
    */
   public Where(final Predicate ... predicates) {
+    super();
     this.predicates = predicates;
   }
 
@@ -45,13 +46,13 @@ public class Where extends AbstractClause implements Clause {
   @Override
   public String toClause() {
     final StringBuffer buf = new StringBuffer(Keywords.Where.toString()).append(Literal.Space);
-    
-    for(int p = 0; p < predicates.length; ) {
+
+    for (int p = 0; p < predicates.length;) {
       final Predicate predicate = predicates[p];
       addPredicate(buf, predicate);
       p++;
-      
-      if(p != predicates.length) {
+
+      if (p != predicates.length) {
         buf.append(Literal.Comma).append(Literal.Space);
       }
     }

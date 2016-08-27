@@ -42,6 +42,8 @@ public class Select extends AbstractClause implements Clause {
    * @param columns the columns
    */
   public Select(final Column... columns) {
+    super();
+    
     for (final Column column : columns) {
       this.columns.add(column);
     }

@@ -57,9 +57,13 @@ public abstract class AbstractPredicate implements Predicate {
     final String columnName = column.getName();
     final String columnAlias = column.getAlias();
     final Operand operand = expression.getOperand();
-    final String valueStr = value != null ? value.toString() : null;
-    
-    if(columnAlias != null) {
+    String valueStr = null;
+
+    if (value != null) {
+      valueStr = value.toString();
+    }
+
+    if (columnAlias != null) {
       buf.append(columnAlias).append(Literal.Period);
     }
     

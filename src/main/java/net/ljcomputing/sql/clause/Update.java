@@ -37,6 +37,7 @@ public class Update extends AbstractClause implements Clause {
    * @param table the table
    */
   public Update(final Table table) {
+    super();
     this.table = table;
   }
 

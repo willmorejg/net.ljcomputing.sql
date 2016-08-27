@@ -43,7 +43,7 @@ public class SelectStatement implements Statement {
    *
    * @param columns the columns
    */
-  public SelectStatement(Column ... columns) {
+  public SelectStatement(final Column ... columns) {
     select = new Select(columns);
   }
   
@@ -52,7 +52,7 @@ public class SelectStatement implements Statement {
    *
    * @param predicate the predicate
    */
-  public void addPredicate(Predicate predicate) {
+  public void addPredicate(final Predicate predicate) {
     predicates.add(predicate);
   }
   
@@ -64,7 +64,7 @@ public class SelectStatement implements Statement {
   public final String toStatement() {
     final StringBuffer buf = new StringBuffer(select.toClause());
     
-    if(!predicates.isEmpty()) {
+    if (!predicates.isEmpty()) {
       final Where where = new Where(predicates.toArray(new Predicate[predicates.size()]));
       buf.append(where.toClause());
     }

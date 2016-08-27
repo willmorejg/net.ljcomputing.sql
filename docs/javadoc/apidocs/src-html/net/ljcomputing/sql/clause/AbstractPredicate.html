@@ -65,17 +65,21 @@
 <span class="sourceLineNo">057</span>    final String columnName = column.getName();<a name="line.57"></a>
 <span class="sourceLineNo">058</span>    final String columnAlias = column.getAlias();<a name="line.58"></a>
 <span class="sourceLineNo">059</span>    final Operand operand = expression.getOperand();<a name="line.59"></a>
-<span class="sourceLineNo">060</span>    final String valueStr = value != null ? value.toString() : null;<a name="line.60"></a>
-<span class="sourceLineNo">061</span>    <a name="line.61"></a>
-<span class="sourceLineNo">062</span>    if(columnAlias != null) {<a name="line.62"></a>
-<span class="sourceLineNo">063</span>      buf.append(columnAlias).append(Literal.Period);<a name="line.63"></a>
+<span class="sourceLineNo">060</span>    String valueStr = null;<a name="line.60"></a>
+<span class="sourceLineNo">061</span><a name="line.61"></a>
+<span class="sourceLineNo">062</span>    if (value != null) {<a name="line.62"></a>
+<span class="sourceLineNo">063</span>      valueStr = value.toString();<a name="line.63"></a>
 <span class="sourceLineNo">064</span>    }<a name="line.64"></a>
-<span class="sourceLineNo">065</span>    <a name="line.65"></a>
-<span class="sourceLineNo">066</span>    buf.append(columnName).append(operand.toString()).append(valueStr);<a name="line.66"></a>
-<span class="sourceLineNo">067</span>    <a name="line.67"></a>
-<span class="sourceLineNo">068</span>    return buf.toString();<a name="line.68"></a>
-<span class="sourceLineNo">069</span>  }<a name="line.69"></a>
-<span class="sourceLineNo">070</span>}<a name="line.70"></a>
+<span class="sourceLineNo">065</span><a name="line.65"></a>
+<span class="sourceLineNo">066</span>    if (columnAlias != null) {<a name="line.66"></a>
+<span class="sourceLineNo">067</span>      buf.append(columnAlias).append(Literal.Period);<a name="line.67"></a>
+<span class="sourceLineNo">068</span>    }<a name="line.68"></a>
+<span class="sourceLineNo">069</span>    <a name="line.69"></a>
+<span class="sourceLineNo">070</span>    buf.append(columnName).append(operand.toString()).append(valueStr);<a name="line.70"></a>
+<span class="sourceLineNo">071</span>    <a name="line.71"></a>
+<span class="sourceLineNo">072</span>    return buf.toString();<a name="line.72"></a>
+<span class="sourceLineNo">073</span>  }<a name="line.73"></a>
+<span class="sourceLineNo">074</span>}<a name="line.74"></a>
 
 
 
