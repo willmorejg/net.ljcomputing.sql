@@ -1,7 +1,7 @@
 README for module net.ljcomputing.sql
-=====================================
-LJ Computing - SQL Builder project
------------------------------------------
+======================================
+LJ Computing - SQL Builder project - Bobby
+------------------------------------------
 
-A SQL builder project.
+Bobby (as in Bobby the Builder) - A SQL builder project.
 
