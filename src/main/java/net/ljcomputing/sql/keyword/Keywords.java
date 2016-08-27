@@ -249,7 +249,8 @@ public enum Keywords {
   Work("WORK"),
   Write("WRITE"),
   Year("YEAR"),
-  Zone("ZONE");
+  Zone("ZONE")
+  ;
   
   /** The value. */
   private final String value;
@@ -268,6 +269,6 @@ public enum Keywords {
    */
   @Override
   public String toString() {
-    return value + " ";
+    return value;
   }
 }

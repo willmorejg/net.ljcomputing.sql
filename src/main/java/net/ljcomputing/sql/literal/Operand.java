@@ -16,50 +16,34 @@
 
 package net.ljcomputing.sql.literal;
 
+import net.ljcomputing.sql.keyword.Keywords;
+
 /**
- * Class containing SQL literal characters (ex. semicolon).
+ * Enumeration of SQL operands.
  * 
  * @author James G. Willmore
  *
  */
-public enum Literal {
-  Space(' '),
-  LeftParen('('),
-  RightParen(')'),
-  DoubleQuote('"'),
-  SingleQuote('\''),
-  Percent('%'),
-  Ampersand('&'),
-  Asterisk('*'),
-  Slash('/'),
-  Plus('+'),
-  Minus('-'),
-  Comma(','),
-  Period('.'),
-  Colon(':'),
-  SemiColon(';'),
-  LessThan('<'),
-  GreaterThan('>'),
-  Question('?'),
-  LeftBracket('['),
-  RightBracket(']'),
-  Underline('_'),
-  VerticalBar('|'),
-  Equals('='),
-  LeftBrace('{'),
-  RightBrace('}'),
-  Circumflex('^')
+public enum Operand {
+  Equals(Literal.Equals.toString()),
+  NotEqualTo(Literal.LessThan.toString() + Literal.GreaterThan.toString()),  
+  GreaterThan(Literal.GreaterThan.toString()),
+  LessThan(Literal.LessThan.toString()),
+  GreaterThanEqualTo(Literal.GreaterThan + Literal.Equals.toString()),
+  LessThanEqualTo(Literal.LessThan + Literal.Equals.toString()),
+  Like(Keywords.Like.toString()),
+  Between(Keywords.Between.toString())
   ;
   
   /** The value. */
-  private final char value;
+  private String value;
   
   /**
-   * Instantiates a new literal.
+   * Instantiates a new operand.
    *
    * @param value the value
    */
-  private Literal(final char value) {
+  private Operand(final String value) {
     this.value = value;
   }
   
@@ -68,6 +52,6 @@ public enum Literal {
    */
   @Override
   public String toString() {
-    return String.valueOf(value);
+    return value;
   }
 }

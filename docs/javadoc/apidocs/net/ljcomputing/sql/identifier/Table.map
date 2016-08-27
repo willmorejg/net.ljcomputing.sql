@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../clause/AbstractClause.html" title="net.ljcomputing.sql.clause.AbstractClause" alt="" coords="85,114,212,153"/>
+<area shape="rect" id="node1" href="../clause/AbstractClause.html" title="&lt;TABLE&gt;" alt="" coords="75,109,223,158"/>
+<area shape="rect" id="node2_1" href="../clause/Delete.html" title="net.ljcomputing.sql.clause.Delete" alt="" coords="39,214,165,253"/>
+<area shape="rect" id="node2" href="../clause/Delete.html" title="&lt;TABLE&gt;" alt="" coords="28,209,176,258"/>
+<area shape="rect" id="node3_2" href="../clause/Update.html" title="net.ljcomputing.sql.clause.Update" alt="" coords="211,214,337,253"/>
+<area shape="rect" id="node3" href="../clause/Update.html" title="&lt;TABLE&gt;" alt="" coords="200,209,348,258"/>
+<area shape="rect" id="node4_3" href="./Column.html" title="net.ljcomputing.sql.identifier.Column" alt="" coords="382,221,443,246"/>
+<area shape="rect" id="node4" href="./Column.html" title="&lt;TABLE&gt;" alt="" coords="371,209,454,257"/>
+<area shape="rect" id="node6_4" href="./Table.html" title="net.ljcomputing.sql.identifier.Table" alt="" coords="388,318,437,343"/>
+<area shape="rect" id="node6" href="./Table.html" title="&lt;TABLE&gt;" alt="" coords="377,307,449,355"/>
+<area shape="rect" id="node5_5" href="./AbstractIdentifier.html" title="net.ljcomputing.sql.identifier.AbstractIdentifier" alt="" coords="355,121,465,146"/>
+<area shape="rect" id="node5" href="./AbstractIdentifier.html" title="&lt;TABLE&gt;" alt="" coords="345,109,475,157"/>
+<area shape="rect" id="node7_6" href="./Identifier.html" title="net.ljcomputing.sql.identifier.Identifier" alt="" coords="370,11,450,53"/>
+<area shape="rect" id="node7" href="./Identifier.html" title="&lt;TABLE&gt;" alt="" coords="359,6,461,58"/>
+<area shape="rect" id="node8_7" href="./Alias.html" title="net.ljcomputing.sql.identifier.Alias" alt="" coords="510,113,590,154"/>
+<area shape="rect" id="node8" href="./Alias.html" title="&lt;TABLE&gt;" alt="" coords="499,107,601,159"/>
+</map>

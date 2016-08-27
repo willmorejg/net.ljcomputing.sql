@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../clause/AbstractClause.html" title="net.ljcomputing.sql.clause.AbstractClause" alt="" coords="15,19,142,58"/>
+<area shape="rect" id="node1" href="../clause/AbstractClause.html" title="&lt;TABLE&gt;" alt="" coords="5,14,153,63"/>
+<area shape="rect" id="node2_1" href="../clause/Select.html" title="net.ljcomputing.sql.clause.Select" alt="" coords="127,127,254,166"/>
+<area shape="rect" id="node2" href="../clause/Select.html" title="&lt;TABLE&gt;" alt="" coords="117,122,265,171"/>
+<area shape="rect" id="node5_2" href="./Column.html" title="net.ljcomputing.sql.identifier.Column" alt="" coords="463,233,524,258"/>
+<area shape="rect" id="node5" href="./Column.html" title="&lt;TABLE&gt;" alt="" coords="452,221,535,269"/>
+<area shape="rect" id="node7_3" href="./Table.html" title="net.ljcomputing.sql.identifier.Table" alt="" coords="622,329,671,354"/>
+<area shape="rect" id="node7" href="./Table.html" title="&lt;TABLE&gt;" alt="" coords="611,317,683,365"/>
+<area shape="rect" id="node3_4" href="../expression/Expression.html" title="net.ljcomputing.sql.expression.Expression" alt="" coords="357,11,502,66"/>
+<area shape="rect" id="node3" href="../expression/Expression.html" title="&lt;TABLE&gt;" alt="" coords="346,6,513,71"/>
+<area shape="rect" id="node4_5" href="../expression/AbstractExpression.html" title="net.ljcomputing.sql.expression.AbstractExpression" alt="" coords="299,127,445,166"/>
+<area shape="rect" id="node4" href="../expression/AbstractExpression.html" title="&lt;TABLE&gt;" alt="" coords="289,122,455,171"/>
+<area shape="rect" id="node6_6" href="./AbstractIdentifier.html" title="net.ljcomputing.sql.identifier.AbstractIdentifier" alt="" coords="592,134,701,159"/>
+<area shape="rect" id="node6" href="./AbstractIdentifier.html" title="&lt;TABLE&gt;" alt="" coords="581,123,712,171"/>
+<area shape="rect" id="node8_7" href="./Identifier.html" title="net.ljcomputing.sql.identifier.Identifier" alt="" coords="607,18,687,59"/>
+<area shape="rect" id="node8" href="./Identifier.html" title="&lt;TABLE&gt;" alt="" coords="596,13,697,65"/>
+<area shape="rect" id="node9_8" href="./Alias.html" title="net.ljcomputing.sql.identifier.Alias" alt="" coords="747,126,827,167"/>
+<area shape="rect" id="node9" href="./Alias.html" title="&lt;TABLE&gt;" alt="" coords="736,121,837,173"/>
+</map>

@@ -66,7 +66,17 @@ public abstract class AbstractClause {
     buf.append(name);
 
     if (alias != null) {
-      buf.append(Literal.Space).append(Keywords.As).append(alias);
+      buf.append(Literal.Space).append(Keywords.As).append(Literal.Space).append(alias);
     }
+  }
+
+  /**
+   * Adds the predicate.
+   *
+   * @param buf the buf
+   * @param predicate the predicate
+   */
+  public void addPredicate(final StringBuffer buf, final Predicate predicate) {
+    buf.append(predicate.toPredicate());
   }
 }

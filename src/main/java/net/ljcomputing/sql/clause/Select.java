@@ -31,7 +31,7 @@ import net.ljcomputing.sql.literal.Literal;
  * @author James G. Willmore
  *
  */
-public class SelectClause extends AbstractClause implements Clause {
+public class Select extends AbstractClause implements Clause {
 
   /** The columns that are SELECTed. */
   private final transient Set<Column> columns = new HashSet<Column>();
@@ -41,7 +41,7 @@ public class SelectClause extends AbstractClause implements Clause {
    *
    * @param columns the columns
    */
-  public SelectClause(final Column... columns) {
+  public Select(final Column... columns) {
     for (final Column column : columns) {
       this.columns.add(column);
     }
@@ -52,9 +52,9 @@ public class SelectClause extends AbstractClause implements Clause {
    */
   @Override
   public String toClause() {
-    final StringBuffer buf = new StringBuffer(Keywords.Select.toString());
+    final StringBuffer buf = new StringBuffer(Keywords.Select.toString()).append(Literal.Space);
     addColumns(buf);
-    buf.append(Keywords.From.toString());
+    buf.append(Keywords.From.toString()).append(Literal.Space);
     addTables(buf);
     buf.append(Literal.Space);
     return buf.toString();

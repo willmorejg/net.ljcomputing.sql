@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./AbstractClause.html" title="net.ljcomputing.sql.clause.AbstractClause" alt="" coords="141,19,243,45"/>
+<area shape="rect" id="node1" href="./AbstractClause.html" title="&lt;TABLE&gt;" alt="" coords="131,8,253,56"/>
+<area shape="rect" id="node2_1" href="./Select.html" title="net.ljcomputing.sql.clause.Select" alt="" coords="91,118,144,143"/>
+<area shape="rect" id="node2" href="./Select.html" title="&lt;TABLE&gt;" alt="" coords="80,107,155,155"/>
+<area shape="rect" id="node4_2" href="../identifier/Column.html" title="net.ljcomputing.sql.identifier.Column" alt="" coords="87,209,222,247"/>
+<area shape="rect" id="node4" href="../identifier/Column.html" title="&lt;TABLE&gt;" alt="" coords="77,203,233,253"/>
+<area shape="rect" id="node3_3" href="./Clause.html" title="net.ljcomputing.sql.clause.Clause" alt="" coords="16,11,96,53"/>
+<area shape="rect" id="node3" href="./Clause.html" title="&lt;TABLE&gt;" alt="" coords="5,6,107,58"/>
+</map>
