@@ -23,5 +23,11 @@ package net.ljcomputing.sql.statement;
  *
  */
 public interface Statement {
-
+  
+  /**
+   * Produce the SQL statement.
+   *
+   * @return the string
+   */
+  String toStatement();
 }

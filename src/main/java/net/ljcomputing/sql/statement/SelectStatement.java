@@ -57,10 +57,9 @@ public class SelectStatement implements Statement {
   }
   
   /**
-   * Produce the SQL statement.
-   *
-   * @return the string
+   * @see net.ljcomputing.sql.statement.Statement#toStatement()
    */
+  @Override
   public final String toStatement() {
     final StringBuffer buf = new StringBuffer(select.toClause());
     

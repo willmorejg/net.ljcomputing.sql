@@ -27,6 +27,7 @@ import net.ljcomputing.sql.clause.Where;
 import net.ljcomputing.sql.identifier.Column;
 import net.ljcomputing.sql.identifier.Table;
 import net.ljcomputing.sql.keyword.Keywords;
+import net.ljcomputing.sql.literal.Conjunction;
 import net.ljcomputing.sql.literal.Literal;
 import net.ljcomputing.sql.literal.Operand;
 import net.ljcomputing.sql.statement.SelectStatement;
@@ -67,15 +68,19 @@ public class Tester {
     final Update update = new Update(table2);
     System.out.println(update.toClause());
 
-    final Predicate predicate = new EqualsPredicate(col1, Literal.Question);
-    System.out.println(predicate.toPredicate());
+    final Predicate predicate1 = new EqualsPredicate(col1, Literal.Question, Conjunction.Or);
+    System.out.println(predicate1.toPredicate());
 
-    final Where where = new Where(predicate);
+    final Predicate predicate2 = new EqualsPredicate(col2, Literal.Question);
+    System.out.println(predicate2.toPredicate());
+
+    final Where where = new Where(predicate1, predicate2);
     System.out.println(where.toClause());
     
     //--
     final SelectStatement selectStatement = new SelectStatement(col1, col2);
-    selectStatement.addPredicate(predicate);
+    selectStatement.addPredicate(predicate1);
+    selectStatement.addPredicate(predicate2);
     System.out.println(selectStatement.toStatement());
   }
 

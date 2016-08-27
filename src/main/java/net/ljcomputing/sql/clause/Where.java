@@ -17,6 +17,7 @@
 package net.ljcomputing.sql.clause;
 
 import net.ljcomputing.sql.keyword.Keywords;
+import net.ljcomputing.sql.literal.Conjunction;
 import net.ljcomputing.sql.literal.Literal;
 
 /**
@@ -53,7 +54,14 @@ public class Where extends AbstractClause implements Clause {
       p++;
 
       if (p != predicates.length) {
-        buf.append(Literal.Comma).append(Literal.Space);
+        if(predicate.hasConjunction()) {
+          final Conjunction conjunction = predicate.getConjunction();
+          buf.append(Literal.Space).append(conjunction.toString());
+        } else {
+          buf.append(Literal.Space).append(Conjunction.And);
+        }
+        
+        buf.append(Literal.Space);
       }
     }
 

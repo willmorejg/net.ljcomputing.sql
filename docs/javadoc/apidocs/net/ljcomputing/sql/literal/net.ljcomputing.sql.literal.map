@@ -1,6 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./Operand.html" title="net.ljcomputing.sql.literal.Operand" alt="" coords="16,11,117,53"/>
-<area shape="rect" id="node1" href="./Operand.html" title="&lt;TABLE&gt;" alt="" coords="5,6,128,58"/>
-<area shape="rect" id="node2_1" href="./Literal.html" title="net.ljcomputing.sql.literal.Literal" alt="" coords="163,11,264,53"/>
-<area shape="rect" id="node2" href="./Literal.html" title="&lt;TABLE&gt;" alt="" coords="152,6,275,58"/>
+<area shape="rect" id="node1_0" href="./Conjunction.html" title="net.ljcomputing.sql.literal.Conjunction" alt="" coords="16,11,117,53"/>
+<area shape="rect" id="node1" href="./Conjunction.html" title="&lt;TABLE&gt;" alt="" coords="5,6,128,58"/>
+<area shape="rect" id="node2_1" href="./Operand.html" title="net.ljcomputing.sql.literal.Operand" alt="" coords="163,11,264,53"/>
+<area shape="rect" id="node2" href="./Operand.html" title="&lt;TABLE&gt;" alt="" coords="152,6,275,58"/>
+<area shape="rect" id="node3_2" href="./Literal.html" title="net.ljcomputing.sql.literal.Literal" alt="" coords="309,11,411,53"/>
+<area shape="rect" id="node3" href="./Literal.html" title="&lt;TABLE&gt;" alt="" coords="299,6,421,58"/>
 </map>

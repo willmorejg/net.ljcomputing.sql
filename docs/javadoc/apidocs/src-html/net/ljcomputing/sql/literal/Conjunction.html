@@ -22,39 +22,42 @@
 <span class="sourceLineNo">014</span>   limitations under the License.<a name="line.14"></a>
 <span class="sourceLineNo">015</span> */<a name="line.15"></a>
 <span class="sourceLineNo">016</span><a name="line.16"></a>
-<span class="sourceLineNo">017</span>package net.ljcomputing.sql.clause;<a name="line.17"></a>
+<span class="sourceLineNo">017</span>package net.ljcomputing.sql.literal;<a name="line.17"></a>
 <span class="sourceLineNo">018</span><a name="line.18"></a>
-<span class="sourceLineNo">019</span>import net.ljcomputing.sql.literal.Conjunction;<a name="line.19"></a>
+<span class="sourceLineNo">019</span>import net.ljcomputing.sql.keyword.Keywords;<a name="line.19"></a>
 <span class="sourceLineNo">020</span><a name="line.20"></a>
 <span class="sourceLineNo">021</span>/**<a name="line.21"></a>
-<span class="sourceLineNo">022</span> * Predicate clause.<a name="line.22"></a>
+<span class="sourceLineNo">022</span> * SQL conjunctions.<a name="line.22"></a>
 <span class="sourceLineNo">023</span> * <a name="line.23"></a>
 <span class="sourceLineNo">024</span> * @author James G. Willmore<a name="line.24"></a>
 <span class="sourceLineNo">025</span> *<a name="line.25"></a>
 <span class="sourceLineNo">026</span> */<a name="line.26"></a>
-<span class="sourceLineNo">027</span>public interface Predicate {<a name="line.27"></a>
-<span class="sourceLineNo">028</span>  <a name="line.28"></a>
-<span class="sourceLineNo">029</span>  /**<a name="line.29"></a>
-<span class="sourceLineNo">030</span>   * SQL predicate.<a name="line.30"></a>
-<span class="sourceLineNo">031</span>   *<a name="line.31"></a>
-<span class="sourceLineNo">032</span>   * @return the string<a name="line.32"></a>
-<span class="sourceLineNo">033</span>   */<a name="line.33"></a>
-<span class="sourceLineNo">034</span>  String toPredicate();<a name="line.34"></a>
-<span class="sourceLineNo">035</span>  <a name="line.35"></a>
-<span class="sourceLineNo">036</span>  /**<a name="line.36"></a>
-<span class="sourceLineNo">037</span>   * Gets the conjunction.<a name="line.37"></a>
-<span class="sourceLineNo">038</span>   *<a name="line.38"></a>
-<span class="sourceLineNo">039</span>   * @return the conjunction<a name="line.39"></a>
-<span class="sourceLineNo">040</span>   */<a name="line.40"></a>
-<span class="sourceLineNo">041</span>  Conjunction getConjunction();<a name="line.41"></a>
-<span class="sourceLineNo">042</span>  <a name="line.42"></a>
-<span class="sourceLineNo">043</span>  /**<a name="line.43"></a>
-<span class="sourceLineNo">044</span>   * Checks for a conjunction.<a name="line.44"></a>
-<span class="sourceLineNo">045</span>   *<a name="line.45"></a>
-<span class="sourceLineNo">046</span>   * @return true, if successful<a name="line.46"></a>
-<span class="sourceLineNo">047</span>   */<a name="line.47"></a>
-<span class="sourceLineNo">048</span>  boolean hasConjunction();<a name="line.48"></a>
-<span class="sourceLineNo">049</span>}<a name="line.49"></a>
+<span class="sourceLineNo">027</span>public enum Conjunction {<a name="line.27"></a>
+<span class="sourceLineNo">028</span>  And(Keywords.And.toString()),<a name="line.28"></a>
+<span class="sourceLineNo">029</span>  Or(Keywords.Or.toString())<a name="line.29"></a>
+<span class="sourceLineNo">030</span>  ;<a name="line.30"></a>
+<span class="sourceLineNo">031</span>  <a name="line.31"></a>
+<span class="sourceLineNo">032</span>  /** The value. */<a name="line.32"></a>
+<span class="sourceLineNo">033</span>  private String value;<a name="line.33"></a>
+<span class="sourceLineNo">034</span>  <a name="line.34"></a>
+<span class="sourceLineNo">035</span>  /**<a name="line.35"></a>
+<span class="sourceLineNo">036</span>   * Instantiates a new conjunction.<a name="line.36"></a>
+<span class="sourceLineNo">037</span>   *<a name="line.37"></a>
+<span class="sourceLineNo">038</span>   * @param value the value<a name="line.38"></a>
+<span class="sourceLineNo">039</span>   */<a name="line.39"></a>
+<span class="sourceLineNo">040</span>  private Conjunction(final String value) {<a name="line.40"></a>
+<span class="sourceLineNo">041</span>    this.value = value;<a name="line.41"></a>
+<span class="sourceLineNo">042</span>  }<a name="line.42"></a>
+<span class="sourceLineNo">043</span>  <a name="line.43"></a>
+<span class="sourceLineNo">044</span>  /**<a name="line.44"></a>
+<span class="sourceLineNo">045</span>   * @see java.lang.Enum#toString()<a name="line.45"></a>
+<span class="sourceLineNo">046</span>   */<a name="line.46"></a>
+<span class="sourceLineNo">047</span>  @Override<a name="line.47"></a>
+<span class="sourceLineNo">048</span>  public String toString() {<a name="line.48"></a>
+<span class="sourceLineNo">049</span>    return value;<a name="line.49"></a>
+<span class="sourceLineNo">050</span>  }<a name="line.50"></a>
+<span class="sourceLineNo">051</span><a name="line.51"></a>
+<span class="sourceLineNo">052</span>}<a name="line.52"></a>
 
 
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.expression.Expression
-	c522 [label=<<table title="net.ljcomputing.sql.expression.Expression" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../expression/Expression.html">
+	c568 [label=<<table title="net.ljcomputing.sql.expression.Expression" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../expression/Expression.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Expression </td></tr>
@@ -18,26 +18,26 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../expression/Expression.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.expression.AbstractExpression
-	c523 [label=<<table title="net.ljcomputing.sql.expression.AbstractExpression" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../expression/AbstractExpression.html">
+	c569 [label=<<table title="net.ljcomputing.sql.expression.AbstractExpression" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../expression/AbstractExpression.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractExpression </font></td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.expression </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../expression/AbstractExpression.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.literal.Operand
-	c531 [label=<<table title="net.ljcomputing.sql.literal.Operand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Operand.html">
+	c578 [label=<<table title="net.ljcomputing.sql.literal.Operand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Operand.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> Operand </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Operand.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.expression.AbstractExpression implements net.ljcomputing.sql.expression.Expression
-	c522:p -> c523:p [dir=back,arrowtail=empty,style=dashed];
+	c568:p -> c569:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.sql.expression.AbstractExpression NAVASSOC net.ljcomputing.sql.literal.Operand
-	c523:p -> c531:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c569:p -> c578:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.expression.Expression DEPEND net.ljcomputing.sql.literal.Operand
-	c522:p -> c531:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c568:p -> c578:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.expression.AbstractExpression DEPEND net.ljcomputing.sql.literal.Operand
-	c523:p -> c531:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c569:p -> c578:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

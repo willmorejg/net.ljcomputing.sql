@@ -14,36 +14,39 @@
    limitations under the License.
  */
 
-package net.ljcomputing.sql.clause;
+package net.ljcomputing.sql.literal;
 
-import net.ljcomputing.sql.literal.Conjunction;
+import net.ljcomputing.sql.keyword.Keywords;
 
 /**
- * Predicate clause.
+ * SQL conjunctions.
  * 
  * @author James G. Willmore
  *
  */
-public interface Predicate {
+public enum Conjunction {
+  And(Keywords.And.toString()),
+  Or(Keywords.Or.toString())
+  ;
+  
+  /** The value. */
+  private String value;
   
   /**
-   * SQL predicate.
+   * Instantiates a new conjunction.
    *
-   * @return the string
+   * @param value the value
    */
-  String toPredicate();
+  private Conjunction(final String value) {
+    this.value = value;
+  }
   
   /**
-   * Gets the conjunction.
-   *
-   * @return the conjunction
+   * @see java.lang.Enum#toString()
    */
-  Conjunction getConjunction();
-  
-  /**
-   * Checks for a conjunction.
-   *
-   * @return true, if successful
-   */
-  boolean hasConjunction();
+  @Override
+  public String toString() {
+    return value;
+  }
+
 }

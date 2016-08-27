@@ -18,6 +18,8 @@ package net.ljcomputing.sql.clause;
 
 import net.ljcomputing.sql.expression.Expression;
 import net.ljcomputing.sql.identifier.Column;
+import net.ljcomputing.sql.identifier.Table;
+import net.ljcomputing.sql.literal.Conjunction;
 import net.ljcomputing.sql.literal.Literal;
 import net.ljcomputing.sql.literal.Operand;
 
@@ -34,6 +36,9 @@ public abstract class AbstractPredicate implements Predicate {
   
   /** The value. */
   private final transient Object value;
+  
+  /** The conjunction. */
+  private transient Conjunction conjunction;
 
   /**
    * Instantiates a new predicate.
@@ -45,6 +50,18 @@ public abstract class AbstractPredicate implements Predicate {
     this.expression = expression;
     this.value = value;
   }
+
+  /**
+   * Instantiates a new abstract predicate.
+   *
+   * @param expression the expression
+   * @param value the value
+   * @param conjunction the conjunction
+   */
+  public AbstractPredicate(final Expression expression, final Object value, final Conjunction conjunction) {
+    this(expression, value);
+    this.conjunction = conjunction;
+  }
   
   /**
    * SQL predicate.
@@ -55,7 +72,8 @@ public abstract class AbstractPredicate implements Predicate {
     final StringBuffer buf = new StringBuffer();
     final Column column = expression.getColumn();
     final String columnName = column.getName();
-    final String columnAlias = column.getAlias();
+    final Table table = column.getTable();
+    final String columnAlias = table.getAlias();
     final Operand operand = expression.getOperand();
     String valueStr = null;
 
@@ -70,5 +88,24 @@ public abstract class AbstractPredicate implements Predicate {
     buf.append(columnName).append(operand.toString()).append(valueStr);
     
     return buf.toString();
+  }
+  
+  /**
+   * Gets the conjunction.
+   *
+   * @return the conjunction
+   */
+  @Override
+  public Conjunction getConjunction() {
+    return conjunction;
+  }
+  
+  /**
+   * Checks for a conjunction.
+   *
+   * @return true, if successful
+   */
+  public boolean hasConjunction() {
+    return conjunction != null;
   }
 }
