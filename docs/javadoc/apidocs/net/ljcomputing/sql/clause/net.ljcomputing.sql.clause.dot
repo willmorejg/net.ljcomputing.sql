@@ -9,66 +9,85 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// net.ljcomputing.sql.clause.AbstractPredicate
+	c0 [label=<<table title="net.ljcomputing.sql.clause.AbstractPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractPredicate.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractPredicate </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./AbstractPredicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.AbstractClause
-	c0 [label=<<table title="net.ljcomputing.sql.clause.AbstractClause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractClause.html">
+	c1 [label=<<table title="net.ljcomputing.sql.clause.AbstractClause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractClause.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractClause </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractClause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Where
-	c1 [label=<<table title="net.ljcomputing.sql.clause.Where" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Where.html">
+	c2 [label=<<table title="net.ljcomputing.sql.clause.Where" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Where.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Where </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Where.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Select
-	c2 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Select.html">
+	c3 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Select.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Select </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Select.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Clause
-	c3 [label=<<table title="net.ljcomputing.sql.clause.Clause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Clause.html">
+	c4 [label=<<table title="net.ljcomputing.sql.clause.Clause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Clause.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Clause </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Clause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.clause.Predicate
-	c4 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Predicate.html">
+	// net.ljcomputing.sql.clause.EqualsPredicate
+	c5 [label=<<table title="net.ljcomputing.sql.clause.EqualsPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EqualsPredicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> EqualsPredicate </td></tr>
+		</table></td></tr>
+		</table>>, URL="./EqualsPredicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.clause.Predicate
+	c6 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Predicate.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Predicate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Predicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Delete
-	c5 [label=<<table title="net.ljcomputing.sql.clause.Delete" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Delete.html">
+	c7 [label=<<table title="net.ljcomputing.sql.clause.Delete" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Delete.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Delete </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Delete.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Update
-	c6 [label=<<table title="net.ljcomputing.sql.clause.Update" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Update.html">
+	c8 [label=<<table title="net.ljcomputing.sql.clause.Update" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Update.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Update </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Update.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	//net.ljcomputing.sql.clause.AbstractPredicate implements net.ljcomputing.sql.clause.Predicate
+	c6:p -> c0:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.clause.Where extends net.ljcomputing.sql.clause.AbstractClause
-	c0:p -> c1:p [dir=back,arrowtail=empty];
+	c1:p -> c2:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.clause.Where implements net.ljcomputing.sql.clause.Clause
-	c3:p -> c1:p [dir=back,arrowtail=empty,style=dashed];
+	c4:p -> c2:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.clause.Select extends net.ljcomputing.sql.clause.AbstractClause
-	c0:p -> c2:p [dir=back,arrowtail=empty];
+	c1:p -> c3:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.clause.Select implements net.ljcomputing.sql.clause.Clause
-	c3:p -> c2:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sql.clause.Delete extends net.ljcomputing.sql.clause.AbstractClause
+	c4:p -> c3:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.clause.EqualsPredicate extends net.ljcomputing.sql.clause.AbstractPredicate
 	c0:p -> c5:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.clause.EqualsPredicate implements net.ljcomputing.sql.clause.Predicate
+	c6:p -> c5:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.clause.Delete extends net.ljcomputing.sql.clause.AbstractClause
+	c1:p -> c7:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.clause.Delete implements net.ljcomputing.sql.clause.Clause
-	c3:p -> c5:p [dir=back,arrowtail=empty,style=dashed];
+	c4:p -> c7:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.clause.Update extends net.ljcomputing.sql.clause.AbstractClause
-	c0:p -> c6:p [dir=back,arrowtail=empty];
+	c1:p -> c8:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.clause.Update implements net.ljcomputing.sql.clause.Clause
-	c3:p -> c6:p [dir=back,arrowtail=empty,style=dashed];
+	c4:p -> c8:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.sql.clause.Where NAVASSOC net.ljcomputing.sql.clause.Predicate
-	c1:p -> c4:p [taillabel="", label="", headlabel="*", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c2:p -> c6:p [taillabel="", label="", headlabel="*", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

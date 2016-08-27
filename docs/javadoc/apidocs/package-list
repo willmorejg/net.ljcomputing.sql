@@ -3,4 +3,5 @@ net.ljcomputing.sql.expression
 net.ljcomputing.sql.identifier
 net.ljcomputing.sql.keyword
 net.ljcomputing.sql.literal
+net.ljcomputing.sql.statement
 net.ljcomputing.sql.value

@@ -1,4 +1,5 @@
 net.ljcomputing.sql.clause
+net.ljcomputing.sql.statement
 net.ljcomputing.sql.expression
 net.ljcomputing.sql.value
 net.ljcomputing.sql.identifier

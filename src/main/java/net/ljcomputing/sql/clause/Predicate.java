@@ -16,49 +16,18 @@
 
 package net.ljcomputing.sql.clause;
 
-import net.ljcomputing.sql.expression.Expression;
-import net.ljcomputing.sql.identifier.Column;
-import net.ljcomputing.sql.literal.Operand;
-
 /**
  * Predicate clause.
  * 
  * @author James G. Willmore
  *
  */
-public class Predicate {
-  
-  /** The expression. */
-  private final transient Expression expression;
-  
-  /** The value. */
-  private final transient Object value;
-
-  /**
-   * Instantiates a new predicate.
-   *
-   * @param expression the expression
-   * @param value the value
-   */
-  public Predicate(final Expression expression, final Object value) {
-    this.expression = expression;
-    this.value = value;
-  }
+public interface Predicate {
   
   /**
    * SQL predicate.
    *
    * @return the string
    */
-  public final String toPredicate() {
-    final StringBuffer buf = new StringBuffer();
-    final Column column = expression.getColumn();
-    final String columnName = column.getName();
-    final Operand operand = expression.getOperand();
-    final String valueStr = value != null ? value.toString() : null;
-    
-    buf.append(columnName).append(operand.toString()).append(valueStr);
-    
-    return buf.toString();
-  }
+  String toPredicate();
 }

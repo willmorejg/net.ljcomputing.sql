@@ -9,41 +9,41 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// net.ljcomputing.sql.clause.Predicate
-	c293 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Predicate.html">
+	// net.ljcomputing.sql.clause.AbstractPredicate
+	c418 [label=<<table title="net.ljcomputing.sql.clause.AbstractPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/AbstractPredicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Predicate </td></tr>
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractPredicate </font></td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.clause </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../clause/Predicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+		</table>>, URL="../clause/AbstractPredicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.expression.EqualsExpression
-	c296 [label=<<table title="net.ljcomputing.sql.expression.EqualsExpression" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EqualsExpression.html">
+	c429 [label=<<table title="net.ljcomputing.sql.expression.EqualsExpression" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EqualsExpression.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EqualsExpression </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EqualsExpression.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.expression.Expression
-	c297 [label=<<table title="net.ljcomputing.sql.expression.Expression" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Expression.html">
+	c430 [label=<<table title="net.ljcomputing.sql.expression.Expression" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Expression.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Expression </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Expression.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.expression.AbstractExpression
-	c298 [label=<<table title="net.ljcomputing.sql.expression.AbstractExpression" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractExpression.html">
+	c431 [label=<<table title="net.ljcomputing.sql.expression.AbstractExpression" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractExpression.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractExpression </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractExpression.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.identifier.Column
-	c300 [label=<<table title="net.ljcomputing.sql.identifier.Column" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/Column.html">
+	c433 [label=<<table title="net.ljcomputing.sql.identifier.Column" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/Column.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Column </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../identifier/Column.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.literal.Operand
-	c306 [label=<<table title="net.ljcomputing.sql.literal.Operand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../literal/Operand.html">
+	c439 [label=<<table title="net.ljcomputing.sql.literal.Operand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../literal/Operand.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> Operand </td></tr>
@@ -51,24 +51,24 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../literal/Operand.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.expression.EqualsExpression extends net.ljcomputing.sql.expression.AbstractExpression
-	c298:p -> c296:p [dir=back,arrowtail=empty];
+	c431:p -> c429:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.expression.EqualsExpression implements net.ljcomputing.sql.expression.Expression
-	c297:p -> c296:p [dir=back,arrowtail=empty,style=dashed];
+	c430:p -> c429:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.expression.AbstractExpression implements net.ljcomputing.sql.expression.Expression
-	c297:p -> c298:p [dir=back,arrowtail=empty,style=dashed];
-	// net.ljcomputing.sql.clause.Predicate NAVASSOC net.ljcomputing.sql.expression.Expression
-	c293:p -> c297:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c430:p -> c431:p [dir=back,arrowtail=empty,style=dashed];
+	// net.ljcomputing.sql.clause.AbstractPredicate NAVASSOC net.ljcomputing.sql.expression.Expression
+	c418:p -> c430:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.expression.AbstractExpression NAVASSOC net.ljcomputing.sql.identifier.Column
-	c298:p -> c300:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c431:p -> c433:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.expression.AbstractExpression NAVASSOC net.ljcomputing.sql.literal.Operand
-	c298:p -> c306:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c431:p -> c439:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.expression.Expression DEPEND net.ljcomputing.sql.identifier.Column
-	c297:p -> c300:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c430:p -> c433:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.expression.Expression DEPEND net.ljcomputing.sql.literal.Operand
-	c297:p -> c306:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c430:p -> c439:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.expression.AbstractExpression DEPEND net.ljcomputing.sql.identifier.Column
-	c298:p -> c300:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c431:p -> c433:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.expression.AbstractExpression DEPEND net.ljcomputing.sql.literal.Operand
-	c298:p -> c306:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c431:p -> c439:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

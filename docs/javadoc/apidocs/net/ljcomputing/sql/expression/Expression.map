@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../clause/Predicate.html" title="net.ljcomputing.sql.clause.Predicate" alt="" coords="143,11,270,50"/>
-<area shape="rect" id="node1" href="../clause/Predicate.html" title="&lt;TABLE&gt;" alt="" coords="133,6,281,55"/>
+<area shape="rect" id="node1_0" href="../clause/AbstractPredicate.html" title="net.ljcomputing.sql.clause.AbstractPredicate" alt="" coords="143,11,270,50"/>
+<area shape="rect" id="node1" href="../clause/AbstractPredicate.html" title="&lt;TABLE&gt;" alt="" coords="133,6,281,55"/>
 <area shape="rect" id="node3_1" href="./Expression.html" title="net.ljcomputing.sql.expression.Expression" alt="" coords="167,110,247,151"/>
 <area shape="rect" id="node3" href="./Expression.html" title="&lt;TABLE&gt;" alt="" coords="156,105,257,157"/>
 <area shape="rect" id="node2_2" href="./EqualsExpression.html" title="net.ljcomputing.sql.expression.EqualsExpression" alt="" coords="16,322,133,347"/>

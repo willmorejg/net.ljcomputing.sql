@@ -1,16 +1,20 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./AbstractClause.html" title="net.ljcomputing.sql.clause.AbstractClause" alt="" coords="77,19,179,45"/>
-<area shape="rect" id="node1" href="./AbstractClause.html" title="&lt;TABLE&gt;" alt="" coords="67,8,189,56"/>
-<area shape="rect" id="node2_1" href="./Where.html" title="net.ljcomputing.sql.clause.Where" alt="" coords="221,118,275,143"/>
-<area shape="rect" id="node2" href="./Where.html" title="&lt;TABLE&gt;" alt="" coords="210,107,286,155"/>
-<area shape="rect" id="node3_2" href="./Select.html" title="net.ljcomputing.sql.clause.Select" alt="" coords="321,118,375,143"/>
-<area shape="rect" id="node3" href="./Select.html" title="&lt;TABLE&gt;" alt="" coords="311,107,385,155"/>
-<area shape="rect" id="node6_3" href="./Delete.html" title="net.ljcomputing.sql.clause.Delete" alt="" coords="15,118,70,143"/>
-<area shape="rect" id="node6" href="./Delete.html" title="&lt;TABLE&gt;" alt="" coords="5,107,81,155"/>
-<area shape="rect" id="node7_4" href="./Update.html" title="net.ljcomputing.sql.clause.Update" alt="" coords="116,118,175,143"/>
-<area shape="rect" id="node7" href="./Update.html" title="&lt;TABLE&gt;" alt="" coords="105,107,185,155"/>
-<area shape="rect" id="node5_5" href="./Predicate.html" title="net.ljcomputing.sql.clause.Predicate" alt="" coords="213,214,283,239"/>
-<area shape="rect" id="node5" href="./Predicate.html" title="&lt;TABLE&gt;" alt="" coords="202,203,294,251"/>
-<area shape="rect" id="node4_6" href="./Clause.html" title="net.ljcomputing.sql.clause.Clause" alt="" coords="224,11,304,53"/>
-<area shape="rect" id="node4" href="./Clause.html" title="&lt;TABLE&gt;" alt="" coords="213,6,315,58"/>
+<area shape="rect" id="node1_0" href="./AbstractPredicate.html" title="net.ljcomputing.sql.clause.AbstractPredicate" alt="" coords="139,315,253,341"/>
+<area shape="rect" id="node1" href="./AbstractPredicate.html" title="&lt;TABLE&gt;" alt="" coords="128,304,264,352"/>
+<area shape="rect" id="node6_1" href="./EqualsPredicate.html" title="net.ljcomputing.sql.clause.EqualsPredicate" alt="" coords="193,411,303,437"/>
+<area shape="rect" id="node6" href="./EqualsPredicate.html" title="&lt;TABLE&gt;" alt="" coords="183,400,313,448"/>
+<area shape="rect" id="node2_2" href="./AbstractClause.html" title="net.ljcomputing.sql.clause.AbstractClause" alt="" coords="77,19,179,45"/>
+<area shape="rect" id="node2" href="./AbstractClause.html" title="&lt;TABLE&gt;" alt="" coords="67,8,189,56"/>
+<area shape="rect" id="node3_3" href="./Where.html" title="net.ljcomputing.sql.clause.Where" alt="" coords="221,118,275,143"/>
+<area shape="rect" id="node3" href="./Where.html" title="&lt;TABLE&gt;" alt="" coords="210,107,286,155"/>
+<area shape="rect" id="node4_4" href="./Select.html" title="net.ljcomputing.sql.clause.Select" alt="" coords="321,118,375,143"/>
+<area shape="rect" id="node4" href="./Select.html" title="&lt;TABLE&gt;" alt="" coords="311,107,385,155"/>
+<area shape="rect" id="node8_5" href="./Delete.html" title="net.ljcomputing.sql.clause.Delete" alt="" coords="15,118,70,143"/>
+<area shape="rect" id="node8" href="./Delete.html" title="&lt;TABLE&gt;" alt="" coords="5,107,81,155"/>
+<area shape="rect" id="node9_6" href="./Update.html" title="net.ljcomputing.sql.clause.Update" alt="" coords="116,118,175,143"/>
+<area shape="rect" id="node9" href="./Update.html" title="&lt;TABLE&gt;" alt="" coords="105,107,185,155"/>
+<area shape="rect" id="node7_7" href="./Predicate.html" title="net.ljcomputing.sql.clause.Predicate" alt="" coords="208,209,288,250"/>
+<area shape="rect" id="node7" href="./Predicate.html" title="&lt;TABLE&gt;" alt="" coords="197,203,299,255"/>
+<area shape="rect" id="node5_8" href="./Clause.html" title="net.ljcomputing.sql.clause.Clause" alt="" coords="224,11,304,53"/>
+<area shape="rect" id="node5" href="./Clause.html" title="&lt;TABLE&gt;" alt="" coords="213,6,315,58"/>
 </map>

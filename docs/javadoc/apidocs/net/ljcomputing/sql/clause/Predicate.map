@@ -1,8 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./Where.html" title="net.ljcomputing.sql.clause.Where" alt="" coords="61,17,115,42"/>
-<area shape="rect" id="node1" href="./Where.html" title="&lt;TABLE&gt;" alt="" coords="50,5,126,53"/>
-<area shape="rect" id="node2_1" href="./Predicate.html" title="net.ljcomputing.sql.clause.Predicate" alt="" coords="53,113,123,138"/>
-<area shape="rect" id="node2" href="./Predicate.html" title="&lt;TABLE&gt;" alt="" coords="42,101,134,149"/>
-<area shape="rect" id="node3_2" href="../expression/Expression.html" title="net.ljcomputing.sql.expression.Expression" alt="" coords="15,203,161,258"/>
-<area shape="rect" id="node3" href="../expression/Expression.html" title="&lt;TABLE&gt;" alt="" coords="5,198,171,263"/>
+<area shape="rect" id="node1_0" href="./AbstractPredicate.html" title="net.ljcomputing.sql.clause.AbstractPredicate" alt="" coords="77,217,192,242"/>
+<area shape="rect" id="node1" href="./AbstractPredicate.html" title="&lt;TABLE&gt;" alt="" coords="67,205,203,253"/>
+<area shape="rect" id="node3_1" href="./EqualsPredicate.html" title="net.ljcomputing.sql.clause.EqualsPredicate" alt="" coords="132,313,241,338"/>
+<area shape="rect" id="node3" href="./EqualsPredicate.html" title="&lt;TABLE&gt;" alt="" coords="121,301,252,349"/>
+<area shape="rect" id="node2_2" href="./Where.html" title="net.ljcomputing.sql.clause.Where" alt="" coords="15,18,70,43"/>
+<area shape="rect" id="node2" href="./Where.html" title="&lt;TABLE&gt;" alt="" coords="5,7,81,55"/>
+<area shape="rect" id="node4_3" href="./Predicate.html" title="net.ljcomputing.sql.clause.Predicate" alt="" coords="147,110,227,151"/>
+<area shape="rect" id="node4" href="./Predicate.html" title="&lt;TABLE&gt;" alt="" coords="136,105,237,157"/>
+<area shape="rect" id="node5_4" href="../statement/SelectStatement.html" title="net.ljcomputing.sql.statement.SelectStatement" alt="" coords="116,11,257,50"/>
+<area shape="rect" id="node5" href="../statement/SelectStatement.html" title="&lt;TABLE&gt;" alt="" coords="105,6,268,55"/>
 </map>

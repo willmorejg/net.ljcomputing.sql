@@ -19,17 +19,17 @@ package net.ljcomputing.sql;
 import org.junit.Test;
 
 import net.ljcomputing.sql.clause.Delete;
+import net.ljcomputing.sql.clause.EqualsPredicate;
 import net.ljcomputing.sql.clause.Predicate;
 import net.ljcomputing.sql.clause.Select;
 import net.ljcomputing.sql.clause.Update;
 import net.ljcomputing.sql.clause.Where;
-import net.ljcomputing.sql.expression.EqualsExpression;
-import net.ljcomputing.sql.expression.Expression;
 import net.ljcomputing.sql.identifier.Column;
 import net.ljcomputing.sql.identifier.Table;
 import net.ljcomputing.sql.keyword.Keywords;
 import net.ljcomputing.sql.literal.Literal;
 import net.ljcomputing.sql.literal.Operand;
+import net.ljcomputing.sql.statement.SelectStatement;
 
 /**
  * @author James G. Willmore
@@ -39,38 +39,44 @@ public class Tester {
 
   @Test
   public void test() {
-    for(final Keywords token : Keywords.values()) {
+    for (final Keywords token : Keywords.values()) {
       System.out.println(token);
     }
 
-    for(final Literal token : Literal.values()) {
+    for (final Literal token : Literal.values()) {
       System.out.println(token);
     }
 
-    for(final Operand token : Operand.values()) {
+    for (final Operand token : Operand.values()) {
       System.out.println(token);
     }
-    
+
     final Table table1 = new Table("foo", "fo");
     final Column col1 = new Column(table1, "bar", "br");
 
     final Table table2 = new Table("xray", "xa");
-    final Column col2 = new Column(table2, "baz", "bz");    
+    final Column col2 = new Column(table2, "baz", "bz");
+    
+    //--
     final Select select = new Select(col1, col2);
-    
     System.out.println(select.toClause());
-    
+
     final Delete delete = new Delete(table1);
     System.out.println(delete.toClause());
-    
+
     final Update update = new Update(table2);
     System.out.println(update.toClause());
-    
-    final Predicate predicate = new Predicate(new EqualsExpression(col1), Literal.Question);
+
+    final Predicate predicate = new EqualsPredicate(col1, Literal.Question);
     System.out.println(predicate.toPredicate());
-    
+
     final Where where = new Where(predicate);
     System.out.println(where.toClause());
+    
+    //--
+    final SelectStatement selectStatement = new SelectStatement(col1, col2);
+    selectStatement.addPredicate(predicate);
+    System.out.println(selectStatement.toStatement());
   }
 
 }
