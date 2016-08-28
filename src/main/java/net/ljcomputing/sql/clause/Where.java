@@ -16,6 +16,9 @@
 
 package net.ljcomputing.sql.clause;
 
+import java.util.Iterator;
+
+import net.ljcomputing.sql.buffer.PredicateBuffer;
 import net.ljcomputing.sql.keyword.Keywords;
 import net.ljcomputing.sql.literal.Conjunction;
 import net.ljcomputing.sql.literal.Literal;
@@ -29,7 +32,7 @@ import net.ljcomputing.sql.literal.Literal;
 public class Where extends AbstractClause implements Clause {
 
   /** The predicates. */
-  private final transient Predicate[] predicates;
+  private final transient PredicateBuffer predicates;
 
   /**
    * Instantiates a new where clause.
@@ -38,7 +41,7 @@ public class Where extends AbstractClause implements Clause {
    */
   public Where(final Predicate... predicates) {
     super();
-    this.predicates = predicates;
+    this.predicates = new PredicateBuffer(predicates);
   }
 
   /**
@@ -46,29 +49,44 @@ public class Where extends AbstractClause implements Clause {
    */
   @Override
   public String toString() {
-    final StringBuffer buf = new StringBuffer(Keywords.Where.toString()).append(Literal.Space);
+    final StringBuffer buf = new StringBuffer();
 
-    for (int p = 0; p < predicates.length;) {
-      final Predicate predicate = predicates[p];
-      addPredicate(buf, predicate);
-      p++;
+    if (!predicates.isEmpty()) {
+      buf.append(Keywords.Where.toString()).append(Literal.Space);
 
-      //do we have any more predicates?
-      if (p != predicates.length) {
-        //the predicate counter is incremented, 
-        //but we are still looking at the most current predicate in the loop
-        if (predicate.hasConjunction()) {
-          final Conjunction conjunction = predicate.getConjunction();
-          buf.append(Literal.Space).append(conjunction.toString());
-        } else {
-          buf.append(Literal.Space).append(Conjunction.And);
+      final Iterator<Predicate> predicatesIt = predicates.iterator();
+
+      while (predicatesIt.hasNext()) {
+        final Predicate predicate = predicatesIt.next();
+
+        addPredicate(buf, predicate);
+
+        //do we have any more predicates?
+        if (predicatesIt.hasNext()) {
+          //the predicate counter is incremented, 
+          //but we are still looking at the most current predicate in the loop
+          addConjunction(buf, predicate);
         }
-
-        buf.append(Literal.Space);
       }
     }
 
     return buf.toString();
   }
 
+  /**
+   * Adds the conjunction.
+   *
+   * @param buf the buf
+   * @param predicate the predicate
+   */
+  private static final void addConjunction(final StringBuffer buf, final Predicate predicate) {
+    if (predicate.hasConjunction()) {
+      final Conjunction conjunction = predicate.getConjunction();
+      buf.append(Literal.Space).append(conjunction.toString());
+    } else {
+      buf.append(Literal.Space).append(Conjunction.And);
+    }
+    
+    buf.append(Literal.Space);
+  }
 }

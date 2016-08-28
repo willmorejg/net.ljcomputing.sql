@@ -16,7 +16,7 @@
 
 package net.ljcomputing.sql.clause;
 
-import net.ljcomputing.sql.identifier.Table;
+import net.ljcomputing.sql.identifier.table.Table;
 import net.ljcomputing.sql.keyword.Keywords;
 import net.ljcomputing.sql.literal.Literal;
 

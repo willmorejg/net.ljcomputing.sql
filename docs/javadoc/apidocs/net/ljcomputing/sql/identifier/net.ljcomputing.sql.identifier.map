@@ -1,12 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./Column.html" title="net.ljcomputing.sql.identifier.Column" alt="" coords="149,219,211,245"/>
-<area shape="rect" id="node1" href="./Column.html" title="&lt;TABLE&gt;" alt="" coords="139,208,221,256"/>
-<area shape="rect" id="node3_1" href="./Table.html" title="net.ljcomputing.sql.identifier.Table" alt="" coords="111,315,161,341"/>
-<area shape="rect" id="node3" href="./Table.html" title="&lt;TABLE&gt;" alt="" coords="100,304,172,352"/>
-<area shape="rect" id="node2_2" href="./AbstractIdentifier.html" title="net.ljcomputing.sql.identifier.AbstractIdentifier" alt="" coords="35,121,144,146"/>
-<area shape="rect" id="node2" href="./AbstractIdentifier.html" title="&lt;TABLE&gt;" alt="" coords="24,109,155,157"/>
-<area shape="rect" id="node4_3" href="./Identifier.html" title="net.ljcomputing.sql.identifier.Identifier" alt="" coords="49,11,129,53"/>
-<area shape="rect" id="node4" href="./Identifier.html" title="&lt;TABLE&gt;" alt="" coords="39,6,140,58"/>
-<area shape="rect" id="node5_4" href="./Alias.html" title="net.ljcomputing.sql.identifier.Alias" alt="" coords="240,113,320,154"/>
-<area shape="rect" id="node5" href="./Alias.html" title="&lt;TABLE&gt;" alt="" coords="229,107,331,159"/>
+<area shape="rect" id="node1_0" href="./AbstractIdentifier.html" title="net.ljcomputing.sql.identifier.AbstractIdentifier" alt="" coords="15,118,124,143"/>
+<area shape="rect" id="node1" href="./AbstractIdentifier.html" title="&lt;TABLE&gt;" alt="" coords="4,107,135,155"/>
+<area shape="rect" id="node2_1" href="./Identifier.html" title="net.ljcomputing.sql.identifier.Identifier" alt="" coords="29,11,109,53"/>
+<area shape="rect" id="node2" href="./Identifier.html" title="&lt;TABLE&gt;" alt="" coords="19,6,120,58"/>
+<area shape="rect" id="node3_2" href="./Alias.html" title="net.ljcomputing.sql.identifier.Alias" alt="" coords="155,11,235,53"/>
+<area shape="rect" id="node3" href="./Alias.html" title="&lt;TABLE&gt;" alt="" coords="144,6,245,58"/>
 </map>

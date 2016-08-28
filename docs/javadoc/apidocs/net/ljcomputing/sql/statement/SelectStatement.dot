@@ -9,41 +9,40 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// net.ljcomputing.sql.clause.Where
+	c907 [label=<<table title="net.ljcomputing.sql.clause.Where" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Where.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Where </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.clause </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../clause/Where.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Select
-	c610 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Select.html">
+	c908 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Select.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Select </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.clause </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../clause/Select.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.clause.Predicate
-	c613 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Predicate.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Predicate </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.clause </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../clause/Predicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.statement.Statement
-	c616 [label=<<table title="net.ljcomputing.sql.statement.Statement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Statement.html">
+	c915 [label=<<table title="net.ljcomputing.sql.statement.Statement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Statement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Statement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Statement.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.statement.SelectStatement
-	c617 [label=<<table title="net.ljcomputing.sql.statement.SelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SelectStatement.html">
+	c916 [label=<<table title="net.ljcomputing.sql.statement.SelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SelectStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SelectStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SelectStatement.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.statement.SelectStatement implements net.ljcomputing.sql.statement.Statement
-	c616:p -> c617:p [dir=back,arrowtail=empty,style=dashed];
+	c915:p -> c916:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.sql.statement.SelectStatement NAVASSOC net.ljcomputing.sql.clause.Select
-	c617:p -> c610:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sql.statement.SelectStatement NAVASSOC net.ljcomputing.sql.clause.Predicate
-	c617:p -> c613:p [taillabel="", label="", headlabel="*", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sql.statement.SelectStatement DEPEND net.ljcomputing.sql.clause.Predicate
-	c617:p -> c613:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c916:p -> c908:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sql.statement.SelectStatement NAVASSOC net.ljcomputing.sql.clause.Where
+	c916:p -> c907:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sql.statement.SelectStatement DEPEND net.ljcomputing.sql.clause.Where
+	c916:p -> c907:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

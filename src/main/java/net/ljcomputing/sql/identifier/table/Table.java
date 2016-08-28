@@ -14,8 +14,11 @@
    limitations under the License.
  */
 
-package net.ljcomputing.sql.identifier;
+package net.ljcomputing.sql.identifier.table;
 
+import net.ljcomputing.sql.identifier.AbstractIdentifier;
+import net.ljcomputing.sql.identifier.Alias;
+import net.ljcomputing.sql.identifier.Identifier;
 import net.ljcomputing.sql.keyword.Keywords;
 import net.ljcomputing.sql.literal.Literal;
 

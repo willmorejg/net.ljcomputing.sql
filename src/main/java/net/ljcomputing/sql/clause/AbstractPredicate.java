@@ -16,7 +16,7 @@
 
 package net.ljcomputing.sql.clause;
 
-import net.ljcomputing.sql.identifier.Column;
+import net.ljcomputing.sql.identifier.column.Column;
 import net.ljcomputing.sql.literal.Conjunction;
 import net.ljcomputing.sql.literal.Operand;
 

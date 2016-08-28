@@ -3,8 +3,8 @@
 <area shape="rect" id="node1" href="./AbstractClause.html" title="&lt;TABLE&gt;" alt="" coords="131,8,253,56"/>
 <area shape="rect" id="node3_1" href="./Update.html" title="net.ljcomputing.sql.clause.Update" alt="" coords="85,118,144,143"/>
 <area shape="rect" id="node3" href="./Update.html" title="&lt;TABLE&gt;" alt="" coords="75,107,155,155"/>
-<area shape="rect" id="node4_2" href="../identifier/Table.html" title="net.ljcomputing.sql.identifier.Table" alt="" coords="86,209,221,247"/>
-<area shape="rect" id="node4" href="../identifier/Table.html" title="&lt;TABLE&gt;" alt="" coords="75,203,231,253"/>
+<area shape="rect" id="node4_2" href="../identifier/table/Table.html" title="net.ljcomputing.sql.identifier.table.Table" alt="" coords="75,209,232,247"/>
+<area shape="rect" id="node4" href="../identifier/table/Table.html" title="&lt;TABLE&gt;" alt="" coords="64,203,243,253"/>
 <area shape="rect" id="node2_3" href="./Clause.html" title="net.ljcomputing.sql.clause.Clause" alt="" coords="16,11,96,53"/>
 <area shape="rect" id="node2" href="./Clause.html" title="&lt;TABLE&gt;" alt="" coords="5,6,107,58"/>
 </map>

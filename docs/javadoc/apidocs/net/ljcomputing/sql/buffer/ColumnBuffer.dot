@@ -10,38 +10,38 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.clause.Select
-	c370 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Select.html">
+	c560 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Select.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Select </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.clause </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../clause/Select.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.buffer.ColumnBuffer
-	c379 [label=<<table title="net.ljcomputing.sql.buffer.ColumnBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ColumnBuffer.html">
+	c570 [label=<<table title="net.ljcomputing.sql.buffer.ColumnBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ColumnBuffer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ColumnBuffer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ColumnBuffer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.buffer.SqlBuffer<T>
-	c380 [label=<<table title="net.ljcomputing.sql.buffer.SqlBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlBuffer.html">
+	c572 [label=<<table title="net.ljcomputing.sql.buffer.SqlBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlBuffer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SqlBuffer&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SqlBuffer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.buffer.AbstractSqlBuffer<T>
-	c381 [label=<<table title="net.ljcomputing.sql.buffer.AbstractSqlBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlBuffer.html">
+	c574 [label=<<table title="net.ljcomputing.sql.buffer.AbstractSqlBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlBuffer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSqlBuffer&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractSqlBuffer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	//net.ljcomputing.sql.buffer.ColumnBuffer extends net.ljcomputing.sql.buffer.AbstractSqlBuffer<net.ljcomputing.sql.identifier.Column>
-	c381:p -> c379:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.buffer.ColumnBuffer extends net.ljcomputing.sql.buffer.AbstractSqlBuffer<net.ljcomputing.sql.identifier.column.Column>
+	c574:p -> c570:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.buffer.ColumnBuffer implements net.ljcomputing.sql.buffer.SqlBuffer<T>
-	c380:p -> c379:p [dir=back,arrowtail=empty,style=dashed];
+	c572:p -> c570:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.buffer.AbstractSqlBuffer<T> implements net.ljcomputing.sql.buffer.SqlBuffer<T>
-	c380:p -> c381:p [dir=back,arrowtail=empty,style=dashed];
+	c572:p -> c574:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.sql.clause.Select NAVASSOC net.ljcomputing.sql.buffer.ColumnBuffer
-	c370:p -> c379:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c560:p -> c570:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

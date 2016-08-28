@@ -47,7 +47,6 @@ public abstract class AbstractSqlBuffer<T> implements SqlBuffer<T> {
   public AbstractSqlBuffer(@SuppressWarnings("unchecked") final T... elements) {
     this.elements = elements;
     capacity = this.elements.length;
-    position = 0;
   }
 
   /**

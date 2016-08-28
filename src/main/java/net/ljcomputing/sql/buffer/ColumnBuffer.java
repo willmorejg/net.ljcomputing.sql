@@ -16,7 +16,7 @@
 
 package net.ljcomputing.sql.buffer;
 
-import net.ljcomputing.sql.identifier.Column;
+import net.ljcomputing.sql.identifier.column.Column;
 
 /**
  * SQL COLUMN buffer.

@@ -32,8 +32,10 @@ import net.ljcomputing.sql.clause.Predicate;
 import net.ljcomputing.sql.clause.Select;
 import net.ljcomputing.sql.clause.Update;
 import net.ljcomputing.sql.clause.Where;
-import net.ljcomputing.sql.identifier.Column;
-import net.ljcomputing.sql.identifier.Table;
+import net.ljcomputing.sql.identifier.column.AllColumns;
+import net.ljcomputing.sql.identifier.column.Column;
+import net.ljcomputing.sql.identifier.column.DistinctColumn;
+import net.ljcomputing.sql.identifier.table.Table;
 import net.ljcomputing.sql.keyword.Keywords;
 import net.ljcomputing.sql.literal.Conjunction;
 import net.ljcomputing.sql.literal.Literal;
@@ -46,39 +48,42 @@ import net.ljcomputing.sql.statement.SelectStatement;
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Tester {
-  
+
   /** The SLF4J Logger. */
   private final static Logger LOGGER = LoggerFactory.getLogger(Tester.class);
 
   @Test
-  public void test1() {
+  @Ignore
+  public void test1Keywords() {
     for (final Keywords token : Keywords.values()) {
       LOGGER.debug("token: {} ", token);
     }
   }
 
   @Test
-  public void test2() {
+  @Ignore
+  public void test2Literals() {
     for (final Literal token : Literal.values()) {
       LOGGER.debug("token: {} ", token);
     }
   }
 
   @Test
-  public void test3() {
+  @Ignore
+  public void test3Operands() {
     for (final Operand token : Operand.values()) {
       LOGGER.debug("token: {} ", token);
     }
   }
-  
+
   @Test
-  public void test4() {
+  public void test4Clauses() {
     final Table table1 = new Table("alice", "a");
     final Column col1 = new Column(table1, "alpha", "alp");
 
     final Table table2 = new Table("bob", "b");
     final Column col2 = new Column(table2, "bravo", "bra");
-    
+
     final Select select = new Select(col1, col2);
     LOGGER.debug("select: {}", select);
 
@@ -96,9 +101,41 @@ public class Tester {
   }
 
   @Test
-  public void test5() {
-    final Table table1 = new Table("foo", "fo");
+  public void test5Buffer() {
+    final Table table1 = new Table("foo");//, "fo");
     final Column col1 = new Column(table1, "bar", "br");
+
+    final Table table2 = new Table("xray", "xa");
+    final Column col2 = new Column(table2, "baz", "bz");
+
+    final ColumnBuffer columnBuffer = new ColumnBuffer(col1);
+    columnBuffer.add(col2);
+
+    for (final Column column : columnBuffer) {
+      LOGGER.debug("column: ");
+      LOGGER.debug("  as      : {}", column.as());
+      LOGGER.debug("  aliased : {}", column.aliased());
+    }
+
+    //    // clear buffer
+    //    columnBuffer.clear();
+
+    Iterator<Column> columnIterator = columnBuffer.iterator();
+
+    while (columnIterator.hasNext()) {
+      final Column column = columnIterator.next();
+      LOGGER.debug("column: ");
+      LOGGER.debug("  as      : {}", column.as());
+      LOGGER.debug("  aliased : {}", column.aliased());
+    }
+    //    will throw a NoSuchElementException
+    //    LOGGER.debug("column: {}", columnIterator.next());
+  }
+
+  @Test
+  public void test6Statements() {
+    final Table table1 = new Table("foo", "fo");
+    final Column col1 = new DistinctColumn(table1, "bar", "br");
 
     final Table table2 = new Table("xray", "xa");
     final Column col2 = new Column(table2, "baz", "bz");
@@ -108,45 +145,19 @@ public class Tester {
     final SelectStatement nestedSelect = new SelectStatement(col2);
     final StringBuffer nestedBuf = new StringBuffer(Literal.LeftParen.toString())
         .append(nestedSelect).append(Literal.RightParen.toString());
-    
+
     final Predicate predicate2 = new EqualsPredicate(col2, nestedBuf.toString());
-//    final Predicate predicate2 = new EqualsPredicate(col2, Literal.Question);
-
-    final SelectStatement selectStatement = new SelectStatement(col1, col2);
-    selectStatement.addPredicate(predicate1);
-    selectStatement.addPredicate(predicate2);
-    LOGGER.debug("selectStatement: {}", selectStatement);
-  }
-
-  @Test
-  public void test6() {
-    final Table table1 = new Table("foo");//, "fo");
-    final Column col1 = new Column(table1, "bar", "br");
-
-    final Table table2 = new Table("xray", "xa");
-    final Column col2 = new Column(table2, "baz", "bz");
+    //    final Predicate predicate2 = new EqualsPredicate(col2, Literal.Question);
     
-    final ColumnBuffer columnBuffer = new ColumnBuffer(col1);
-    columnBuffer.add(col2);
-    
-    for(final Column column : columnBuffer) {
-      LOGGER.debug("column: ");
-      LOGGER.debug("  as      : {}", column.as());
-      LOGGER.debug("  aliased : {}", column.aliased());
-    }
+    final Where whereClause = new Where(predicate1, predicate2);
 
-//    // clear buffer
-//    columnBuffer.clear();
-    
-    Iterator<Column> columnIterator = columnBuffer.iterator();
+    final SelectStatement selectStatement1 = new SelectStatement(col1, col2);
+    selectStatement1.where(whereClause);
+    LOGGER.debug("selectStatement1: {}", selectStatement1);
 
-    while(columnIterator.hasNext()) {
-      final Column column = columnIterator.next();
-      LOGGER.debug("column: ");
-      LOGGER.debug("  as      : {}", column.as());
-      LOGGER.debug("  aliased : {}", column.aliased());
-    }
-//    will throw a NoSuchElementException
-//    LOGGER.debug("column: {}", columnIterator.next());
+    final Column col3 = new AllColumns(table1);
+    final SelectStatement selectStatement2 = new SelectStatement(col3);
+    selectStatement2.where(whereClause);
+    LOGGER.debug("selectStatement2: {}", selectStatement2);
   }
 }

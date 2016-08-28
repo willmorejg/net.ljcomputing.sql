@@ -14,8 +14,12 @@
    limitations under the License.
  */
 
-package net.ljcomputing.sql.identifier;
+package net.ljcomputing.sql.identifier.column;
 
+import net.ljcomputing.sql.identifier.AbstractIdentifier;
+import net.ljcomputing.sql.identifier.Alias;
+import net.ljcomputing.sql.identifier.Identifier;
+import net.ljcomputing.sql.identifier.table.Table;
 import net.ljcomputing.sql.keyword.Keywords;
 import net.ljcomputing.sql.literal.Literal;
 
@@ -28,16 +32,16 @@ import net.ljcomputing.sql.literal.Literal;
 public class Column extends AbstractIdentifier implements Identifier, Alias {
 
   /** The table associated with the given column. */
-  private final transient Table table;
+  protected final transient Table table;
 
   /** The name of the table associated with the given column. */
-  private final transient String tableName;
+  protected final transient String tableName;
 
   /** The alias of the table associated with the given column. */
-  private final transient String tableAlias;
+  protected final transient String tableAlias;
 
   /** The alias. */
-  private transient String alias;
+  protected transient String alias;
 
   /**
    * Instantiates a new column.
@@ -85,7 +89,7 @@ public class Column extends AbstractIdentifier implements Identifier, Alias {
   /**
    * @see net.ljcomputing.sql.identifier.Alias#as()
    */
-  public final String as() {
+  public String as() {
     final StringBuilder buf = new StringBuilder();
     final boolean hasTableName = tableName != null && !"".equals(tableName.trim());
     final boolean hasTableAlias = tableAlias != null && !"".equals(tableAlias.trim());
@@ -113,7 +117,7 @@ public class Column extends AbstractIdentifier implements Identifier, Alias {
    *
    * @return the string
    */
-  public final String aliased() {
+  public String aliased() {
     final StringBuilder buf = new StringBuilder();
 
     if (alias != null && !"".equals(alias.trim())) {

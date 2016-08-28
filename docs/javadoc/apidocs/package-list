@@ -1,6 +1,8 @@
 net.ljcomputing.sql.buffer
 net.ljcomputing.sql.clause
 net.ljcomputing.sql.identifier
+net.ljcomputing.sql.identifier.column
+net.ljcomputing.sql.identifier.table
 net.ljcomputing.sql.keyword
 net.ljcomputing.sql.literal
 net.ljcomputing.sql.statement

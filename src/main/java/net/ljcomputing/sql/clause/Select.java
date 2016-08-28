@@ -16,13 +16,12 @@
 
 package net.ljcomputing.sql.clause;
 
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Set;
 
 import net.ljcomputing.sql.buffer.ColumnBuffer;
-import net.ljcomputing.sql.identifier.Column;
-import net.ljcomputing.sql.identifier.Table;
+import net.ljcomputing.sql.buffer.TableBuffer;
+import net.ljcomputing.sql.identifier.column.Column;
+import net.ljcomputing.sql.identifier.table.Table;
 import net.ljcomputing.sql.keyword.Keywords;
 import net.ljcomputing.sql.literal.Literal;
 
@@ -37,6 +36,9 @@ public class Select extends AbstractClause implements Clause {
   /** The columns that are SELECTed. */
   private final transient ColumnBuffer columns;
 
+  /** The tables that are SELECTed. */
+  private final transient TableBuffer tables;
+
   /**
    * Instantiates a new select clause.
    *
@@ -45,6 +47,7 @@ public class Select extends AbstractClause implements Clause {
   public Select(final Column... columns) {
     super();
     this.columns = new ColumnBuffer(columns);
+    this.tables = new TableBuffer(columns);
   }
 
   /**
@@ -66,23 +69,17 @@ public class Select extends AbstractClause implements Clause {
    * @param buf the buf
    */
   private final void addColumns(final StringBuffer buf) {
-    if (columns.isEmpty()) {
-      buf.append(Literal.Asterisk);
-    }
+    final Iterator<Column> iterator = columns.iterator();
 
-    if (!columns.isEmpty()) {
-      final Iterator<Column> iterator = columns.iterator();
+    while (iterator.hasNext()) {
+      final Column column = iterator.next();
+      addColumn(buf, column);
 
-      while (iterator.hasNext()) {
-        final Column column = iterator.next();
-        addColumn(buf, column);
-
-        if (iterator.hasNext()) {
-          buf.append(Literal.Comma);
-        }
-
-        buf.append(Literal.Space);
+      if (iterator.hasNext()) {
+        buf.append(Literal.Comma);
       }
+
+      buf.append(Literal.Space);
     }
   }
 
@@ -92,8 +89,8 @@ public class Select extends AbstractClause implements Clause {
    * @param buf the buf
    */
   private final void addTables(final StringBuffer buf) {
-    final Set<Table> tables = getSelectedTables();
     final Iterator<Table> iterator = tables.iterator();
+
     while (iterator.hasNext()) {
       final Table table = iterator.next();
       addTable(buf, table);
@@ -102,21 +99,5 @@ public class Select extends AbstractClause implements Clause {
         buf.append(Literal.Comma).append(Literal.Space);
       }
     }
-  }
-
-  /**
-   * Gets the selected tables.
-   *
-   * @return the selected tables
-   */
-  private final Set<Table> getSelectedTables() {
-    final Set<Table> tables = new HashSet<Table>();
-
-    for (final Column column : columns) {
-      final Table table = column.getTable();
-      tables.add(table);
-    }
-
-    return tables;
   }
 }

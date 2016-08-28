@@ -10,45 +10,54 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.clause.AbstractClause
-	c584 [label=<<table title="net.ljcomputing.sql.clause.AbstractClause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractClause.html">
+	c877 [label=<<table title="net.ljcomputing.sql.clause.AbstractClause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractClause.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractClause </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractClause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Select
-	c586 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Select.html">
+	c879 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Select.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Select </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Select.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Clause
-	c587 [label=<<table title="net.ljcomputing.sql.clause.Clause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Clause.html">
+	c880 [label=<<table title="net.ljcomputing.sql.clause.Clause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Clause.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Clause </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Clause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.statement.SelectStatement
-	c593 [label=<<table title="net.ljcomputing.sql.statement.SelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../statement/SelectStatement.html">
+	c887 [label=<<table title="net.ljcomputing.sql.statement.SelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../statement/SelectStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SelectStatement </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.statement </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../statement/SelectStatement.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.buffer.ColumnBuffer
-	c595 [label=<<table title="net.ljcomputing.sql.buffer.ColumnBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../buffer/ColumnBuffer.html">
+	c889 [label=<<table title="net.ljcomputing.sql.buffer.ColumnBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../buffer/ColumnBuffer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ColumnBuffer </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.buffer </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../buffer/ColumnBuffer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.buffer.TableBuffer
+	c890 [label=<<table title="net.ljcomputing.sql.buffer.TableBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../buffer/TableBuffer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TableBuffer </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.buffer </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../buffer/TableBuffer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.clause.Select extends net.ljcomputing.sql.clause.AbstractClause
-	c584:p -> c586:p [dir=back,arrowtail=empty];
+	c877:p -> c879:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.clause.Select implements net.ljcomputing.sql.clause.Clause
-	c587:p -> c586:p [dir=back,arrowtail=empty,style=dashed];
+	c880:p -> c879:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.sql.clause.Select NAVASSOC net.ljcomputing.sql.buffer.ColumnBuffer
-	c586:p -> c595:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c879:p -> c889:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sql.clause.Select NAVASSOC net.ljcomputing.sql.buffer.TableBuffer
+	c879:p -> c890:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.statement.SelectStatement NAVASSOC net.ljcomputing.sql.clause.Select
-	c593:p -> c586:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c887:p -> c879:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

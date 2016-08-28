@@ -47,33 +47,49 @@ public interface SqlBuffer<T> extends Iterator<T>, Iterable<T> {
 
   /**
    * Returns the number of elements in implementing class.
+   *
+   * @return the int
    */
   int size();
 
   /**
    * Returns true if implemented class contains no elements.
+   *
+   * @return true, if is empty
    */
   boolean isEmpty();
 
   /**
    * Returns true if the implemented class contains the specified element.
+   *
+   * @param obj the obj
+   * @return true, if successful
    */
   boolean contains(T obj);
 
   /**
    * Add the given element to the implementing class.
+   *
+   * @param element the element
+   * @return true, if successful
    */
   boolean add(T element);
 
   /**
    * Remove the given element from the array of elements 
    * within the implementing class.
+   *
+   * @param obj the obj
+   * @return true, if successful
    */
   boolean remove(T obj);
 
   /**
    * Adds all of the elements in the specified collection to 
    * this collection.
+   *
+   * @param collection the collection
+   * @return true, if successful
    */
   boolean addAll(Collection<? extends T> collection);
 

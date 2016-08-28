@@ -16,13 +16,9 @@
 
 package net.ljcomputing.sql.statement;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import net.ljcomputing.sql.clause.Predicate;
 import net.ljcomputing.sql.clause.Select;
 import net.ljcomputing.sql.clause.Where;
-import net.ljcomputing.sql.identifier.Column;
+import net.ljcomputing.sql.identifier.column.Column;
 
 /**
  * SQL SELECT statement implementation.
@@ -31,44 +27,42 @@ import net.ljcomputing.sql.identifier.Column;
  *
  */
 public class SelectStatement implements Statement {
-  
+
   /** The select clause. */
   private final transient Select select;
-  
+
   /** The predicates clauses. */
-  private final transient Set<Predicate> predicates = new HashSet<Predicate>();
-  
+  private transient Where whereClause;
+
   /**
    * Instantiates a new select statement.
    *
    * @param columns the columns
    */
-  public SelectStatement(final Column ... columns) {
+  public SelectStatement(final Column... columns) {
     select = new Select(columns);
   }
-  
+
   /**
-   * Adds a predicate. 
-   * NOTE: the conjunction is IGNORED for the LAST predicate added.
+   * Add WHERE clause to SELECT statement.
    *
-   * @param predicate the predicate
+   * @param whereClause the where clause
    */
-  public void addPredicate(final Predicate predicate) {
-    predicates.add(predicate);
+  public void where(final Where whereClause) {
+    this.whereClause = whereClause;
   }
-  
+
   /**
    * @see java.lang.Object#toString()
    */
   @Override
   public String toString() {
     final StringBuffer buf = new StringBuffer(select.toString());
-    
-    if (!predicates.isEmpty()) {
-      final Where where = new Where(predicates.toArray(new Predicate[predicates.size()]));
-      buf.append(where.toString());
+
+    if (whereClause != null) {
+      buf.append(whereClause.toString());
     }
-    
+
     return buf.toString();
   }
 }

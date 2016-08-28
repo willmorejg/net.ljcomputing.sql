@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../clause/AbstractClause.html" title="net.ljcomputing.sql.clause.AbstractClause" alt="" coords="195,134,322,173"/>
+<area shape="rect" id="node1" href="../../clause/AbstractClause.html" title="&lt;TABLE&gt;" alt="" coords="185,129,333,178"/>
+<area shape="rect" id="node2_1" href="../../clause/Delete.html" title="net.ljcomputing.sql.clause.Delete" alt="" coords="15,241,142,279"/>
+<area shape="rect" id="node2" href="../../clause/Delete.html" title="&lt;TABLE&gt;" alt="" coords="5,235,153,285"/>
+<area shape="rect" id="node3_2" href="../../clause/Update.html" title="net.ljcomputing.sql.clause.Update" alt="" coords="187,241,314,279"/>
+<area shape="rect" id="node3" href="../../clause/Update.html" title="&lt;TABLE&gt;" alt="" coords="177,235,325,285"/>
+<area shape="rect" id="node4_3" href="./Table.html" title="net.ljcomputing.sql.identifier.table.Table" alt="" coords="470,345,519,370"/>
+<area shape="rect" id="node4" href="./Table.html" title="&lt;TABLE&gt;" alt="" coords="459,333,531,381"/>
+<area shape="rect" id="node8_4" href="../column/Column.html" title="net.ljcomputing.sql.identifier.column.Column" alt="" coords="411,241,579,279"/>
+<area shape="rect" id="node8" href="../column/Column.html" title="&lt;TABLE&gt;" alt="" coords="400,235,589,285"/>
+<area shape="rect" id="node5_5" href="../AbstractIdentifier.html" title="net.ljcomputing.sql.identifier.AbstractIdentifier" alt="" coords="429,134,563,173"/>
+<area shape="rect" id="node5" href="../AbstractIdentifier.html" title="&lt;TABLE&gt;" alt="" coords="418,129,574,178"/>
+<area shape="rect" id="node6_6" href="../Identifier.html" title="net.ljcomputing.sql.identifier.Identifier" alt="" coords="429,11,563,66"/>
+<area shape="rect" id="node6" href="../Identifier.html" title="&lt;TABLE&gt;" alt="" coords="418,6,574,71"/>
+<area shape="rect" id="node7_7" href="../Alias.html" title="net.ljcomputing.sql.identifier.Alias" alt="" coords="609,126,743,181"/>
+<area shape="rect" id="node7" href="../Alias.html" title="&lt;TABLE&gt;" alt="" coords="598,121,754,186"/>
+</map>

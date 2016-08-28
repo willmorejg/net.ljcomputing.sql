@@ -10,33 +10,33 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.clause.AbstractPredicate
-	c247 [label=<<table title="net.ljcomputing.sql.clause.AbstractPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractPredicate.html">
+	c383 [label=<<table title="net.ljcomputing.sql.clause.AbstractPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractPredicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractPredicate </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractPredicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.EqualsPredicate
-	c252 [label=<<table title="net.ljcomputing.sql.clause.EqualsPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EqualsPredicate.html">
+	c388 [label=<<table title="net.ljcomputing.sql.clause.EqualsPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EqualsPredicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EqualsPredicate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EqualsPredicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Predicate
-	c253 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Predicate.html">
+	c389 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Predicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Predicate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Predicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.identifier.Column
-	c262 [label=<<table title="net.ljcomputing.sql.identifier.Column" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/Column.html">
+	// net.ljcomputing.sql.identifier.column.Column
+	c406 [label=<<table title="net.ljcomputing.sql.identifier.column.Column" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/column/Column.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Column </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier </font></td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.column </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../identifier/Column.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+		</table>>, URL="../identifier/column/Column.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.literal.Conjunction
-	c268 [label=<<table title="net.ljcomputing.sql.literal.Conjunction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../literal/Conjunction.html">
+	c409 [label=<<table title="net.ljcomputing.sql.literal.Conjunction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../literal/Conjunction.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> Conjunction </td></tr>
@@ -44,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../literal/Conjunction.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.literal.Operand
-	c269 [label=<<table title="net.ljcomputing.sql.literal.Operand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../literal/Operand.html">
+	c410 [label=<<table title="net.ljcomputing.sql.literal.Operand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../literal/Operand.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> Operand </td></tr>
@@ -52,20 +52,20 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../literal/Operand.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.clause.AbstractPredicate implements net.ljcomputing.sql.clause.Predicate
-	c253:p -> c247:p [dir=back,arrowtail=empty,style=dashed];
+	c389:p -> c383:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.clause.EqualsPredicate extends net.ljcomputing.sql.clause.AbstractPredicate
-	c247:p -> c252:p [dir=back,arrowtail=empty];
+	c383:p -> c388:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.clause.EqualsPredicate implements net.ljcomputing.sql.clause.Predicate
-	c253:p -> c252:p [dir=back,arrowtail=empty,style=dashed];
-	// net.ljcomputing.sql.clause.AbstractPredicate NAVASSOC net.ljcomputing.sql.identifier.Column
-	c247:p -> c262:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c389:p -> c388:p [dir=back,arrowtail=empty,style=dashed];
+	// net.ljcomputing.sql.clause.AbstractPredicate NAVASSOC net.ljcomputing.sql.identifier.column.Column
+	c383:p -> c406:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.clause.AbstractPredicate NAVASSOC net.ljcomputing.sql.literal.Operand
-	c247:p -> c269:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c383:p -> c410:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.clause.AbstractPredicate NAVASSOC net.ljcomputing.sql.literal.Conjunction
-	c247:p -> c268:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c383:p -> c409:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.clause.AbstractPredicate DEPEND net.ljcomputing.sql.literal.Conjunction
-	c247:p -> c268:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c383:p -> c409:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.clause.Predicate DEPEND net.ljcomputing.sql.literal.Conjunction
-	c253:p -> c268:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c389:p -> c409:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

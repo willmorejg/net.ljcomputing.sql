@@ -16,8 +16,8 @@
 
 package net.ljcomputing.sql.clause;
 
-import net.ljcomputing.sql.identifier.Column;
-import net.ljcomputing.sql.identifier.Table;
+import net.ljcomputing.sql.identifier.column.Column;
+import net.ljcomputing.sql.identifier.table.Table;
 
 /**
  * Abstract implementation of a SQL clause.
