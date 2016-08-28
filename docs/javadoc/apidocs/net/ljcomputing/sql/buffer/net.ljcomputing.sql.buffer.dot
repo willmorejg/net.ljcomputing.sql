@@ -10,29 +10,29 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.buffer.ColumnBuffer
-	c123 [label=<<table title="net.ljcomputing.sql.buffer.ColumnBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ColumnBuffer.html">
+	c84 [label=<<table title="net.ljcomputing.sql.buffer.ColumnBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ColumnBuffer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ColumnBuffer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ColumnBuffer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.buffer.SqlBuffer<T>
-	c124 [label=<<table title="net.ljcomputing.sql.buffer.SqlBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlBuffer.html">
+	c85 [label=<<table title="net.ljcomputing.sql.buffer.SqlBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlBuffer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SqlBuffer&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SqlBuffer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.buffer.AbstractSqlBuffer<T>
-	c125 [label=<<table title="net.ljcomputing.sql.buffer.AbstractSqlBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlBuffer.html">
+	c86 [label=<<table title="net.ljcomputing.sql.buffer.AbstractSqlBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlBuffer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSqlBuffer&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractSqlBuffer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.buffer.ColumnBuffer extends net.ljcomputing.sql.buffer.AbstractSqlBuffer<net.ljcomputing.sql.identifier.Column>
-	c125:p -> c123:p [dir=back,arrowtail=empty];
+	c86:p -> c84:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.buffer.ColumnBuffer implements net.ljcomputing.sql.buffer.SqlBuffer<T>
-	c124:p -> c123:p [dir=back,arrowtail=empty,style=dashed];
+	c85:p -> c84:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.buffer.AbstractSqlBuffer<T> implements net.ljcomputing.sql.buffer.SqlBuffer<T>
-	c124:p -> c125:p [dir=back,arrowtail=empty,style=dashed];
+	c85:p -> c86:p [dir=back,arrowtail=empty,style=dashed];
 }
 

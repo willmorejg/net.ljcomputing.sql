@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.statement.Statement
-	c853 [label=<<table title="net.ljcomputing.sql.statement.Statement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Statement.html">
+	c664 [label=<<table title="net.ljcomputing.sql.statement.Statement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Statement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Statement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Statement.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.statement.SelectStatement
-	c854 [label=<<table title="net.ljcomputing.sql.statement.SelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SelectStatement.html">
+	c665 [label=<<table title="net.ljcomputing.sql.statement.SelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SelectStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SelectStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SelectStatement.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.statement.SelectStatement implements net.ljcomputing.sql.statement.Statement
-	c853:p -> c854:p [dir=back,arrowtail=empty,style=dashed];
+	c664:p -> c665:p [dir=back,arrowtail=empty,style=dashed];
 }
 

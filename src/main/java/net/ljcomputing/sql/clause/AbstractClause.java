@@ -34,7 +34,7 @@ public abstract class AbstractClause {
    * @param buf the buf
    * @param table the table
    */
-  public void addTable(final StringBuffer buf, final Table table) {
+  public final void addTable(final StringBuffer buf, final Table table) {
     buf.append(table.as());
   }
 
@@ -44,7 +44,7 @@ public abstract class AbstractClause {
    * @param buf the buf
    * @param column the column
    */
-  public void addColumn(final StringBuffer buf, final Column column) {
+  public final void addColumn(final StringBuffer buf, final Column column) {
     buf.append(column.as());
   }
 
@@ -54,7 +54,7 @@ public abstract class AbstractClause {
    * @param buf the buf
    * @param predicate the predicate
    */
-  public void addPredicate(final StringBuffer buf, final Predicate predicate) {
+  public final void addPredicate(final StringBuffer buf, final Predicate predicate) {
     buf.append(predicate.toString());
   }
 }

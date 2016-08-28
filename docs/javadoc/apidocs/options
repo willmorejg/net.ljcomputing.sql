@@ -1,5 +1,5 @@
 -classpath
-'/home/jim/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/jim/.m2/repository/junit/junit/4.12/junit-4.12.jar'
+'/home/jim/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/jim/.m2/repository/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar:/home/jim/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/home/jim/.m2/repository/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.jar:/home/jim/.m2/repository/junit/junit/4.12/junit-4.12.jar'
 -doclet
 'org.umlgraph.doclet.UmlGraphDoc'
 -docletpath
@@ -25,6 +25,8 @@
 'UTF-8'
 -doctitle
 'LJ Computing - Bobby - SQL builder framework 1.0.0-SNAPSHOT API'
+-link
+'http://www.slf4j.org/apidocs'
 -linkoffline
 'http://docs.oracle.com/javase/8/docs/api' '/home/jim/git/net.ljcomputing.sql.git/net.ljcomputing.sql/target/javadoc-bundle-options'
 -linksource

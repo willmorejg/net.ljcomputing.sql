@@ -16,7 +16,6 @@
 
 package net.ljcomputing.sql.clause;
 
-import net.ljcomputing.sql.expression.Expression;
 import net.ljcomputing.sql.identifier.Column;
 import net.ljcomputing.sql.literal.Conjunction;
 import net.ljcomputing.sql.literal.Operand;
@@ -29,49 +28,53 @@ import net.ljcomputing.sql.literal.Operand;
  */
 public abstract class AbstractPredicate implements Predicate {
 
-  /** The expression. */
-  private final transient Expression expression;
+  /** The column. */
+  private final transient Column column;
+
+  /** The operand. */
+  private final transient Operand operand;
 
   /** The value. */
   private final transient Object value;
 
   /** The conjunction. */
-  private transient Conjunction conjunction;
+  private final transient Conjunction conjunction;
 
   /**
    * Instantiates a new predicate.
    *
-   * @param expression the expression
+   * @param column the column
+   * @param operand the operand
    * @param value the value
+   * @param conjunction the conjunction
    */
-  public AbstractPredicate(final Expression expression, final Object value) {
-    this.expression = expression;
+  public AbstractPredicate(final Column column, final Operand operand, final Object value,
+      final Conjunction conjunction) {
+    this.column = column;
+    this.operand = operand;
     this.value = value;
+    this.conjunction = conjunction;
   }
 
   /**
    * Instantiates a new abstract predicate.
    *
-   * @param expression the expression
+   * @param column the column
+   * @param operand the operand
    * @param value the value
-   * @param conjunction the conjunction
    */
-  public AbstractPredicate(final Expression expression, final Object value,
-      final Conjunction conjunction) {
-    this(expression, value);
-    this.conjunction = conjunction;
+  public AbstractPredicate(final Column column, final Operand operand, final Object value) {
+    this(column, operand, value, null);
   }
 
   /**
    * @see java.lang.Object#toString()
    */
   @Override
-  public final String toString() {
+  public String toString() {
     final StringBuffer buf = new StringBuffer();
-    final Column column = expression.getColumn();
     final String columnAlias = column.aliased();
-    final Operand operand = expression.getOperand();
-    
+
     buf.append(columnAlias).append(operand);
 
     if (value != null) {
@@ -87,7 +90,7 @@ public abstract class AbstractPredicate implements Predicate {
    * @return the conjunction
    */
   @Override
-  public Conjunction getConjunction() {
+  public final Conjunction getConjunction() {
     return conjunction;
   }
 
@@ -96,7 +99,8 @@ public abstract class AbstractPredicate implements Predicate {
    *
    * @return true, if successful
    */
-  public boolean hasConjunction() {
+  @Override
+  public final boolean hasConjunction() {
     return conjunction != null;
   }
 }

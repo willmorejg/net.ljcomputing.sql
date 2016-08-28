@@ -16,9 +16,9 @@
 
 package net.ljcomputing.sql.clause;
 
-import net.ljcomputing.sql.expression.EqualsExpression;
 import net.ljcomputing.sql.identifier.Column;
 import net.ljcomputing.sql.literal.Conjunction;
+import net.ljcomputing.sql.literal.Operand;
 
 /**
  * Equals predicate implementation.
@@ -32,9 +32,10 @@ public class EqualsPredicate extends AbstractPredicate implements Predicate {
    * Instantiates a new equals predicate.
    *
    * @param column the column
+   * @param value the value
    */
   public EqualsPredicate(final Column column, final Object value) {
-    super(new EqualsExpression(column), value);
+    super(column, Operand.Equals, value);
   }
 
   /**
@@ -45,6 +46,6 @@ public class EqualsPredicate extends AbstractPredicate implements Predicate {
    * @param conjunction the conjunction
    */
   public EqualsPredicate(final Column column, final Object value, final Conjunction conjunction) {
-    super(new EqualsExpression(column), value, conjunction);
+    super(column, Operand.Equals, value, conjunction);
   }
 }
