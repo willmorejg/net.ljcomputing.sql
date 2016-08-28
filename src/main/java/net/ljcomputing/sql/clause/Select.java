@@ -20,6 +20,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import net.ljcomputing.sql.buffer.ColumnBuffer;
 import net.ljcomputing.sql.identifier.Column;
 import net.ljcomputing.sql.identifier.Table;
 import net.ljcomputing.sql.keyword.Keywords;
@@ -34,7 +35,7 @@ import net.ljcomputing.sql.literal.Literal;
 public class Select extends AbstractClause implements Clause {
 
   /** The columns that are SELECTed. */
-  private final transient Set<Column> columns = new HashSet<Column>();
+  private final transient ColumnBuffer columns;
 
   /**
    * Instantiates a new select clause.
@@ -43,10 +44,7 @@ public class Select extends AbstractClause implements Clause {
    */
   public Select(final Column... columns) {
     super();
-    
-    for (final Column column : columns) {
-      this.columns.add(column);
-    }
+    this.columns = new ColumnBuffer(columns);
   }
 
   /**

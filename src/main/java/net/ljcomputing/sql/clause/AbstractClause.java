@@ -18,8 +18,6 @@ package net.ljcomputing.sql.clause;
 
 import net.ljcomputing.sql.identifier.Column;
 import net.ljcomputing.sql.identifier.Table;
-import net.ljcomputing.sql.keyword.Keywords;
-import net.ljcomputing.sql.literal.Literal;
 
 /**
  * Abstract implementation of a SQL clause.
@@ -27,7 +25,7 @@ import net.ljcomputing.sql.literal.Literal;
  * @author James G. Willmore
  *
  */
-@SuppressWarnings({"PMD.AbstractClassWithoutAbstractMethod", "PMD.AtLeastOneConstructor"})
+@SuppressWarnings({ "PMD.AbstractClassWithoutAbstractMethod", "PMD.AtLeastOneConstructor" })
 public abstract class AbstractClause {
 
   /**
@@ -37,15 +35,7 @@ public abstract class AbstractClause {
    * @param table the table
    */
   public void addTable(final StringBuffer buf, final Table table) {
-    final String name = table.getName();
-    final String alias = table.getAlias();
-
-    buf.append(name);
-
-    if (alias != null) {
-      buf.append(Literal.Space).append(alias);
-    }
-
+    buf.append(table.as());
   }
 
   /**
@@ -55,20 +45,7 @@ public abstract class AbstractClause {
    * @param column the column
    */
   public void addColumn(final StringBuffer buf, final Column column) {
-    final Table table = column.getTable();
-    final String tableAlias = table.getAlias();
-    final String name = column.getName();
-    final String alias = column.getAlias();
-
-    if (tableAlias != null) {
-      buf.append(tableAlias).append(Literal.Period);
-    }
-
-    buf.append(name);
-
-    if (alias != null) {
-      buf.append(Literal.Space).append(Keywords.As).append(Literal.Space).append(alias);
-    }
+    buf.append(column.as());
   }
 
   /**

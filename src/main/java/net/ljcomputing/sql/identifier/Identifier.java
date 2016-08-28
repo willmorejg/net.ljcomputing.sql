@@ -30,11 +30,4 @@ public interface Identifier {
    * @return the name
    */
   String getName();
-
-  /**
-   * Sets the name of the identifier.
-   *
-   * @param name the new name
-   */
-  void setName(String name);
 }

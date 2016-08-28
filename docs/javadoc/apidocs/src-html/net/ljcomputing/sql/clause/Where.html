@@ -35,7 +35,7 @@
 <span class="sourceLineNo">027</span> *<a name="line.27"></a>
 <span class="sourceLineNo">028</span> */<a name="line.28"></a>
 <span class="sourceLineNo">029</span>public class Where extends AbstractClause implements Clause {<a name="line.29"></a>
-<span class="sourceLineNo">030</span>  <a name="line.30"></a>
+<span class="sourceLineNo">030</span><a name="line.30"></a>
 <span class="sourceLineNo">031</span>  /** The predicates. */<a name="line.31"></a>
 <span class="sourceLineNo">032</span>  private final transient Predicate[] predicates;<a name="line.32"></a>
 <span class="sourceLineNo">033</span><a name="line.33"></a>
@@ -44,7 +44,7 @@
 <span class="sourceLineNo">036</span>   *<a name="line.36"></a>
 <span class="sourceLineNo">037</span>   * @param predicates the predicates<a name="line.37"></a>
 <span class="sourceLineNo">038</span>   */<a name="line.38"></a>
-<span class="sourceLineNo">039</span>  public Where(final Predicate ... predicates) {<a name="line.39"></a>
+<span class="sourceLineNo">039</span>  public Where(final Predicate... predicates) {<a name="line.39"></a>
 <span class="sourceLineNo">040</span>    super();<a name="line.40"></a>
 <span class="sourceLineNo">041</span>    this.predicates = predicates;<a name="line.41"></a>
 <span class="sourceLineNo">042</span>  }<a name="line.42"></a>
@@ -65,13 +65,13 @@
 <span class="sourceLineNo">057</span>      if (p != predicates.length) {<a name="line.57"></a>
 <span class="sourceLineNo">058</span>        //the predicate counter is incremented, <a name="line.58"></a>
 <span class="sourceLineNo">059</span>        //but we are still looking at the most current predicate in the loop<a name="line.59"></a>
-<span class="sourceLineNo">060</span>        if(predicate.hasConjunction()) {<a name="line.60"></a>
+<span class="sourceLineNo">060</span>        if (predicate.hasConjunction()) {<a name="line.60"></a>
 <span class="sourceLineNo">061</span>          final Conjunction conjunction = predicate.getConjunction();<a name="line.61"></a>
 <span class="sourceLineNo">062</span>          buf.append(Literal.Space).append(conjunction.toString());<a name="line.62"></a>
 <span class="sourceLineNo">063</span>        } else {<a name="line.63"></a>
 <span class="sourceLineNo">064</span>          buf.append(Literal.Space).append(Conjunction.And);<a name="line.64"></a>
 <span class="sourceLineNo">065</span>        }<a name="line.65"></a>
-<span class="sourceLineNo">066</span>        <a name="line.66"></a>
+<span class="sourceLineNo">066</span><a name="line.66"></a>
 <span class="sourceLineNo">067</span>        buf.append(Literal.Space);<a name="line.67"></a>
 <span class="sourceLineNo">068</span>      }<a name="line.68"></a>
 <span class="sourceLineNo">069</span>    }<a name="line.69"></a>

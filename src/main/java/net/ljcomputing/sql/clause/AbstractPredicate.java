@@ -30,13 +30,13 @@ import net.ljcomputing.sql.literal.Operand;
  *
  */
 public abstract class AbstractPredicate implements Predicate {
-  
+
   /** The expression. */
   private final transient Expression expression;
-  
+
   /** The value. */
   private final transient Object value;
-  
+
   /** The conjunction. */
   private transient Conjunction conjunction;
 
@@ -58,11 +58,12 @@ public abstract class AbstractPredicate implements Predicate {
    * @param value the value
    * @param conjunction the conjunction
    */
-  public AbstractPredicate(final Expression expression, final Object value, final Conjunction conjunction) {
+  public AbstractPredicate(final Expression expression, final Object value,
+      final Conjunction conjunction) {
     this(expression, value);
     this.conjunction = conjunction;
   }
-  
+
   /**
    * @see java.lang.Object#toString()
    */
@@ -74,21 +75,20 @@ public abstract class AbstractPredicate implements Predicate {
     final Table table = column.getTable();
     final String columnAlias = table.getAlias();
     final Operand operand = expression.getOperand();
-    String valueStr = null;
-
-    if (value != null) {
-      valueStr = value.toString();
-    }
 
     if (columnAlias != null) {
       buf.append(columnAlias).append(Literal.Period);
     }
-    
-    buf.append(columnName).append(operand.toString()).append(valueStr);
-    
+
+    buf.append(columnName).append(operand.toString());
+
+    if (value != null) {
+      buf.append(value.toString());
+    }
+
     return buf.toString();
   }
-  
+
   /**
    * Gets the conjunction.
    *
@@ -98,7 +98,7 @@ public abstract class AbstractPredicate implements Predicate {
   public Conjunction getConjunction() {
     return conjunction;
   }
-  
+
   /**
    * Checks for a conjunction.
    *

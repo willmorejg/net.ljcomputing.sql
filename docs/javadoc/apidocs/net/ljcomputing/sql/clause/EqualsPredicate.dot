@@ -10,29 +10,29 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.clause.AbstractPredicate
-	c436 [label=<<table title="net.ljcomputing.sql.clause.AbstractPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractPredicate.html">
+	c574 [label=<<table title="net.ljcomputing.sql.clause.AbstractPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractPredicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractPredicate </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractPredicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.EqualsPredicate
-	c441 [label=<<table title="net.ljcomputing.sql.clause.EqualsPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EqualsPredicate.html">
+	c579 [label=<<table title="net.ljcomputing.sql.clause.EqualsPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EqualsPredicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EqualsPredicate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EqualsPredicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Predicate
-	c442 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Predicate.html">
+	c580 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Predicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Predicate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Predicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.clause.AbstractPredicate implements net.ljcomputing.sql.clause.Predicate
-	c442:p -> c436:p [dir=back,arrowtail=empty,style=dashed];
+	c580:p -> c574:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.clause.EqualsPredicate extends net.ljcomputing.sql.clause.AbstractPredicate
-	c436:p -> c441:p [dir=back,arrowtail=empty];
+	c574:p -> c579:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.clause.EqualsPredicate implements net.ljcomputing.sql.clause.Predicate
-	c442:p -> c441:p [dir=back,arrowtail=empty,style=dashed];
+	c580:p -> c579:p [dir=back,arrowtail=empty,style=dashed];
 }
 

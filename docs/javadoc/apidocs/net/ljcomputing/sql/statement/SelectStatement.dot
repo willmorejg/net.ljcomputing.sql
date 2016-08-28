@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.clause.Select
-	c631 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Select.html">
+	c793 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Select.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Select </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.clause </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../clause/Select.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Predicate
-	c634 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Predicate.html">
+	c796 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Predicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Predicate </td></tr>
@@ -25,25 +25,25 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../clause/Predicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.statement.Statement
-	c637 [label=<<table title="net.ljcomputing.sql.statement.Statement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Statement.html">
+	c799 [label=<<table title="net.ljcomputing.sql.statement.Statement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Statement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Statement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Statement.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.statement.SelectStatement
-	c638 [label=<<table title="net.ljcomputing.sql.statement.SelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SelectStatement.html">
+	c800 [label=<<table title="net.ljcomputing.sql.statement.SelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SelectStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SelectStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SelectStatement.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.statement.SelectStatement implements net.ljcomputing.sql.statement.Statement
-	c637:p -> c638:p [dir=back,arrowtail=empty,style=dashed];
+	c799:p -> c800:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.sql.statement.SelectStatement NAVASSOC net.ljcomputing.sql.clause.Select
-	c638:p -> c631:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c800:p -> c793:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.statement.SelectStatement NAVASSOC net.ljcomputing.sql.clause.Predicate
-	c638:p -> c634:p [taillabel="", label="", headlabel="*", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c800:p -> c796:p [taillabel="", label="", headlabel="*", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.statement.SelectStatement DEPEND net.ljcomputing.sql.clause.Predicate
-	c638:p -> c634:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c800:p -> c796:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

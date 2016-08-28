@@ -16,11 +16,14 @@
 
 package net.ljcomputing.sql;
 
+import java.util.Iterator;
+
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+import net.ljcomputing.sql.buffer.ColumnBuffer;
 import net.ljcomputing.sql.clause.Delete;
 import net.ljcomputing.sql.clause.EqualsPredicate;
 import net.ljcomputing.sql.clause.Predicate;
@@ -67,7 +70,6 @@ public class Tester {
   }
   
   @Test
-  @Ignore
   public void test4() {
     final Table table1 = new Table("foo", "fo");
     final Column col1 = new Column(table1, "bar", "br");
@@ -115,5 +117,37 @@ public class Tester {
     selectStatement.addPredicate(predicate1);
     selectStatement.addPredicate(predicate2);
     System.out.println(selectStatement);
+  }
+
+  @Test
+  public void test6() {
+    final Table table1 = new Table("foo");//, "fo");
+    final Column col1 = new Column(table1, "bar", "br");
+
+    final Table table2 = new Table("xray", "xa");
+    final Column col2 = new Column(table2, "baz", "bz");
+    
+    final ColumnBuffer columnBuffer = new ColumnBuffer(col1);
+    columnBuffer.add(col2);
+    
+    for(final Column column : columnBuffer) {
+      System.out.println("column: ");
+      System.out.println("  as     : " + column.as());
+      System.out.println("  aliased: " + column.aliased());
+    }
+
+//    // clear buffer
+//    columnBuffer.clear();
+    
+    Iterator<Column> columnIterator = columnBuffer.iterator();
+
+    while(columnIterator.hasNext()) {
+      final Column column = columnIterator.next();
+      System.out.println("column: ");
+      System.out.println("  as     : " + column.as());
+      System.out.println("  aliased: " + column.aliased());
+    }
+//    will throw a NoSuchElementException
+//    System.out.println(columnIterator.next());
   }
 }

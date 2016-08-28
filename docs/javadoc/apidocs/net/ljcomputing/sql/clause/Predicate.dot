@@ -10,39 +10,39 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.clause.AbstractPredicate
-	c580 [label=<<table title="net.ljcomputing.sql.clause.AbstractPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractPredicate.html">
+	c736 [label=<<table title="net.ljcomputing.sql.clause.AbstractPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractPredicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractPredicate </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractPredicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Where
-	c582 [label=<<table title="net.ljcomputing.sql.clause.Where" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Where.html">
+	c738 [label=<<table title="net.ljcomputing.sql.clause.Where" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Where.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Where </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Where.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.EqualsPredicate
-	c585 [label=<<table title="net.ljcomputing.sql.clause.EqualsPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EqualsPredicate.html">
+	c741 [label=<<table title="net.ljcomputing.sql.clause.EqualsPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EqualsPredicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EqualsPredicate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EqualsPredicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Predicate
-	c586 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Predicate.html">
+	c742 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Predicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Predicate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Predicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.statement.SelectStatement
-	c590 [label=<<table title="net.ljcomputing.sql.statement.SelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../statement/SelectStatement.html">
+	c746 [label=<<table title="net.ljcomputing.sql.statement.SelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../statement/SelectStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SelectStatement </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.statement </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../statement/SelectStatement.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.literal.Conjunction
-	c601 [label=<<table title="net.ljcomputing.sql.literal.Conjunction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../literal/Conjunction.html">
+	c760 [label=<<table title="net.ljcomputing.sql.literal.Conjunction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../literal/Conjunction.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> Conjunction </td></tr>
@@ -50,22 +50,22 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../literal/Conjunction.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.clause.AbstractPredicate implements net.ljcomputing.sql.clause.Predicate
-	c586:p -> c580:p [dir=back,arrowtail=empty,style=dashed];
+	c742:p -> c736:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.clause.EqualsPredicate extends net.ljcomputing.sql.clause.AbstractPredicate
-	c580:p -> c585:p [dir=back,arrowtail=empty];
+	c736:p -> c741:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.clause.EqualsPredicate implements net.ljcomputing.sql.clause.Predicate
-	c586:p -> c585:p [dir=back,arrowtail=empty,style=dashed];
+	c742:p -> c741:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.sql.clause.AbstractPredicate NAVASSOC net.ljcomputing.sql.literal.Conjunction
-	c580:p -> c601:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c736:p -> c760:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.clause.Where NAVASSOC net.ljcomputing.sql.clause.Predicate
-	c582:p -> c586:p [taillabel="", label="", headlabel="*", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c738:p -> c742:p [taillabel="", label="", headlabel="*", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.statement.SelectStatement NAVASSOC net.ljcomputing.sql.clause.Predicate
-	c590:p -> c586:p [taillabel="", label="", headlabel="*", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c746:p -> c742:p [taillabel="", label="", headlabel="*", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.clause.AbstractPredicate DEPEND net.ljcomputing.sql.literal.Conjunction
-	c580:p -> c601:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c736:p -> c760:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.clause.Predicate DEPEND net.ljcomputing.sql.literal.Conjunction
-	c586:p -> c601:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c742:p -> c760:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.statement.SelectStatement DEPEND net.ljcomputing.sql.clause.Predicate
-	c590:p -> c586:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c746:p -> c742:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

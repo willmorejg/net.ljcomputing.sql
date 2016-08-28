@@ -10,36 +10,36 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.clause.AbstractClause
-	c749 [label=<<table title="net.ljcomputing.sql.clause.AbstractClause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractClause.html">
+	c953 [label=<<table title="net.ljcomputing.sql.clause.AbstractClause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractClause.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractClause </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractClause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Where
-	c750 [label=<<table title="net.ljcomputing.sql.clause.Where" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Where.html">
+	c954 [label=<<table title="net.ljcomputing.sql.clause.Where" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Where.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Where </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Where.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Clause
-	c752 [label=<<table title="net.ljcomputing.sql.clause.Clause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Clause.html">
+	c956 [label=<<table title="net.ljcomputing.sql.clause.Clause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Clause.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Clause </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Clause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Predicate
-	c754 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Predicate.html">
+	c958 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Predicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Predicate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Predicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.clause.Where extends net.ljcomputing.sql.clause.AbstractClause
-	c749:p -> c750:p [dir=back,arrowtail=empty];
+	c953:p -> c954:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.clause.Where implements net.ljcomputing.sql.clause.Clause
-	c752:p -> c750:p [dir=back,arrowtail=empty,style=dashed];
+	c956:p -> c954:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.sql.clause.Where NAVASSOC net.ljcomputing.sql.clause.Predicate
-	c750:p -> c754:p [taillabel="", label="", headlabel="*", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c954:p -> c958:p [taillabel="", label="", headlabel="*", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

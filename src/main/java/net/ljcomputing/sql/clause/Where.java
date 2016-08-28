@@ -27,7 +27,7 @@ import net.ljcomputing.sql.literal.Literal;
  *
  */
 public class Where extends AbstractClause implements Clause {
-  
+
   /** The predicates. */
   private final transient Predicate[] predicates;
 
@@ -36,7 +36,7 @@ public class Where extends AbstractClause implements Clause {
    *
    * @param predicates the predicates
    */
-  public Where(final Predicate ... predicates) {
+  public Where(final Predicate... predicates) {
     super();
     this.predicates = predicates;
   }
@@ -57,13 +57,13 @@ public class Where extends AbstractClause implements Clause {
       if (p != predicates.length) {
         //the predicate counter is incremented, 
         //but we are still looking at the most current predicate in the loop
-        if(predicate.hasConjunction()) {
+        if (predicate.hasConjunction()) {
           final Conjunction conjunction = predicate.getConjunction();
           buf.append(Literal.Space).append(conjunction.toString());
         } else {
           buf.append(Literal.Space).append(Conjunction.And);
         }
-        
+
         buf.append(Literal.Space);
       }
     }

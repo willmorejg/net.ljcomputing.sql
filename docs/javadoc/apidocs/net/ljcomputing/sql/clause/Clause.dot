@@ -10,43 +10,43 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.clause.Where
-	c318 [label=<<table title="net.ljcomputing.sql.clause.Where" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Where.html">
+	c414 [label=<<table title="net.ljcomputing.sql.clause.Where" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Where.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Where </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Where.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Select
-	c319 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Select.html">
+	c415 [label=<<table title="net.ljcomputing.sql.clause.Select" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Select.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Select </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Select.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Clause
-	c320 [label=<<table title="net.ljcomputing.sql.clause.Clause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Clause.html">
+	c416 [label=<<table title="net.ljcomputing.sql.clause.Clause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Clause.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Clause </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Clause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Delete
-	c323 [label=<<table title="net.ljcomputing.sql.clause.Delete" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Delete.html">
+	c419 [label=<<table title="net.ljcomputing.sql.clause.Delete" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Delete.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Delete </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Delete.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Update
-	c324 [label=<<table title="net.ljcomputing.sql.clause.Update" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Update.html">
+	c420 [label=<<table title="net.ljcomputing.sql.clause.Update" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Update.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Update </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Update.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.clause.Where implements net.ljcomputing.sql.clause.Clause
-	c320:p -> c318:p [dir=back,arrowtail=empty,style=dashed];
+	c416:p -> c414:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.clause.Select implements net.ljcomputing.sql.clause.Clause
-	c320:p -> c319:p [dir=back,arrowtail=empty,style=dashed];
+	c416:p -> c415:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.clause.Delete implements net.ljcomputing.sql.clause.Clause
-	c320:p -> c323:p [dir=back,arrowtail=empty,style=dashed];
+	c416:p -> c419:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.clause.Update implements net.ljcomputing.sql.clause.Clause
-	c320:p -> c324:p [dir=back,arrowtail=empty,style=dashed];
+	c416:p -> c420:p [dir=back,arrowtail=empty,style=dashed];
 }
 

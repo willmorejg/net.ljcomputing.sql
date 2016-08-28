@@ -16,6 +16,9 @@
 
 package net.ljcomputing.sql.identifier;
 
+import net.ljcomputing.sql.keyword.Keywords;
+import net.ljcomputing.sql.literal.Literal;
+
 /**
  * Table SQL identifier.
  * 
@@ -54,5 +57,19 @@ public class Table extends AbstractIdentifier implements Identifier, Alias {
   @Override
   public final String getAlias() {
     return alias;
+  }
+
+  /**
+   * @see net.ljcomputing.sql.identifier.Alias#as()
+   */
+  public final String as() {
+    final StringBuilder buf = new StringBuilder(name);
+
+    if (alias != null && !"".equals(alias.trim())) {
+      buf.append(Literal.Space.toString()).append(Keywords.As).append(Literal.Space.toString())
+          .append(alias);
+    }
+
+    return buf.toString();
   }
 }

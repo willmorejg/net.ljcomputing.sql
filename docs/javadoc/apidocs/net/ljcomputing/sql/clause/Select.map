@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./AbstractClause.html" title="net.ljcomputing.sql.clause.AbstractClause" alt="" coords="328,19,429,45"/>
-<area shape="rect" id="node1" href="./AbstractClause.html" title="&lt;TABLE&gt;" alt="" coords="317,8,440,56"/>
-<area shape="rect" id="node2_1" href="./Select.html" title="net.ljcomputing.sql.clause.Select" alt="" coords="231,118,284,143"/>
-<area shape="rect" id="node2" href="./Select.html" title="&lt;TABLE&gt;" alt="" coords="220,107,295,155"/>
-<area shape="rect" id="node5_2" href="../identifier/Column.html" title="net.ljcomputing.sql.identifier.Column" alt="" coords="238,209,373,247"/>
-<area shape="rect" id="node5" href="../identifier/Column.html" title="&lt;TABLE&gt;" alt="" coords="227,203,383,253"/>
-<area shape="rect" id="node3_3" href="./Clause.html" title="net.ljcomputing.sql.clause.Clause" alt="" coords="16,11,96,53"/>
-<area shape="rect" id="node3" href="./Clause.html" title="&lt;TABLE&gt;" alt="" coords="5,6,107,58"/>
-<area shape="rect" id="node4_4" href="../statement/SelectStatement.html" title="net.ljcomputing.sql.statement.SelectStatement" alt="" coords="141,13,283,51"/>
-<area shape="rect" id="node4" href="../statement/SelectStatement.html" title="&lt;TABLE&gt;" alt="" coords="131,7,293,57"/>
+<area shape="rect" id="node1_0" href="./AbstractClause.html" title="net.ljcomputing.sql.clause.AbstractClause" alt="" coords="16,19,117,45"/>
+<area shape="rect" id="node1" href="./AbstractClause.html" title="&lt;TABLE&gt;" alt="" coords="5,8,128,56"/>
+<area shape="rect" id="node2_1" href="./Select.html" title="net.ljcomputing.sql.clause.Select" alt="" coords="176,118,229,143"/>
+<area shape="rect" id="node2" href="./Select.html" title="&lt;TABLE&gt;" alt="" coords="165,107,240,155"/>
+<area shape="rect" id="node5_2" href="../buffer/ColumnBuffer.html" title="net.ljcomputing.sql.buffer.ColumnBuffer" alt="" coords="141,209,265,247"/>
+<area shape="rect" id="node5" href="../buffer/ColumnBuffer.html" title="&lt;TABLE&gt;" alt="" coords="130,203,275,253"/>
+<area shape="rect" id="node3_3" href="./Clause.html" title="net.ljcomputing.sql.clause.Clause" alt="" coords="163,11,243,53"/>
+<area shape="rect" id="node3" href="./Clause.html" title="&lt;TABLE&gt;" alt="" coords="152,6,253,58"/>
+<area shape="rect" id="node4_4" href="../statement/SelectStatement.html" title="net.ljcomputing.sql.statement.SelectStatement" alt="" coords="288,13,429,51"/>
+<area shape="rect" id="node4" href="../statement/SelectStatement.html" title="&lt;TABLE&gt;" alt="" coords="277,7,440,57"/>
 </map>

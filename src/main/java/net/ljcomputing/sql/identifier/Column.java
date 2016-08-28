@@ -16,6 +16,9 @@
 
 package net.ljcomputing.sql.identifier;
 
+import net.ljcomputing.sql.keyword.Keywords;
+import net.ljcomputing.sql.literal.Literal;
+
 /**
  * Column SQL identifier.
  * 
@@ -26,6 +29,12 @@ public class Column extends AbstractIdentifier implements Identifier, Alias {
 
   /** The table associated with the given column. */
   private final transient Table table;
+
+  /** The name of the table associated with the given column. */
+  private final transient String tableName;
+
+  /** The alias of the table associated with the given column. */
+  private final transient String tableAlias;
 
   /** The alias. */
   private transient String alias;
@@ -40,6 +49,8 @@ public class Column extends AbstractIdentifier implements Identifier, Alias {
     super();
     this.table = table;
     this.name = name;
+    this.tableName = this.table.getName();
+    this.tableAlias = this.table.getAlias();
   }
 
   /**
@@ -69,5 +80,48 @@ public class Column extends AbstractIdentifier implements Identifier, Alias {
    */
   public Table getTable() {
     return table;
+  }
+
+  /**
+   * @see net.ljcomputing.sql.identifier.Alias#as()
+   */
+  public final String as() {
+    final StringBuilder buf = new StringBuilder();
+    final boolean hasTableName = tableName != null && !"".equals(tableName.trim());
+    final boolean hasTableAlias = tableAlias != null && !"".equals(tableAlias.trim());
+    final boolean hasAlias = alias != null && !"".equals(alias.trim());
+
+    if (hasTableAlias) {
+      buf.append(tableAlias).append(Literal.Period.toString());
+    } else if (hasTableName) {
+      buf.append(tableName).append(Literal.Period.toString());
+    }
+
+    buf.append(name);
+
+    if (hasAlias) {
+      buf.append(Literal.Space.toString()).append(Keywords.As).append(Literal.Space.toString())
+          .append(alias);
+    }
+
+    return buf.toString();
+  }
+
+  /**
+   * Create a SQL fragment of the column with the alias separated by a comma. 
+   * For example: COLUMN_ALIAS.COLUMN_NAME
+   *
+   * @return the string
+   */
+  public final String aliased() {
+    final StringBuilder buf = new StringBuilder();
+
+    if (alias != null && !"".equals(alias.trim())) {
+      buf.append(alias).append(Literal.Period.toString());
+    }
+
+    buf.append(name);
+
+    return buf.toString();
   }
 }

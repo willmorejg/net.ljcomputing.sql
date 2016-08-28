@@ -35,12 +35,4 @@ public abstract class AbstractIdentifier implements Identifier {
   public String getName() {
     return name;
   }
-
-  /**
-   * @see net.ljcomputing.sql.identifier.Identifier#setName(java.lang.String)
-   */
-  @Override
-  public void setName(final String name) {
-    this.name = name;
-  }
 }

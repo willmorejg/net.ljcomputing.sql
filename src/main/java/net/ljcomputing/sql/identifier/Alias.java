@@ -30,4 +30,12 @@ public interface Alias {
    * @return the alias
    */
   String getAlias();
+  
+  /**
+   * Creates a SQL fragment with the AS keyword. 
+   * For example: MYTABLE AS T, or MYTABLE.MYCOLUMN AS COL
+   *
+   * @return the string
+   */
+  String as();
 }
