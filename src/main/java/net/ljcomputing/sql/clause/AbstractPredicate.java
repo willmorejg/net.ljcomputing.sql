@@ -18,9 +18,7 @@ package net.ljcomputing.sql.clause;
 
 import net.ljcomputing.sql.expression.Expression;
 import net.ljcomputing.sql.identifier.Column;
-import net.ljcomputing.sql.identifier.Table;
 import net.ljcomputing.sql.literal.Conjunction;
-import net.ljcomputing.sql.literal.Literal;
 import net.ljcomputing.sql.literal.Operand;
 
 /**
@@ -71,16 +69,10 @@ public abstract class AbstractPredicate implements Predicate {
   public final String toString() {
     final StringBuffer buf = new StringBuffer();
     final Column column = expression.getColumn();
-    final String columnName = column.getName();
-    final Table table = column.getTable();
-    final String columnAlias = table.getAlias();
+    final String columnAlias = column.aliased();
     final Operand operand = expression.getOperand();
-
-    if (columnAlias != null) {
-      buf.append(columnAlias).append(Literal.Period);
-    }
-
-    buf.append(columnName).append(operand.toString());
+    
+    buf.append(columnAlias).append(operand);
 
     if (value != null) {
       buf.append(value.toString());
