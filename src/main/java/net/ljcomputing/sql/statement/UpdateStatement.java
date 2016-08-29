@@ -37,6 +37,7 @@ public class UpdateStatement implements Statement {
   /** The update clause. */
   private final transient Update update;
   
+  /** The new values. */
   private final transient PredicateBuffer newValues;
 
   /** The predicates clauses. */
@@ -69,7 +70,7 @@ public class UpdateStatement implements Statement {
   public String toString() {
     final StringBuffer buf = new StringBuffer(update.toString());
     
-    Iterator<Predicate> setValuesIt = newValues.iterator();
+    final Iterator<Predicate> setValuesIt = newValues.iterator();
     
     if (!newValues.isEmpty()) {
       buf.append(Keywords.Set).append(Literal.Space.toString());

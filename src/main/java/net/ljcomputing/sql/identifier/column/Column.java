@@ -89,6 +89,8 @@ public class Column extends AbstractIdentifier implements Identifier, Alias {
   /**
    * @see net.ljcomputing.sql.identifier.Alias#as()
    */
+  @SuppressWarnings({ "PMD.ShortMethodName" })
+  @Override
   public String as() {
     final StringBuilder buf = new StringBuilder();
     final boolean hasTableName = tableName != null && !"".equals(tableName.trim());

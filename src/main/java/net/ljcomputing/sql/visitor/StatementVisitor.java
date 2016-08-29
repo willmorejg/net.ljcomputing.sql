@@ -14,29 +14,24 @@
    limitations under the License.
  */
 
-package net.ljcomputing.sql.identifier;
+package net.ljcomputing.sql.visitor;
+
+import net.ljcomputing.sql.statement.Statement;
 
 /**
- * ALIAS identifier.
- * 
  * @author James G. Willmore
  *
  */
-public interface Alias {
+@SuppressWarnings({ "PMD.AtLeastOneConstructor" })
+public class StatementVisitor implements Visitor<Statement> {
 
   /**
-   * Gets the ALIAS.
-   *
-   * @return the alias
+   * @see net.ljcomputing.sql.visitor.Visitor
+   * #visit(java.lang.StringBuffer, java.lang.Object)
    */
-  String getAlias();
-  
-  /**
-   * Creates a SQL fragment with the AS keyword. 
-   * For example: MYTABLE AS T, or MYTABLE.MYCOLUMN AS COL
-   *
-   * @return the string
-   */
-  @SuppressWarnings({ "PMD.ShortMethodName" })
-  String as();
+  @Override
+  public void visit(final StringBuffer buf, final Statement element) {
+    buf.append(element);
+  }
+
 }

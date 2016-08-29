@@ -65,6 +65,7 @@ public class Table extends AbstractIdentifier implements Identifier, Alias {
   /**
    * @see net.ljcomputing.sql.identifier.Alias#as()
    */
+  @SuppressWarnings({ "PMD.ShortMethodName" })
   public final String as() {
     final StringBuilder buf = new StringBuilder(name);
 

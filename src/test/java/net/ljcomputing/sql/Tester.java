@@ -42,7 +42,10 @@ import net.ljcomputing.sql.literal.Literal;
 import net.ljcomputing.sql.literal.Operand;
 import net.ljcomputing.sql.statement.DeleteStatement;
 import net.ljcomputing.sql.statement.SelectStatement;
+import net.ljcomputing.sql.statement.Statement;
 import net.ljcomputing.sql.statement.UpdateStatement;
+import net.ljcomputing.sql.visitor.StatementVisitor;
+import net.ljcomputing.sql.visitor.Visitor;
 
 /**
  * @author James G. Willmore
@@ -56,7 +59,7 @@ public class Tester {
 
   @Test
   @Ignore
-  public void test1Keywords() {
+  public void test01Keywords() {
     for (final Keywords token : Keywords.values()) {
       LOGGER.debug("token: {} ", token);
     }
@@ -64,7 +67,7 @@ public class Tester {
 
   @Test
   @Ignore
-  public void test2Literals() {
+  public void test02Literals() {
     for (final Literal token : Literal.values()) {
       LOGGER.debug("token: {} ", token);
     }
@@ -72,14 +75,15 @@ public class Tester {
 
   @Test
   @Ignore
-  public void test3Operands() {
+  public void test03Operands() {
     for (final Operand token : Operand.values()) {
       LOGGER.debug("token: {} ", token);
     }
   }
 
   @Test
-  public void test4Clauses() {
+  @Ignore
+  public void test04Clauses() {
     final Table table1 = new Table("alice", "a");
     final Column col1 = new Column(table1, "alpha", "alp");
 
@@ -103,7 +107,8 @@ public class Tester {
   }
 
   @Test
-  public void test5Buffer() {
+  @Ignore
+  public void test05Buffer() {
     final Table table1 = new Table("foo");
     final Column col1 = new Column(table1, "bar", "br");
 
@@ -135,7 +140,8 @@ public class Tester {
   }
 
   @Test
-  public void test6SelectStatement1() {
+  @Ignore
+  public void test06SelectStatement1() {
     final Table table1 = new Table("foo", "fo");
     final Column col1 = new DistinctColumn(table1, "bar", "br");
 
@@ -159,7 +165,8 @@ public class Tester {
   }
 
   @Test
-  public void test7SelectStatement2() {
+  @Ignore
+  public void test07SelectStatement2() {
     final Table table1 = new Table("foo", "fo");
     final Table table2 = new Table("xray", "xa");
     final Column col1 = new DistinctColumn(table1, "bar", "br");
@@ -178,7 +185,8 @@ public class Tester {
   }
 
   @Test
-  public void test8DeleteStatement1() {
+  @Ignore
+  public void test08DeleteStatement1() {
     final Table deleteTable = new Table("dell");
     final Column deleteColumn1 = new Column(deleteTable, "d_col");
     final DeleteStatement deleteStatement1 = new DeleteStatement(deleteTable);
@@ -188,7 +196,8 @@ public class Tester {
   }
 
   @Test
-  public void test9UpdateStatement1() {
+  @Ignore
+  public void test09UpdateStatement1() {
     final Table updateTable = new Table("upd");
     final Column updateColumn1 = new Column(updateTable, "u_col");
     final Predicate updateSetValue1 = new EqualsPredicate(updateColumn1, "'A'");
@@ -196,5 +205,21 @@ public class Tester {
     final Predicate updatePredicate1 = new EqualsPredicate(updateColumn1, Literal.Question);
     updateStatement1.where(new Where(updatePredicate1));
     LOGGER.debug("updateStatement1: {}", updateStatement1);
+  }
+  
+  @Test
+  public void test10Visitor1() {
+    final Table updateTable = new Table("upd");
+    final Column updateColumn1 = new Column(updateTable, "u_col");
+    final Predicate updateSetValue1 = new EqualsPredicate(updateColumn1, "'A'");
+    final UpdateStatement updateStatement1 = new UpdateStatement(updateTable, updateSetValue1);
+    final Predicate updatePredicate1 = new EqualsPredicate(updateColumn1, Literal.Question);
+    updateStatement1.where(new Where(updatePredicate1));
+    
+    final StringBuffer statementBuffer =  new StringBuffer();
+    final Visitor<Statement> visitor = new StatementVisitor();
+    visitor.visit(statementBuffer, updateStatement1);
+    
+    LOGGER.debug("statement: {}", statementBuffer);
   }
 }

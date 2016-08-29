@@ -53,6 +53,7 @@ public class AllColumns extends Column implements Identifier, Alias {
   /**
    * @see net.ljcomputing.sql.identifier.Alias#as()
    */
+  @SuppressWarnings({ "PMD.ShortMethodName" })
   @Override
   public final String as() {
     final StringBuilder buf = new StringBuilder();

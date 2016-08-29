@@ -23,10 +23,10 @@ package net.ljcomputing.sql.visitor;
 public interface Visitor<T> {
   
   /**
-   * Visit the element, and return a String.
-   *
+   * Visit the element, and add to the StringBuffer.
+   * 
+   * @param buf the buffer
    * @param element the element
-   * @return the string
    */
-  String visit(T element);
+  void visit(StringBuffer buf, T element);
 }
