@@ -40,6 +40,7 @@ import net.ljcomputing.sql.keyword.Keywords;
 import net.ljcomputing.sql.literal.Conjunction;
 import net.ljcomputing.sql.literal.Literal;
 import net.ljcomputing.sql.literal.Operand;
+import net.ljcomputing.sql.statement.DeleteStatement;
 import net.ljcomputing.sql.statement.SelectStatement;
 
 /**
@@ -102,7 +103,7 @@ public class Tester {
 
   @Test
   public void test5Buffer() {
-    final Table table1 = new Table("foo");//, "fo");
+    final Table table1 = new Table("foo");
     final Column col1 = new Column(table1, "bar", "br");
 
     final Table table2 = new Table("xray", "xa");
@@ -133,7 +134,7 @@ public class Tester {
   }
 
   @Test
-  public void test6Statements() {
+  public void test6SelectStatement1() {
     final Table table1 = new Table("foo", "fo");
     final Column col1 = new DistinctColumn(table1, "bar", "br");
 
@@ -148,16 +149,40 @@ public class Tester {
 
     final Predicate predicate2 = new EqualsPredicate(col2, nestedBuf.toString());
     //    final Predicate predicate2 = new EqualsPredicate(col2, Literal.Question);
-    
+
     final Where whereClause = new Where(predicate1, predicate2);
 
     final SelectStatement selectStatement1 = new SelectStatement(col1, col2);
     selectStatement1.where(whereClause);
     LOGGER.debug("selectStatement1: {}", selectStatement1);
+  }
 
+  @Test
+  public void test7SelectStatement2() {
+    final Table table1 = new Table("foo", "fo");
+    final Table table2 = new Table("xray", "xa");
+    final Column col1 = new DistinctColumn(table1, "bar", "br");
+    final Column col2 = new Column(table2, "baz", "bz");
     final Column col3 = new AllColumns(table1);
+    final Predicate predicate1 = new EqualsPredicate(col1, Literal.Question, Conjunction.Or);
+    final SelectStatement nestedSelect = new SelectStatement(col2);
+    final StringBuffer nestedBuf = new StringBuffer(Literal.LeftParen.toString())
+        .append(nestedSelect).append(Literal.RightParen.toString());
+    final Predicate predicate2 = new EqualsPredicate(col2, nestedBuf.toString());
+    //    final Predicate predicate2 = new EqualsPredicate(col2, Literal.Question);
+    final Where whereClause = new Where(predicate1, predicate2);
     final SelectStatement selectStatement2 = new SelectStatement(col3);
     selectStatement2.where(whereClause);
     LOGGER.debug("selectStatement2: {}", selectStatement2);
+  }
+
+  @Test
+  public void test8DeleteStatement1() {
+    final Table deleteTable = new Table("dell");
+    final Column deleteColumn1 = new Column(deleteTable, "d_col");
+    final DeleteStatement deleteStatement1 = new DeleteStatement(deleteTable);
+    final Predicate deletePredicate1 = new EqualsPredicate(deleteColumn1, Literal.Question);
+    deleteStatement1.where(new Where(deletePredicate1));
+    LOGGER.debug("deleteStatement1: {}", deleteStatement1);
   }
 }
