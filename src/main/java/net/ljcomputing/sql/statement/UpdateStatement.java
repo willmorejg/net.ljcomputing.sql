@@ -16,31 +16,41 @@
 
 package net.ljcomputing.sql.statement;
 
-import net.ljcomputing.sql.clause.Delete;
+import java.util.Iterator;
+
+import net.ljcomputing.sql.buffer.PredicateBuffer;
+import net.ljcomputing.sql.clause.Predicate;
+import net.ljcomputing.sql.clause.Update;
 import net.ljcomputing.sql.clause.Where;
 import net.ljcomputing.sql.identifier.table.Table;
+import net.ljcomputing.sql.keyword.Keywords;
+import net.ljcomputing.sql.literal.Literal;
 
 /**
- * SQL DELETE statement implementation.
+ * SQL UPDATE statement implementation.
  * 
  * @author James G. Willmore
  *
  */
-public class DeleteStatement implements Statement {
+public class UpdateStatement implements Statement {
 
-  /** The delete clause. */
-  private final transient Delete delete;
+  /** The update clause. */
+  private final transient Update update;
+  
+  private final transient PredicateBuffer newValues;
 
   /** The predicates clauses. */
   private transient Where whereClause;
 
   /**
-   * Instantiates a new delete statement.
+   * Instantiates a new update statement.
    *
-   * @param columns the columns
+   * @param table the table
+   * @param setValues the set values
    */
-  public DeleteStatement(final Table table) {
-    delete = new Delete(table);
+  public UpdateStatement(final Table table, final Predicate ... setValues) {
+    update = new Update(table);
+    newValues = new PredicateBuffer(setValues);
   }
 
   /**
@@ -57,8 +67,25 @@ public class DeleteStatement implements Statement {
    */
   @Override
   public String toString() {
-    final StringBuffer buf = new StringBuffer(delete.toString());
+    final StringBuffer buf = new StringBuffer(update.toString());
+    
+    Iterator<Predicate> setValuesIt = newValues.iterator();
+    
+    if (!newValues.isEmpty()) {
+      buf.append(Keywords.Set).append(Literal.Space.toString());
+      
+      while (setValuesIt.hasNext()) {
+        final Predicate predicate = setValuesIt.next();
 
+        buf.append(predicate.toString());
+
+        if (setValuesIt.hasNext()) {
+          buf.append(Literal.Comma.toString());
+        }
+
+        buf.append(Literal.Space.toString());
+      } 
+    }
     if (whereClause != null) {
       buf.append(whereClause.toString());
     }

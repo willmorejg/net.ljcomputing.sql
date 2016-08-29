@@ -42,6 +42,7 @@ import net.ljcomputing.sql.literal.Literal;
 import net.ljcomputing.sql.literal.Operand;
 import net.ljcomputing.sql.statement.DeleteStatement;
 import net.ljcomputing.sql.statement.SelectStatement;
+import net.ljcomputing.sql.statement.UpdateStatement;
 
 /**
  * @author James G. Willmore
@@ -184,5 +185,16 @@ public class Tester {
     final Predicate deletePredicate1 = new EqualsPredicate(deleteColumn1, Literal.Question);
     deleteStatement1.where(new Where(deletePredicate1));
     LOGGER.debug("deleteStatement1: {}", deleteStatement1);
+  }
+
+  @Test
+  public void test9UpdateStatement1() {
+    final Table updateTable = new Table("upd");
+    final Column updateColumn1 = new Column(updateTable, "u_col");
+    final Predicate updateSetValue1 = new EqualsPredicate(updateColumn1, "'A'");
+    final UpdateStatement updateStatement1 = new UpdateStatement(updateTable, updateSetValue1);
+    final Predicate updatePredicate1 = new EqualsPredicate(updateColumn1, Literal.Question);
+    updateStatement1.where(new Where(updatePredicate1));
+    LOGGER.debug("updateStatement1: {}", updateStatement1);
   }
 }
