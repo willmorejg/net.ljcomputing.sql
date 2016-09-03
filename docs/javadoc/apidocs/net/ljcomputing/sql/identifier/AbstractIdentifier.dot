@@ -10,45 +10,41 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.identifier.table.Table
-	c372 [label=<<table title="net.ljcomputing.sql.identifier.table.Table" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./table/Table.html">
+	c400 [label=<<table title="net.ljcomputing.sql.identifier.table.Table" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./table/Table.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Table </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.table </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./table/Table.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.identifier.AbstractIdentifier
-	c373 [label=<<table title="net.ljcomputing.sql.identifier.AbstractIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractIdentifier.html">
+	c401 [label=<<table title="net.ljcomputing.sql.identifier.AbstractIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractIdentifier </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.identifier.Identifier
-	c374 [label=<<table title="net.ljcomputing.sql.identifier.Identifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifier.html">
+	c402 [label=<<table title="net.ljcomputing.sql.identifier.Identifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Identifier </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Identifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.identifier.column.Column
-	c377 [label=<<table title="net.ljcomputing.sql.identifier.column.Column" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./column/Column.html">
+	c403 [label=<<table title="net.ljcomputing.sql.identifier.column.Column" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./column/Column.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Column </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.column </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./column/Column.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.identifier.table.Table extends net.ljcomputing.sql.identifier.AbstractIdentifier
-	c373:p -> c372:p [dir=back,arrowtail=empty];
+	c401:p -> c400:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.identifier.table.Table implements net.ljcomputing.sql.identifier.Identifier
-	c374:p -> c372:p [dir=back,arrowtail=empty,style=dashed];
+	c402:p -> c400:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.identifier.AbstractIdentifier implements net.ljcomputing.sql.identifier.Identifier
-	c374:p -> c373:p [dir=back,arrowtail=empty,style=dashed];
+	c402:p -> c401:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.identifier.column.Column extends net.ljcomputing.sql.identifier.AbstractIdentifier
-	c373:p -> c377:p [dir=back,arrowtail=empty];
+	c401:p -> c403:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.identifier.column.Column implements net.ljcomputing.sql.identifier.Identifier
-	c374:p -> c377:p [dir=back,arrowtail=empty,style=dashed];
-	// net.ljcomputing.sql.identifier.column.Column NAVASSOC net.ljcomputing.sql.identifier.table.Table
-	c377:p -> c372:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sql.identifier.column.Column DEPEND net.ljcomputing.sql.identifier.table.Table
-	c377:p -> c372:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c402:p -> c403:p [dir=back,arrowtail=empty,style=dashed];
 }
 

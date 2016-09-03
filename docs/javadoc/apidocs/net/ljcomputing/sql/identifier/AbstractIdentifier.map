@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./table/Table.html" title="net.ljcomputing.sql.identifier.table.Table" alt="" coords="33,307,191,346"/>
-<area shape="rect" id="node1" href="./table/Table.html" title="&lt;TABLE&gt;" alt="" coords="23,302,201,351"/>
-<area shape="rect" id="node2_1" href="./AbstractIdentifier.html" title="net.ljcomputing.sql.identifier.AbstractIdentifier" alt="" coords="33,118,143,143"/>
-<area shape="rect" id="node2" href="./AbstractIdentifier.html" title="&lt;TABLE&gt;" alt="" coords="23,107,153,155"/>
-<area shape="rect" id="node4_2" href="./column/Column.html" title="net.ljcomputing.sql.identifier.column.Column" alt="" coords="95,209,263,247"/>
-<area shape="rect" id="node4" href="./column/Column.html" title="&lt;TABLE&gt;" alt="" coords="84,203,273,253"/>
-<area shape="rect" id="node3_3" href="./Identifier.html" title="net.ljcomputing.sql.identifier.Identifier" alt="" coords="48,11,128,53"/>
-<area shape="rect" id="node3" href="./Identifier.html" title="&lt;TABLE&gt;" alt="" coords="37,6,139,58"/>
+<area shape="rect" id="node1_0" href="./table/Table.html" title="net.ljcomputing.sql.identifier.table.Table" alt="" coords="16,209,173,247"/>
+<area shape="rect" id="node1" href="./table/Table.html" title="&lt;TABLE&gt;" alt="" coords="5,203,184,253"/>
+<area shape="rect" id="node2_1" href="./AbstractIdentifier.html" title="net.ljcomputing.sql.identifier.AbstractIdentifier" alt="" coords="144,118,253,143"/>
+<area shape="rect" id="node2" href="./AbstractIdentifier.html" title="&lt;TABLE&gt;" alt="" coords="133,107,264,155"/>
+<area shape="rect" id="node4_2" href="./column/Column.html" title="net.ljcomputing.sql.identifier.column.Column" alt="" coords="219,209,387,247"/>
+<area shape="rect" id="node4" href="./column/Column.html" title="&lt;TABLE&gt;" alt="" coords="208,203,397,253"/>
+<area shape="rect" id="node3_3" href="./Identifier.html" title="net.ljcomputing.sql.identifier.Identifier" alt="" coords="159,11,239,53"/>
+<area shape="rect" id="node3" href="./Identifier.html" title="&lt;TABLE&gt;" alt="" coords="148,6,249,58"/>
 </map>

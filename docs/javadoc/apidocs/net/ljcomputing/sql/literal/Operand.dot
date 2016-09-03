@@ -9,21 +9,12 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// net.ljcomputing.sql.clause.AbstractPredicate
-	c789 [label=<<table title="net.ljcomputing.sql.clause.AbstractPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/AbstractPredicate.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractPredicate </font></td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.clause </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../clause/AbstractPredicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.literal.Operand
-	c816 [label=<<table title="net.ljcomputing.sql.literal.Operand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Operand.html">
+	c846 [label=<<table title="net.ljcomputing.sql.literal.Operand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Operand.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> Operand </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Operand.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.clause.AbstractPredicate NAVASSOC net.ljcomputing.sql.literal.Operand
-	c789:p -> c816:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

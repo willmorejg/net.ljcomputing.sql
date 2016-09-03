@@ -25,14 +25,14 @@ import net.ljcomputing.sql.literal.Conjunction;
  *
  */
 public interface Predicate {
-  
+
   /**
    * Gets the conjunction.
    *
    * @return the conjunction
    */
   Conjunction getConjunction();
-  
+
   /**
    * Checks for a conjunction.
    *

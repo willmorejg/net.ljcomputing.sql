@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../collection/SqlFragmentCollection.html" title="net.ljcomputing.sql.collection.SqlFragmentCollection" alt="" coords="16,209,181,263"/>
+<area shape="rect" id="node1" href="../collection/SqlFragmentCollection.html" title="&lt;TABLE&gt;" alt="" coords="5,203,192,269"/>
+<area shape="rect" id="node2_1" href="../identifier/Identifier.html" title="net.ljcomputing.sql.identifier.Identifier" alt="" coords="227,209,362,263"/>
+<area shape="rect" id="node2" href="../identifier/Identifier.html" title="&lt;TABLE&gt;" alt="" coords="217,203,373,269"/>
+<area shape="rect" id="node3_2" href="./DottedAlias.html" title="net.ljcomputing.sql.flyweight.DottedAlias" alt="" coords="147,118,346,143"/>
+<area shape="rect" id="node3" href="./DottedAlias.html" title="&lt;TABLE&gt;" alt="" coords="137,107,357,155"/>
+<area shape="rect" id="node4_3" href="./Alias.html" title="net.ljcomputing.sql.flyweight.Alias" alt="" coords="132,11,212,53"/>
+<area shape="rect" id="node4" href="./Alias.html" title="&lt;TABLE&gt;" alt="" coords="121,6,223,58"/>
+</map>

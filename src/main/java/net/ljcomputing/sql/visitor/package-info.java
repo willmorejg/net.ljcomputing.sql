@@ -15,7 +15,7 @@
  */
 
 /**
- * Package containing SQL fragment visitor implementations.
+ * Package containing SQL visitors.
  * 
  * @author James G. Willmore
  *

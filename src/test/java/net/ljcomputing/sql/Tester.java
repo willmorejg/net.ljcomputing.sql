@@ -19,35 +19,26 @@ package net.ljcomputing.sql;
 import java.util.Iterator;
 
 import org.junit.FixMethodOrder;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import net.ljcomputing.sql.buffer.ColumnBuffer;
-import net.ljcomputing.sql.clause.Delete;
-import net.ljcomputing.sql.clause.EqualsPredicate;
-import net.ljcomputing.sql.clause.Predicate;
-import net.ljcomputing.sql.clause.Select;
-import net.ljcomputing.sql.clause.Update;
-import net.ljcomputing.sql.clause.Where;
-import net.ljcomputing.sql.identifier.column.AllColumns;
+import net.ljcomputing.sql.collection.ColumnCollection;
+import net.ljcomputing.sql.collection.TableCollection;
+import net.ljcomputing.sql.flyweight.AliasedAs;
+import net.ljcomputing.sql.flyweight.DottedAlias;
+import net.ljcomputing.sql.flyweight.TableFlyweight;
 import net.ljcomputing.sql.identifier.column.Column;
-import net.ljcomputing.sql.identifier.column.DistinctColumn;
 import net.ljcomputing.sql.identifier.table.Table;
-import net.ljcomputing.sql.keyword.Keywords;
-import net.ljcomputing.sql.literal.Conjunction;
-import net.ljcomputing.sql.literal.Literal;
-import net.ljcomputing.sql.literal.Operand;
-import net.ljcomputing.sql.statement.DeleteStatement;
-import net.ljcomputing.sql.statement.SelectStatement;
-import net.ljcomputing.sql.statement.Statement;
-import net.ljcomputing.sql.statement.UpdateStatement;
-import net.ljcomputing.sql.visitor.StatementVisitor;
-import net.ljcomputing.sql.visitor.Visitor;
+import net.ljcomputing.sql.visitor.ColumnAliasedAsVisitor;
+import net.ljcomputing.sql.visitor.ColumnDottedAliasVisitor;
+import net.ljcomputing.sql.visitor.TableAliasedAsVisitor;
+import net.ljcomputing.sql.visitor.TableDottedAliasVisitor;
 
 /**
+ * JUnit tests.
+ * 
  * @author James G. Willmore
  *
  */
@@ -56,170 +47,166 @@ public class Tester {
 
   /** The SLF4J Logger. */
   private final static Logger LOGGER = LoggerFactory.getLogger(Tester.class);
-
-  @Test
-  @Ignore
-  public void test01Keywords() {
-    for (final Keywords token : Keywords.values()) {
-      LOGGER.debug("token: {} ", token);
-    }
+  
+  private static void log(final String testId, final boolean start) {
+    final String value = start ? "== STARTED {} ==" : "== ENDDED  {} ==";
+    LOGGER.info(value, testId);
   }
 
+  /**
+   * Test 01 - Equals.
+   */
   @Test
-  @Ignore
-  public void test02Literals() {
-    for (final Literal token : Literal.values()) {
-      LOGGER.debug("token: {} ", token);
-    }
+  public void test01Equals() {
+    log("test01Equals", true);
+    
+    final Column col1 = new Column("COLUMN_1");
+    final Column col11 = new Column("COLUMN_1", "C1");
+    
+    LOGGER.debug("col1.equals(col1): {}", col1.equals(col1));
+    LOGGER.debug("col1.equals(col11): {}", col1.equals(col11));
+    
+    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
+    final ColumnCollection columnCollections11 = new ColumnCollection(col1, col11);
+    
+    LOGGER.debug("columnCollections1.equals(columnCollections1): {}", columnCollections1.equals(columnCollections1));
+    LOGGER.debug("columnCollections1.equals(columnCollections11): {}", columnCollections1.equals(columnCollections11));
+
+    final Table table1 = new Table("TABLE_1", columnCollections1);
+    final Table table11 = new Table("TABLE_1", "T1", columnCollections11);
+    
+    LOGGER.debug("table1.equals(table1): {}", table1.equals(table1));
+    LOGGER.debug("table1.equals(table11): {}", table1.equals(table11));
+
+    log("test01Equals", false);
   }
-
+  
+  /**
+   * Test 02 - Iterator.
+   */
   @Test
-  @Ignore
-  public void test03Operands() {
-    for (final Operand token : Operand.values()) {
-      LOGGER.debug("token: {} ", token);
-    }
-  }
+  public void test02Iterator() {
+    log("test02Iterator", true);
+    
+    final Column col1 = new Column("COLUMN_1");
+    final Column col11 = new Column("COLUMN_1", "C1");
+    
+    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
+    
+    final Table table1 = new Table("TABLE_1", columnCollections1);
+    final Table table11 = new Table("TABLE_11", columnCollections1);
+    
+    final TableCollection tableCollections1 = new TableCollection(table1, table11);
 
-  @Test
-  @Ignore
-  public void test04Clauses() {
-    final Table table1 = new Table("alice", "a");
-    final Column col1 = new Column(table1, "alpha", "alp");
-
-    final Table table2 = new Table("bob", "b");
-    final Column col2 = new Column(table2, "bravo", "bra");
-
-    final Select select = new Select(col1, col2);
-    LOGGER.debug("select: {}", select);
-
-    final Delete delete = new Delete(table1);
-    LOGGER.debug("delete: {}", delete);
-
-    final Update update = new Update(table2);
-    LOGGER.debug("update: {}", update);
-
-    final Predicate predicate1 = new EqualsPredicate(col1, Literal.Question, Conjunction.Or);
-    final Predicate predicate2 = new EqualsPredicate(col2, Literal.Question);
-
-    final Where where = new Where(predicate1, predicate2);
-    LOGGER.debug("where: {}", where);
-  }
-
-  @Test
-  @Ignore
-  public void test05Buffer() {
-    final Table table1 = new Table("foo");
-    final Column col1 = new Column(table1, "bar", "br");
-
-    final Table table2 = new Table("xray", "xa");
-    final Column col2 = new Column(table2, "baz", "bz");
-
-    final ColumnBuffer columnBuffer = new ColumnBuffer(col1);
-    columnBuffer.add(col2);
-
-    for (final Column column : columnBuffer) {
-      LOGGER.debug("column: ");
-      LOGGER.debug("  as      : {}", column.as());
-      LOGGER.debug("  aliased : {}", column.aliased());
+    Iterator<Table> tableIt = tableCollections1.iterator();
+    tableCollections1.reverse();
+    
+    while(tableIt.hasNext()) {
+      LOGGER.debug("table: {}", tableIt.next());
     }
 
-    //    // clear buffer
-    //    columnBuffer.clear();
+    log("test02Iterator", false);
+  }
+  
+  /**
+   * Test 03 - dotted alias.
+   */
+  @Test
+  public void test03DottedAlias() {
+    log("test03DottedAlias", true);
+    final Column col1 = new Column("COLUMN_1");
+    final Column col11 = new Column("COLUMN_1", "C1");
+    
+    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
+    
+    final Table table1 = new Table("TABLE_1", "T1", columnCollections1);
+    final Table table11 = new Table("TABLE_11", "T11", columnCollections1);
+    
+    final TableCollection tableCollections1 = new TableCollection(table1, table11);
+    
+    final DottedAlias<Table> tableDotted = new DottedAlias<Table>();
+    final String tableAliases = tableDotted.toSql(tableCollections1);
+    
+    final AliasedAs<Table> tableAs = new AliasedAs<Table>();
+    final String tableAliasesAs = tableAs.toSql(tableCollections1);
+    
+    final DottedAlias<Column> columnDotted = new DottedAlias<Column>();
+    final String columnAliases = columnDotted.toSql(columnCollections1);
+    
+    final AliasedAs<Column> columnAs = new AliasedAs<Column>();
+    final String columnAliasesAs = columnAs.toSql(columnCollections1);
+    
+    LOGGER.debug("tableAliases: {}", tableAliases);
+    LOGGER.debug("tableAs: {}", tableAliasesAs);
+    LOGGER.debug("columnAliases: {}", columnAliases);
+    LOGGER.debug("columnAs: {}", columnAliasesAs);
 
-    Iterator<Column> columnIterator = columnBuffer.iterator();
-
-    while (columnIterator.hasNext()) {
-      final Column column = columnIterator.next();
-      LOGGER.debug("column: ");
-      LOGGER.debug("  as      : {}", column.as());
-      LOGGER.debug("  aliased : {}", column.aliased());
-    }
-    //    will throw a NoSuchElementException
-    //    LOGGER.debug("column: {}", columnIterator.next());
+    log("test03DottedAlias", false);
   }
 
+  /**
+   * Test 04 - table dotted visitor.
+   */
   @Test
-  @Ignore
-  public void test06SelectStatement1() {
-    final Table table1 = new Table("foo", "fo");
-    final Column col1 = new DistinctColumn(table1, "bar", "br");
+  public void test04TableDottedVisitor() {
+    log("test04TableDottedVisitor", true);
 
-    final Table table2 = new Table("xray", "xa");
-    final Column col2 = new Column(table2, "baz", "bz");
+    final Column col1 = new Column("COLUMN_1");
+    final Column col11 = new Column("COLUMN_1", "C1");
+    
+    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
+    
+    final Table table1 = new Table("TABLE_1", "T1", columnCollections1);
+    final Table table11 = new Table("TABLE_11", "T11", columnCollections1);
+    
+    final TableCollection tableCollections1 = new TableCollection(table1, table11);
+    
+    final TableDottedAliasVisitor tableDottedVisitor = new TableDottedAliasVisitor();
+    final TableAliasedAsVisitor tableAsVisitor = new TableAliasedAsVisitor();
+    
+    LOGGER.debug("tableDottedAliases: {}", tableDottedVisitor.visit(tableCollections1));
+    LOGGER.debug("tableAliasesAs: {}", tableAsVisitor.visit(tableCollections1));
 
-    final Predicate predicate1 = new EqualsPredicate(col1, Literal.Question, Conjunction.Or);
-
-    final SelectStatement nestedSelect = new SelectStatement(col2);
-    final StringBuffer nestedBuf = new StringBuffer(Literal.LeftParen.toString())
-        .append(nestedSelect).append(Literal.RightParen.toString());
-
-    final Predicate predicate2 = new EqualsPredicate(col2, nestedBuf.toString());
-    //    final Predicate predicate2 = new EqualsPredicate(col2, Literal.Question);
-
-    final Where whereClause = new Where(predicate1, predicate2);
-
-    final SelectStatement selectStatement1 = new SelectStatement(col1, col2);
-    selectStatement1.where(whereClause);
-    LOGGER.debug("selectStatement1: {}", selectStatement1);
+    log("test04TableDottedVisitor", false);
   }
 
+  /**
+   * Test 05 - column dotted visitor.
+   */
   @Test
-  @Ignore
-  public void test07SelectStatement2() {
-    final Table table1 = new Table("foo", "fo");
-    final Table table2 = new Table("xray", "xa");
-    final Column col1 = new DistinctColumn(table1, "bar", "br");
-    final Column col2 = new Column(table2, "baz", "bz");
-    final Column col3 = new AllColumns(table1);
-    final Predicate predicate1 = new EqualsPredicate(col1, Literal.Question, Conjunction.Or);
-    final SelectStatement nestedSelect = new SelectStatement(col2);
-    final StringBuffer nestedBuf = new StringBuffer(Literal.LeftParen.toString())
-        .append(nestedSelect).append(Literal.RightParen.toString());
-    final Predicate predicate2 = new EqualsPredicate(col2, nestedBuf.toString());
-    //    final Predicate predicate2 = new EqualsPredicate(col2, Literal.Question);
-    final Where whereClause = new Where(predicate1, predicate2);
-    final SelectStatement selectStatement2 = new SelectStatement(col3);
-    selectStatement2.where(whereClause);
-    LOGGER.debug("selectStatement2: {}", selectStatement2);
-  }
+  public void test05ColumnDottedVisitor() {
+    log("test05ColumnDottedVisitor", true);
+    final Column col1 = new Column("COLUMN_1");
+    final Column col11 = new Column("COLUMN_1", "C1");
+    
+    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
+    
+    final ColumnDottedAliasVisitor columnDottedVisitor = new ColumnDottedAliasVisitor();
+    final ColumnAliasedAsVisitor columnAsVisitor = new ColumnAliasedAsVisitor();
+    
+    LOGGER.debug("ColumnDottedAliases: {}", columnDottedVisitor.visit(columnCollections1));
+    LOGGER.debug("ColumnAliasesAs: {}", columnAsVisitor.visit(columnCollections1));
 
-  @Test
-  @Ignore
-  public void test08DeleteStatement1() {
-    final Table deleteTable = new Table("dell");
-    final Column deleteColumn1 = new Column(deleteTable, "d_col");
-    final DeleteStatement deleteStatement1 = new DeleteStatement(deleteTable);
-    final Predicate deletePredicate1 = new EqualsPredicate(deleteColumn1, Literal.Question);
-    deleteStatement1.where(new Where(deletePredicate1));
-    LOGGER.debug("deleteStatement1: {}", deleteStatement1);
-  }
-
-  @Test
-  @Ignore
-  public void test09UpdateStatement1() {
-    final Table updateTable = new Table("upd");
-    final Column updateColumn1 = new Column(updateTable, "u_col");
-    final Predicate updateSetValue1 = new EqualsPredicate(updateColumn1, "'A'");
-    final UpdateStatement updateStatement1 = new UpdateStatement(updateTable, updateSetValue1);
-    final Predicate updatePredicate1 = new EqualsPredicate(updateColumn1, Literal.Question);
-    updateStatement1.where(new Where(updatePredicate1));
-    LOGGER.debug("updateStatement1: {}", updateStatement1);
+    log("test05ColumnDottedVisitor", false);
   }
   
   @Test
-  public void test10Visitor1() {
-    final Table updateTable = new Table("upd");
-    final Column updateColumn1 = new Column(updateTable, "u_col");
-    final Predicate updateSetValue1 = new EqualsPredicate(updateColumn1, "'A'");
-    final UpdateStatement updateStatement1 = new UpdateStatement(updateTable, updateSetValue1);
-    final Predicate updatePredicate1 = new EqualsPredicate(updateColumn1, Literal.Question);
-    updateStatement1.where(new Where(updatePredicate1));
+  public void test06TableFlyweight() {
+    log("test06TableFlyweight", true);
+
+    final Column col1 = new Column("COLUMN_1");
+    final Column col11 = new Column("COLUMN_1", "C1");
     
-    final StringBuffer statementBuffer =  new StringBuffer();
-    final Visitor<Statement> visitor = new StatementVisitor();
-    visitor.visit(statementBuffer, updateStatement1);
+    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
     
-    LOGGER.debug("statement: {}", statementBuffer);
+    final Table table1 = new Table("TABLE_1", "T1", columnCollections1);
+    final Table table11 = new Table("TABLE_11", "T11", columnCollections1);
+    
+    final TableCollection tableCollections1 = new TableCollection(table1, table11);
+    
+    final TableFlyweight tableFly = new TableFlyweight();
+    LOGGER.debug("sql: {}", tableFly.toSql(tableCollections1));
+    
+    log("test06TableFlyweight", false);
   }
 }

@@ -30,4 +30,18 @@ public interface Identifier {
    * @return the name
    */
   String getName();
+
+  /**
+   * Checks for alias.
+   *
+   * @return true, if successful
+   */
+  boolean hasAlias();
+
+  /**
+   * Gets the alias.
+   *
+   * @return the alias
+   */
+  String getAlias();
 }

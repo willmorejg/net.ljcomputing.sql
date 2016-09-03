@@ -16,11 +16,9 @@
 
 package net.ljcomputing.sql.identifier.table;
 
+import net.ljcomputing.sql.collection.ColumnCollection;
 import net.ljcomputing.sql.identifier.AbstractIdentifier;
-import net.ljcomputing.sql.identifier.Alias;
 import net.ljcomputing.sql.identifier.Identifier;
-import net.ljcomputing.sql.keyword.Keywords;
-import net.ljcomputing.sql.literal.Literal;
 
 /**
  * Table SQL identifier.
@@ -28,19 +26,22 @@ import net.ljcomputing.sql.literal.Literal;
  * @author James G. Willmore
  *
  */
-public class Table extends AbstractIdentifier implements Identifier, Alias {
+public class Table extends AbstractIdentifier implements Identifier {
 
   /** The alias. */
-  private transient String alias;
+  protected transient String alias;
+
+  /** The column buffer. */
+  protected transient ColumnCollection columnCollection;
 
   /**
    * Instantiates a new table.
    *
    * @param name the name
+   * @param columnCollection the column collection
    */
-  public Table(final String name) {
-    super();
-    this.name = name;
+  public Table(final String name, final ColumnCollection columnCollection) {
+    this(name, null, columnCollection);
   }
 
   /**
@@ -48,32 +49,19 @@ public class Table extends AbstractIdentifier implements Identifier, Alias {
    *
    * @param name the name
    * @param alias the alias
+   * @param columnCollection the column collection
    */
-  public Table(final String name, final String alias) {
-    this(name);
-    this.alias = alias;
+  public Table(final String name, final String alias, final ColumnCollection columnCollection) {
+    super(name, alias);
+    this.columnCollection = columnCollection;
   }
 
   /**
-   * @see net.ljcomputing.sql.identifier.Alias#getAlias()
+   * Columns.
+   *
+   * @return the column collection
    */
-  @Override
-  public final String getAlias() {
-    return alias;
-  }
-
-  /**
-   * @see net.ljcomputing.sql.identifier.Alias#as()
-   */
-  @SuppressWarnings({ "PMD.ShortMethodName" })
-  public final String as() {
-    final StringBuilder buf = new StringBuilder(name);
-
-    if (alias != null && !"".equals(alias.trim())) {
-      buf.append(Literal.Space.toString()).append(Keywords.As).append(Literal.Space.toString())
-          .append(alias);
-    }
-
-    return buf.toString();
+  public ColumnCollection columns() {
+    return columnCollection;
   }
 }

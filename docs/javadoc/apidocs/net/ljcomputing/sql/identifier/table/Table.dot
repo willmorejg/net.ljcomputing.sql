@@ -9,92 +9,43 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// net.ljcomputing.sql.clause.AbstractClause
-	c993 [label=<<table title="net.ljcomputing.sql.clause.AbstractClause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../clause/AbstractClause.html">
+	// net.ljcomputing.sql.collection.ColumnCollection
+	c1063 [label=<<table title="net.ljcomputing.sql.collection.ColumnCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../collection/ColumnCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractClause </font></td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.clause </font></td></tr>
+<tr><td align="center" balign="center"> ColumnCollection </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.collection </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../../clause/AbstractClause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.clause.Delete
-	c999 [label=<<table title="net.ljcomputing.sql.clause.Delete" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../clause/Delete.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Delete </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.clause </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../../clause/Delete.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.clause.Update
-	c1000 [label=<<table title="net.ljcomputing.sql.clause.Update" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../clause/Update.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Update </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.clause </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../../clause/Update.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+		</table>>, URL="../../collection/ColumnCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.identifier.table.Table
-	c1010 [label=<<table title="net.ljcomputing.sql.identifier.table.Table" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Table.html">
+	c1067 [label=<<table title="net.ljcomputing.sql.identifier.table.Table" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Table.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Table </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Table.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.identifier.AbstractIdentifier
-	c1011 [label=<<table title="net.ljcomputing.sql.identifier.AbstractIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AbstractIdentifier.html">
+	c1068 [label=<<table title="net.ljcomputing.sql.identifier.AbstractIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AbstractIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractIdentifier </font></td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../AbstractIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.identifier.Identifier
-	c1012 [label=<<table title="net.ljcomputing.sql.identifier.Identifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Identifier.html">
+	c1069 [label=<<table title="net.ljcomputing.sql.identifier.Identifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Identifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Identifier </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../Identifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.identifier.Alias
-	c1013 [label=<<table title="net.ljcomputing.sql.identifier.Alias" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Alias.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Alias </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../Alias.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.identifier.column.Column
-	c1015 [label=<<table title="net.ljcomputing.sql.identifier.column.Column" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../column/Column.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Column </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.column </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../column/Column.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	//net.ljcomputing.sql.clause.Delete extends net.ljcomputing.sql.clause.AbstractClause
-	c993:p -> c999:p [dir=back,arrowtail=empty];
-	//net.ljcomputing.sql.clause.Update extends net.ljcomputing.sql.clause.AbstractClause
-	c993:p -> c1000:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.identifier.table.Table extends net.ljcomputing.sql.identifier.AbstractIdentifier
-	c1011:p -> c1010:p [dir=back,arrowtail=empty];
+	c1068:p -> c1067:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.identifier.table.Table implements net.ljcomputing.sql.identifier.Identifier
-	c1012:p -> c1010:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sql.identifier.table.Table implements net.ljcomputing.sql.identifier.Alias
-	c1013:p -> c1010:p [dir=back,arrowtail=empty,style=dashed];
+	c1069:p -> c1067:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.identifier.AbstractIdentifier implements net.ljcomputing.sql.identifier.Identifier
-	c1012:p -> c1011:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sql.identifier.column.Column extends net.ljcomputing.sql.identifier.AbstractIdentifier
-	c1011:p -> c1015:p [dir=back,arrowtail=empty];
-	//net.ljcomputing.sql.identifier.column.Column implements net.ljcomputing.sql.identifier.Identifier
-	c1012:p -> c1015:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sql.identifier.column.Column implements net.ljcomputing.sql.identifier.Alias
-	c1013:p -> c1015:p [dir=back,arrowtail=empty,style=dashed];
-	// net.ljcomputing.sql.clause.Delete NAVASSOC net.ljcomputing.sql.identifier.table.Table
-	c999:p -> c1010:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sql.clause.Update NAVASSOC net.ljcomputing.sql.identifier.table.Table
-	c1000:p -> c1010:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sql.identifier.column.Column NAVASSOC net.ljcomputing.sql.identifier.table.Table
-	c1015:p -> c1010:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sql.clause.AbstractClause DEPEND net.ljcomputing.sql.identifier.table.Table
-	c993:p -> c1010:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sql.clause.AbstractClause DEPEND net.ljcomputing.sql.identifier.column.Column
-	c993:p -> c1015:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sql.identifier.column.Column DEPEND net.ljcomputing.sql.identifier.table.Table
-	c1015:p -> c1010:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1069:p -> c1068:p [dir=back,arrowtail=empty,style=dashed];
+	// net.ljcomputing.sql.identifier.table.Table NAVASSOC net.ljcomputing.sql.collection.ColumnCollection
+	c1067:p -> c1063:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sql.identifier.table.Table DEPEND net.ljcomputing.sql.collection.ColumnCollection
+	c1067:p -> c1063:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

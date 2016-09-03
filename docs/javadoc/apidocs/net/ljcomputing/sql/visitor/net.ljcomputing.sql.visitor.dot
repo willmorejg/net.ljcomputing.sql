@@ -9,12 +9,52 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// net.ljcomputing.sql.visitor.Visitor<T>
-	c38 [label=<<table title="net.ljcomputing.sql.visitor.Visitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Visitor.html">
+	// net.ljcomputing.sql.visitor.ColumnDottedAliasVisitor
+	c31 [label=<<table title="net.ljcomputing.sql.visitor.ColumnDottedAliasVisitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ColumnDottedAliasVisitor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ColumnDottedAliasVisitor </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ColumnDottedAliasVisitor.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.visitor.SqlVisitor<T, S>
+	c32 [label=<<table title="net.ljcomputing.sql.visitor.SqlVisitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlVisitor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Visitor&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> SqlVisitor&lt;T, S&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Visitor.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+		</table>>, URL="./SqlVisitor.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.visitor.TableDottedAliasVisitor
+	c33 [label=<<table title="net.ljcomputing.sql.visitor.TableDottedAliasVisitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TableDottedAliasVisitor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TableDottedAliasVisitor </td></tr>
+		</table></td></tr>
+		</table>>, URL="./TableDottedAliasVisitor.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.visitor.ColumnAliasedAsVisitor
+	c34 [label=<<table title="net.ljcomputing.sql.visitor.ColumnAliasedAsVisitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ColumnAliasedAsVisitor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ColumnAliasedAsVisitor </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ColumnAliasedAsVisitor.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.visitor.AbstractAliasVisitor<T extends net.ljcomputing.sql.identifier.Identifier, C extends net.ljcomputing.sql.collection.SqlFragmentCollection<T>, S extends net.ljcomputing.sql.flyweight.Alias<T>>
+	c35 [label=<<table title="net.ljcomputing.sql.visitor.AbstractAliasVisitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractAliasVisitor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractAliasVisitor&lt;T extends Identifier, C extends SqlFragmentCollection&lt;T&gt;, S extends Alias&lt;T&gt;&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./AbstractAliasVisitor.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.visitor.TableAliasedAsVisitor
+	c36 [label=<<table title="net.ljcomputing.sql.visitor.TableAliasedAsVisitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TableAliasedAsVisitor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TableAliasedAsVisitor </td></tr>
+		</table></td></tr>
+		</table>>, URL="./TableAliasedAsVisitor.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	//net.ljcomputing.sql.visitor.ColumnDottedAliasVisitor extends net.ljcomputing.sql.visitor.AbstractAliasVisitor<net.ljcomputing.sql.identifier.column.Column, net.ljcomputing.sql.collection.ColumnCollection, net.ljcomputing.sql.flyweight.DottedAlias<net.ljcomputing.sql.identifier.column.Column>>
+	c35:p -> c31:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.visitor.TableDottedAliasVisitor extends net.ljcomputing.sql.visitor.AbstractAliasVisitor<net.ljcomputing.sql.identifier.table.Table, net.ljcomputing.sql.collection.TableCollection, net.ljcomputing.sql.flyweight.DottedAlias<net.ljcomputing.sql.identifier.table.Table>>
+	c35:p -> c33:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.visitor.ColumnAliasedAsVisitor extends net.ljcomputing.sql.visitor.AbstractAliasVisitor<net.ljcomputing.sql.identifier.column.Column, net.ljcomputing.sql.collection.ColumnCollection, net.ljcomputing.sql.flyweight.AliasedAs<net.ljcomputing.sql.identifier.column.Column>>
+	c35:p -> c34:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.visitor.AbstractAliasVisitor<T extends net.ljcomputing.sql.identifier.Identifier, C extends net.ljcomputing.sql.collection.SqlFragmentCollection<T>, S extends net.ljcomputing.sql.flyweight.Alias<T>> implements net.ljcomputing.sql.visitor.SqlVisitor<T, S>
+	c32:p -> c35:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.visitor.TableAliasedAsVisitor extends net.ljcomputing.sql.visitor.AbstractAliasVisitor<net.ljcomputing.sql.identifier.table.Table, net.ljcomputing.sql.collection.TableCollection, net.ljcomputing.sql.flyweight.AliasedAs<net.ljcomputing.sql.identifier.table.Table>>
+	c35:p -> c36:p [dir=back,arrowtail=empty];
 }
 

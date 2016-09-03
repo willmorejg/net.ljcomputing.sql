@@ -25,13 +25,11 @@ import net.ljcomputing.sql.keyword.Keywords;
  *
  */
 public enum Conjunction {
-  And(Keywords.And.toString()),
-  Or(Keywords.Or.toString())
-  ;
-  
+  And(Keywords.And.toString()), Or(Keywords.Or.toString());
+
   /** The value. */
   private String value;
-  
+
   /**
    * Instantiates a new conjunction.
    *
@@ -40,7 +38,7 @@ public enum Conjunction {
   private Conjunction(final String value) {
     this.value = value;
   }
-  
+
   /**
    * @see java.lang.Enum#toString()
    */
