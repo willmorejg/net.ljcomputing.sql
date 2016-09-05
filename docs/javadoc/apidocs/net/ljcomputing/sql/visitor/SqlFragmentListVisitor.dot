@@ -22,6 +22,13 @@ digraph G {
 <tr><td align="center" balign="center"> SqlFragmentListVisitor </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SqlFragmentListVisitor.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.collection.ColumnCollection
+	c1081 [label=<<table title="net.ljcomputing.sql.collection.ColumnCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../collection/ColumnCollection.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ColumnCollection </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.collection </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../collection/ColumnCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier
 	c1085 [label=<<table title="net.ljcomputing.sql.identifier.schema.SchemaIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/schema/SchemaIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -59,20 +66,28 @@ digraph G {
 	c1088:p -> c1086:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.identifier.column.ColumnIdentifier implements net.ljcomputing.sql.identifier.Identifier
 	c1088:p -> c1090:p [dir=back,arrowtail=empty,style=dashed];
-	// net.ljcomputing.sql.visitor.DottedVisitor DEPEND net.ljcomputing.sql.identifier.schema.SchemaIdentifier
-	c1074:p -> c1085:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.table.TableIdentifier NAVASSOC net.ljcomputing.sql.collection.ColumnCollection
+	c1086:p -> c1081:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.visitor.DottedVisitor DEPEND net.ljcomputing.sql.identifier.table.TableIdentifier
 	c1074:p -> c1086:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.visitor.DottedVisitor DEPEND net.ljcomputing.sql.collection.ColumnCollection
+	c1074:p -> c1081:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.visitor.DottedVisitor DEPEND net.ljcomputing.sql.identifier.schema.SchemaIdentifier
+	c1074:p -> c1085:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.visitor.DottedVisitor DEPEND net.ljcomputing.sql.identifier.column.ColumnIdentifier
 	c1074:p -> c1090:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sql.visitor.SqlFragmentListVisitor DEPEND net.ljcomputing.sql.identifier.Identifier
-	c1076:p -> c1088:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sql.visitor.SqlFragmentListVisitor DEPEND net.ljcomputing.sql.identifier.schema.SchemaIdentifier
-	c1076:p -> c1085:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.visitor.SqlFragmentListVisitor DEPEND net.ljcomputing.sql.identifier.table.TableIdentifier
 	c1076:p -> c1086:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.visitor.SqlFragmentListVisitor DEPEND net.ljcomputing.sql.collection.ColumnCollection
+	c1076:p -> c1081:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.visitor.SqlFragmentListVisitor DEPEND net.ljcomputing.sql.identifier.schema.SchemaIdentifier
+	c1076:p -> c1085:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.visitor.SqlFragmentListVisitor DEPEND net.ljcomputing.sql.identifier.column.ColumnIdentifier
 	c1076:p -> c1090:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.visitor.SqlFragmentListVisitor DEPEND net.ljcomputing.sql.identifier.Identifier
+	c1076:p -> c1088:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.table.TableIdentifier DEPEND net.ljcomputing.sql.collection.ColumnCollection
+	c1086:p -> c1081:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.identifier.Identifier DEPEND net.ljcomputing.sql.visitor.DottedVisitor
 	c1088:p -> c1074:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
