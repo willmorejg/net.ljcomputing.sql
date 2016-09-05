@@ -25,7 +25,8 @@ import net.ljcomputing.sql.keyword.Keywords;
  *
  */
 public enum Conjunction {
-  And(Keywords.And.toString()), Or(Keywords.Or.toString());
+  And(Keywords.And.toString()), 
+  Or(Keywords.Or.toString());
 
   /** The value. */
   private String value;

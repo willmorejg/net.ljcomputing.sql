@@ -16,7 +16,7 @@
 
 package net.ljcomputing.sql.collection;
 
-import net.ljcomputing.sql.identifier.column.Column;
+import net.ljcomputing.sql.identifier.column.ColumnIdentifier;
 
 /**
  * SQL COLUMN buffer.
@@ -24,15 +24,15 @@ import net.ljcomputing.sql.identifier.column.Column;
  * @author James G. Willmore
  *
  */
-public class ColumnCollection extends AbstractSqlFragmentCollection<Column>
-    implements SqlFragmentCollection<Column> {
+public class ColumnCollection extends AbstractSqlFragmentCollection<ColumnIdentifier>
+    implements SqlFragmentCollection<ColumnIdentifier> {
 
   /**
    * Instantiates a new column buffer.
    *
    * @param columns the columns
    */
-  public ColumnCollection(final Column... columns) {
+  public ColumnCollection(final ColumnIdentifier... columns) {
     super(columns);
   }
 }

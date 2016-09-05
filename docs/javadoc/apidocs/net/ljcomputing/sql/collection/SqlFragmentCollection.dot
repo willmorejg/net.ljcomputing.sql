@@ -9,107 +9,127 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// net.ljcomputing.sql.visitor.SqlVisitor<T, S>
-	c967 [label=<<table title="net.ljcomputing.sql.visitor.SqlVisitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../visitor/SqlVisitor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SqlVisitor&lt;T, S&gt; </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.visitor </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../visitor/SqlVisitor.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.visitor.AbstractAliasVisitor<T extends net.ljcomputing.sql.identifier.Identifier, C extends net.ljcomputing.sql.collection.SqlFragmentCollection<T>, S extends net.ljcomputing.sql.flyweight.Alias<T>>
-	c970 [label=<<table title="net.ljcomputing.sql.visitor.AbstractAliasVisitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../visitor/AbstractAliasVisitor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractAliasVisitor&lt;T extends net.ljcomputing.sql.identifier.Identifier, C extends net.ljcomputing.sql.collection.SqlFragmentCollection&lt;T&gt;, S extends net.ljcomputing.sql.flyweight.Alias&lt;T&gt;&gt; </font></td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.visitor </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../visitor/AbstractAliasVisitor.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<T>
-	c972 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlFragmentCollection.html">
+	c1021 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlFragmentCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSqlFragmentCollection&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractSqlFragmentCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.collection.SqlFragmentIterator<T>
+	c1022 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlFragmentIterator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SqlFragmentIterator&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SqlFragmentIterator.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c975 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SqlFragmentCollection.html">
+	c1024 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SqlFragmentCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SqlFragmentCollection&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SqlFragmentCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.ColumnCollection
-	c976 [label=<<table title="net.ljcomputing.sql.collection.ColumnCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ColumnCollection.html">
+	c1025 [label=<<table title="net.ljcomputing.sql.collection.ColumnCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ColumnCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ColumnCollection </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ColumnCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.PredicateCollection
-	c977 [label=<<table title="net.ljcomputing.sql.collection.PredicateCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PredicateCollection.html">
+	c1026 [label=<<table title="net.ljcomputing.sql.collection.PredicateCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PredicateCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PredicateCollection </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PredicateCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.TableCollection
-	c978 [label=<<table title="net.ljcomputing.sql.collection.TableCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TableCollection.html">
+	c1027 [label=<<table title="net.ljcomputing.sql.collection.TableCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TableCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TableCollection </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TableCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.flyweight.DottedAlias<T extends net.ljcomputing.sql.identifier.Identifier>
-	c986 [label=<<table title="net.ljcomputing.sql.flyweight.DottedAlias" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../flyweight/DottedAlias.html">
+	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier
+	c1029 [label=<<table title="net.ljcomputing.sql.identifier.schema.SchemaIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/schema/SchemaIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DottedAlias&lt;T extends net.ljcomputing.sql.identifier.Identifier&gt; </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.flyweight </font></td></tr>
+<tr><td align="center" balign="center"> SchemaIdentifier </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.schema </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../flyweight/DottedAlias.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.flyweight.AliasedAs<T extends net.ljcomputing.sql.identifier.Identifier>
-	c987 [label=<<table title="net.ljcomputing.sql.flyweight.AliasedAs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../flyweight/AliasedAs.html">
+		</table>>, URL="../identifier/schema/SchemaIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.identifier.table.TableIdentifier
+	c1030 [label=<<table title="net.ljcomputing.sql.identifier.table.TableIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/table/TableIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> AliasedAs&lt;T extends net.ljcomputing.sql.identifier.Identifier&gt; </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.flyweight </font></td></tr>
+<tr><td align="center" balign="center"> TableIdentifier </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.table </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../flyweight/AliasedAs.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.flyweight.Alias<T>
-	c988 [label=<<table title="net.ljcomputing.sql.flyweight.Alias" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../flyweight/Alias.html">
+		</table>>, URL="../identifier/table/TableIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.identifier.AbstractIdentifier
+	c1031 [label=<<table title="net.ljcomputing.sql.identifier.AbstractIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/AbstractIdentifier.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractIdentifier </font></td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../identifier/AbstractIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.identifier.Identifier
+	c1032 [label=<<table title="net.ljcomputing.sql.identifier.Identifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/Identifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Alias&lt;T&gt; </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.flyweight </font></td></tr>
+<tr><td align="center" balign="center"> Identifier </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../flyweight/Alias.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	//net.ljcomputing.sql.visitor.AbstractAliasVisitor<T extends net.ljcomputing.sql.identifier.Identifier, C extends net.ljcomputing.sql.collection.SqlFragmentCollection<T>, S extends net.ljcomputing.sql.flyweight.Alias<T>> implements net.ljcomputing.sql.visitor.SqlVisitor<T, S>
-	c967:p -> c970:p [dir=back,arrowtail=empty,style=dashed];
+		</table>>, URL="../identifier/Identifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.identifier.column.ColumnIdentifier
+	c1034 [label=<<table title="net.ljcomputing.sql.identifier.column.ColumnIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/column/ColumnIdentifier.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ColumnIdentifier </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.column </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../identifier/column/ColumnIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<T> implements net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c975:p -> c972:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sql.collection.ColumnCollection extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<net.ljcomputing.sql.identifier.column.Column>
-	c972:p -> c976:p [dir=back,arrowtail=empty];
+	c1024:p -> c1021:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.collection.SqlFragmentCollection<T> implements net.ljcomputing.sql.collection.SqlFragmentIterator<T>
+	c1022:p -> c1024:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.collection.ColumnCollection extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<net.ljcomputing.sql.identifier.column.ColumnIdentifier>
+	c1021:p -> c1025:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.collection.ColumnCollection implements net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c975:p -> c976:p [dir=back,arrowtail=empty,style=dashed];
+	c1024:p -> c1025:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.collection.PredicateCollection extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<net.ljcomputing.sql.clause.Predicate>
-	c972:p -> c977:p [dir=back,arrowtail=empty];
+	c1021:p -> c1026:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.collection.PredicateCollection implements net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c975:p -> c977:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sql.collection.TableCollection extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<net.ljcomputing.sql.identifier.table.Table>
-	c972:p -> c978:p [dir=back,arrowtail=empty];
+	c1024:p -> c1026:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.collection.TableCollection extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<net.ljcomputing.sql.identifier.table.TableIdentifier>
+	c1021:p -> c1027:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.collection.TableCollection implements net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c975:p -> c978:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sql.flyweight.DottedAlias<T extends net.ljcomputing.sql.identifier.Identifier> implements net.ljcomputing.sql.flyweight.Alias<T>
-	c988:p -> c986:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sql.flyweight.AliasedAs<T extends net.ljcomputing.sql.identifier.Identifier> implements net.ljcomputing.sql.flyweight.Alias<T>
-	c988:p -> c987:p [dir=back,arrowtail=empty,style=dashed];
-	// net.ljcomputing.sql.visitor.SqlVisitor<T, S> DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c967:p -> c975:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sql.visitor.AbstractAliasVisitor<T extends net.ljcomputing.sql.identifier.Identifier, C extends net.ljcomputing.sql.collection.SqlFragmentCollection<T>, S extends net.ljcomputing.sql.flyweight.Alias<T>> DEPEND net.ljcomputing.sql.flyweight.Alias<T>
-	c970:p -> c988:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sql.visitor.AbstractAliasVisitor<T extends net.ljcomputing.sql.identifier.Identifier, C extends net.ljcomputing.sql.collection.SqlFragmentCollection<T>, S extends net.ljcomputing.sql.flyweight.Alias<T>> DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c970:p -> c975:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sql.visitor.AbstractAliasVisitor<T extends net.ljcomputing.sql.identifier.Identifier, C extends net.ljcomputing.sql.collection.SqlFragmentCollection<T>, S extends net.ljcomputing.sql.flyweight.Alias<T>> DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c970:p -> c975:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sql.flyweight.DottedAlias<T extends net.ljcomputing.sql.identifier.Identifier> DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c986:p -> c975:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sql.flyweight.AliasedAs<T extends net.ljcomputing.sql.identifier.Identifier> DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c987:p -> c975:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sql.flyweight.Alias<T> DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c988:p -> c975:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1024:p -> c1027:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.identifier.schema.SchemaIdentifier extends net.ljcomputing.sql.identifier.AbstractIdentifier
+	c1031:p -> c1029:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.identifier.schema.SchemaIdentifier implements net.ljcomputing.sql.identifier.Identifier
+	c1032:p -> c1029:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.identifier.table.TableIdentifier extends net.ljcomputing.sql.identifier.AbstractIdentifier
+	c1031:p -> c1030:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.identifier.table.TableIdentifier implements net.ljcomputing.sql.identifier.Identifier
+	c1032:p -> c1030:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.identifier.AbstractIdentifier implements net.ljcomputing.sql.identifier.Identifier
+	c1032:p -> c1031:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.identifier.column.ColumnIdentifier extends net.ljcomputing.sql.identifier.AbstractIdentifier
+	c1031:p -> c1034:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.identifier.column.ColumnIdentifier implements net.ljcomputing.sql.identifier.Identifier
+	c1032:p -> c1034:p [dir=back,arrowtail=empty,style=dashed];
+	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier NAVASSOC net.ljcomputing.sql.collection.TableCollection
+	c1029:p -> c1027:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sql.identifier.table.TableIdentifier NAVASSOC net.ljcomputing.sql.collection.ColumnCollection
+	c1030:p -> c1025:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c1029:p -> c1024:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier DEPEND net.ljcomputing.sql.collection.TableCollection
+	c1029:p -> c1027:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.table.TableIdentifier DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c1030:p -> c1024:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.table.TableIdentifier DEPEND net.ljcomputing.sql.collection.ColumnCollection
+	c1030:p -> c1025:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.AbstractIdentifier DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c1031:p -> c1024:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.Identifier DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c1032:p -> c1024:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.column.ColumnIdentifier DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c1034:p -> c1024:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

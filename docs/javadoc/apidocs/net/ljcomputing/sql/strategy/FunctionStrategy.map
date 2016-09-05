@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../identifier/column/Column.html" title="net.ljcomputing.sql.identifier.column.Column" alt="" coords="81,11,249,66"/>
+<area shape="rect" id="node1" href="../identifier/column/Column.html" title="&lt;TABLE&gt;" alt="" coords="71,6,260,71"/>
+<area shape="rect" id="node2_1" href="../identifier/column/ColumnIdentifier.html" title="net.ljcomputing.sql.identifier.column.ColumnIdentifier" alt="" coords="16,127,184,166"/>
+<area shape="rect" id="node2" href="../identifier/column/ColumnIdentifier.html" title="&lt;TABLE&gt;" alt="" coords="5,122,195,171"/>
+<area shape="rect" id="node3_2" href="./FunctionStrategy.html" title="net.ljcomputing.sql.strategy.FunctionStrategy" alt="" coords="110,227,221,269"/>
+<area shape="rect" id="node3" href="./FunctionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="99,222,231,274"/>
+<area shape="rect" id="node4_3" href="./Function.html" title="net.ljcomputing.sql.strategy.Function" alt="" coords="280,126,360,167"/>
+<area shape="rect" id="node4" href="./Function.html" title="&lt;TABLE&gt;" alt="" coords="269,121,371,173"/>
+</map>

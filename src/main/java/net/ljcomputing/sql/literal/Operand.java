@@ -25,14 +25,16 @@ import net.ljcomputing.sql.keyword.Keywords;
  *
  */
 public enum Operand {
-  Equals(Literal.Equals.toString()), NotEqualTo(
-      Literal.LessThan.toString() + Literal.GreaterThan.toString()), GreaterThan(
-          Literal.GreaterThan.toString()), LessThan(
-              Literal.LessThan.toString()), GreaterThanEqualTo(
-                  Literal.GreaterThan + Literal.Equals.toString()), LessThanEqualTo(
-                      Literal.LessThan + Literal.Equals.toString()), Like(
-                          Keywords.Like.toString()), Between(Keywords.Between.toString());
-
+  Equals(Literal.Equals.toString()),
+  NotEqualTo(Literal.LessThan.toString() + Literal.GreaterThan.toString()),  
+  GreaterThan(Literal.GreaterThan.toString()),
+  LessThan(Literal.LessThan.toString()),
+  GreaterThanEqualTo(Literal.GreaterThan + Literal.Equals.toString()),
+  LessThanEqualTo(Literal.LessThan + Literal.Equals.toString()),
+  Like(Keywords.Like.toString()),
+  Between(Keywords.Between.toString())
+  ;
+  
   /** The value. */
   private String value;
 

@@ -16,7 +16,7 @@
 
 package net.ljcomputing.sql.collection;
 
-import net.ljcomputing.sql.identifier.table.Table;
+import net.ljcomputing.sql.identifier.table.TableIdentifier;
 
 /**
  * SQL TABLE buffer.
@@ -24,15 +24,15 @@ import net.ljcomputing.sql.identifier.table.Table;
  * @author James G. Willmore
  *
  */
-public class TableCollection extends AbstractSqlFragmentCollection<Table>
-    implements SqlFragmentCollection<Table> {
+public class TableCollection extends AbstractSqlFragmentCollection<TableIdentifier>
+    implements SqlFragmentCollection<TableIdentifier> {
 
   /**
    * Instantiates a new table buffer.
    *
    * @param tables the tables
    */
-  public TableCollection(final Table... tables) {
+  public TableCollection(final TableIdentifier... tables) {
     super(tables);
   }
 }

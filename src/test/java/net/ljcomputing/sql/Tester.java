@@ -16,8 +16,6 @@
 
 package net.ljcomputing.sql;
 
-import java.util.Iterator;
-
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -26,15 +24,11 @@ import org.slf4j.LoggerFactory;
 
 import net.ljcomputing.sql.collection.ColumnCollection;
 import net.ljcomputing.sql.collection.TableCollection;
-import net.ljcomputing.sql.flyweight.AliasedAs;
-import net.ljcomputing.sql.flyweight.DottedAlias;
-import net.ljcomputing.sql.flyweight.TableFlyweight;
-import net.ljcomputing.sql.identifier.column.Column;
-import net.ljcomputing.sql.identifier.table.Table;
-import net.ljcomputing.sql.visitor.ColumnAliasedAsVisitor;
-import net.ljcomputing.sql.visitor.ColumnDottedAliasVisitor;
-import net.ljcomputing.sql.visitor.TableAliasedAsVisitor;
-import net.ljcomputing.sql.visitor.TableDottedAliasVisitor;
+import net.ljcomputing.sql.identifier.column.ColumnIdentifier;
+import net.ljcomputing.sql.identifier.schema.SchemaIdentifier;
+import net.ljcomputing.sql.identifier.table.TableIdentifier;
+import net.ljcomputing.sql.strategy.FunctionStrategy;
+import net.ljcomputing.sql.visitor.SqlFragmentListVisitor;
 
 /**
  * JUnit tests.
@@ -57,156 +51,39 @@ public class Tester {
    * Test 01 - Equals.
    */
   @Test
-  public void test01Equals() {
-    log("test01Equals", true);
-    
-    final Column col1 = new Column("COLUMN_1");
-    final Column col11 = new Column("COLUMN_1", "C1");
-    
-    LOGGER.debug("col1.equals(col1): {}", col1.equals(col1));
-    LOGGER.debug("col1.equals(col11): {}", col1.equals(col11));
+  public void test0100Visitor() {
+    log("test0100Visitor", true);
+
+    final ColumnIdentifier col1 = new ColumnIdentifier("COLUMN_1");
+    final ColumnIdentifier col11 = new ColumnIdentifier("COLUMN_11", "C1");
+    col11.setFunction(FunctionStrategy.Max);
     
     final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
-    final ColumnCollection columnCollections11 = new ColumnCollection(col1, col11);
-    
-    LOGGER.debug("columnCollections1.equals(columnCollections1): {}", columnCollections1.equals(columnCollections1));
-    LOGGER.debug("columnCollections1.equals(columnCollections11): {}", columnCollections1.equals(columnCollections11));
 
-    final Table table1 = new Table("TABLE_1", columnCollections1);
-    final Table table11 = new Table("TABLE_1", "T1", columnCollections11);
+    final ColumnIdentifier col2 = new ColumnIdentifier("COLUMN_2");
+    final ColumnIdentifier col21 = new ColumnIdentifier("COLUMN_21", "C2");
     
-    LOGGER.debug("table1.equals(table1): {}", table1.equals(table1));
-    LOGGER.debug("table1.equals(table11): {}", table1.equals(table11));
+    final ColumnCollection columnCollections2 = new ColumnCollection(col2, col21);
+    
+    final TableIdentifier table1 = new TableIdentifier("TABLE_1", "T1", columnCollections1);
+    final TableIdentifier table11 = new TableIdentifier("TABLE_21", "T21", columnCollections2);
+    
+    final TableCollection tableCollections1 = new TableCollection(table1);
+    final TableCollection tableCollections11 = new TableCollection(table11);
+    
+    final SchemaIdentifier schema1 = new SchemaIdentifier("SCHEMA1", tableCollections1);
+    final SchemaIdentifier schema2 = new SchemaIdentifier("SCHEMA2", tableCollections11);
 
-    log("test01Equals", false);
-  }
-  
-  /**
-   * Test 02 - Iterator.
-   */
-  @Test
-  public void test02Iterator() {
-    log("test02Iterator", true);
+    final String sql1 = schema1.toSqlList(new SqlFragmentListVisitor());
+    final String sql2 = schema2.toSqlList(new SqlFragmentListVisitor());
+    final String sql3 = table1.toSqlList(new SqlFragmentListVisitor());
+    final String sql4 = table11.toSqlList(new SqlFragmentListVisitor());
     
-    final Column col1 = new Column("COLUMN_1");
-    final Column col11 = new Column("COLUMN_1", "C1");
+    LOGGER.debug("sql1: {}", sql1);
+    LOGGER.debug("sql2: {}", sql2);
+    LOGGER.debug("sql3: {}", sql3);
+    LOGGER.debug("sql4: {}", sql4);
     
-    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
-    
-    final Table table1 = new Table("TABLE_1", columnCollections1);
-    final Table table11 = new Table("TABLE_11", columnCollections1);
-    
-    final TableCollection tableCollections1 = new TableCollection(table1, table11);
-
-    Iterator<Table> tableIt = tableCollections1.iterator();
-    tableCollections1.reverse();
-    
-    while(tableIt.hasNext()) {
-      LOGGER.debug("table: {}", tableIt.next());
-    }
-
-    log("test02Iterator", false);
-  }
-  
-  /**
-   * Test 03 - dotted alias.
-   */
-  @Test
-  public void test03DottedAlias() {
-    log("test03DottedAlias", true);
-    final Column col1 = new Column("COLUMN_1");
-    final Column col11 = new Column("COLUMN_1", "C1");
-    
-    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
-    
-    final Table table1 = new Table("TABLE_1", "T1", columnCollections1);
-    final Table table11 = new Table("TABLE_11", "T11", columnCollections1);
-    
-    final TableCollection tableCollections1 = new TableCollection(table1, table11);
-    
-    final DottedAlias<Table> tableDotted = new DottedAlias<Table>();
-    final String tableAliases = tableDotted.toSql(tableCollections1);
-    
-    final AliasedAs<Table> tableAs = new AliasedAs<Table>();
-    final String tableAliasesAs = tableAs.toSql(tableCollections1);
-    
-    final DottedAlias<Column> columnDotted = new DottedAlias<Column>();
-    final String columnAliases = columnDotted.toSql(columnCollections1);
-    
-    final AliasedAs<Column> columnAs = new AliasedAs<Column>();
-    final String columnAliasesAs = columnAs.toSql(columnCollections1);
-    
-    LOGGER.debug("tableAliases: {}", tableAliases);
-    LOGGER.debug("tableAs: {}", tableAliasesAs);
-    LOGGER.debug("columnAliases: {}", columnAliases);
-    LOGGER.debug("columnAs: {}", columnAliasesAs);
-
-    log("test03DottedAlias", false);
-  }
-
-  /**
-   * Test 04 - table dotted visitor.
-   */
-  @Test
-  public void test04TableDottedVisitor() {
-    log("test04TableDottedVisitor", true);
-
-    final Column col1 = new Column("COLUMN_1");
-    final Column col11 = new Column("COLUMN_1", "C1");
-    
-    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
-    
-    final Table table1 = new Table("TABLE_1", "T1", columnCollections1);
-    final Table table11 = new Table("TABLE_11", "T11", columnCollections1);
-    
-    final TableCollection tableCollections1 = new TableCollection(table1, table11);
-    
-    final TableDottedAliasVisitor tableDottedVisitor = new TableDottedAliasVisitor();
-    final TableAliasedAsVisitor tableAsVisitor = new TableAliasedAsVisitor();
-    
-    LOGGER.debug("tableDottedAliases: {}", tableDottedVisitor.visit(tableCollections1));
-    LOGGER.debug("tableAliasesAs: {}", tableAsVisitor.visit(tableCollections1));
-
-    log("test04TableDottedVisitor", false);
-  }
-
-  /**
-   * Test 05 - column dotted visitor.
-   */
-  @Test
-  public void test05ColumnDottedVisitor() {
-    log("test05ColumnDottedVisitor", true);
-    final Column col1 = new Column("COLUMN_1");
-    final Column col11 = new Column("COLUMN_1", "C1");
-    
-    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
-    
-    final ColumnDottedAliasVisitor columnDottedVisitor = new ColumnDottedAliasVisitor();
-    final ColumnAliasedAsVisitor columnAsVisitor = new ColumnAliasedAsVisitor();
-    
-    LOGGER.debug("ColumnDottedAliases: {}", columnDottedVisitor.visit(columnCollections1));
-    LOGGER.debug("ColumnAliasesAs: {}", columnAsVisitor.visit(columnCollections1));
-
-    log("test05ColumnDottedVisitor", false);
-  }
-  
-  @Test
-  public void test06TableFlyweight() {
-    log("test06TableFlyweight", true);
-
-    final Column col1 = new Column("COLUMN_1");
-    final Column col11 = new Column("COLUMN_1", "C1");
-    
-    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
-    
-    final Table table1 = new Table("TABLE_1", "T1", columnCollections1);
-    final Table table11 = new Table("TABLE_11", "T11", columnCollections1);
-    
-    final TableCollection tableCollections1 = new TableCollection(table1, table11);
-    
-    final TableFlyweight tableFly = new TableFlyweight();
-    LOGGER.debug("sql: {}", tableFly.toSql(tableCollections1));
-    
-    log("test06TableFlyweight", false);
+    log("test0100Visitor", false);
   }
 }

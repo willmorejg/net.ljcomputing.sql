@@ -10,38 +10,42 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<T>
-	c1117 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlFragmentCollection.html">
+	c1133 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlFragmentCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSqlFragmentCollection&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractSqlFragmentCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c1120 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlFragmentCollection.html">
+	c1136 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlFragmentCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SqlFragmentCollection&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SqlFragmentCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.TableCollection
-	c1123 [label=<<table title="net.ljcomputing.sql.collection.TableCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TableCollection.html">
+	c1139 [label=<<table title="net.ljcomputing.sql.collection.TableCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TableCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TableCollection </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TableCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.flyweight.TableFlyweight
-	c1130 [label=<<table title="net.ljcomputing.sql.flyweight.TableFlyweight" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../flyweight/TableFlyweight.html">
+	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier
+	c1141 [label=<<table title="net.ljcomputing.sql.identifier.schema.SchemaIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/schema/SchemaIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> TableFlyweight </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.flyweight </font></td></tr>
+<tr><td align="center" balign="center"> SchemaIdentifier </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.schema </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../flyweight/TableFlyweight.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+		</table>>, URL="../identifier/schema/SchemaIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<T> implements net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c1120:p -> c1117:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sql.collection.TableCollection extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<net.ljcomputing.sql.identifier.table.Table>
-	c1117:p -> c1123:p [dir=back,arrowtail=empty];
+	c1136:p -> c1133:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.collection.TableCollection extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<net.ljcomputing.sql.identifier.table.TableIdentifier>
+	c1133:p -> c1139:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.collection.TableCollection implements net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c1120:p -> c1123:p [dir=back,arrowtail=empty,style=dashed];
-	// net.ljcomputing.sql.flyweight.TableFlyweight DEPEND net.ljcomputing.sql.collection.TableCollection
-	c1130:p -> c1123:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1136:p -> c1139:p [dir=back,arrowtail=empty,style=dashed];
+	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier NAVASSOC net.ljcomputing.sql.collection.TableCollection
+	c1141:p -> c1139:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c1141:p -> c1136:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier DEPEND net.ljcomputing.sql.collection.TableCollection
+	c1141:p -> c1139:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

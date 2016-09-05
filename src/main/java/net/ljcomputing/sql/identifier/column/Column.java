@@ -16,33 +16,35 @@
 
 package net.ljcomputing.sql.identifier.column;
 
-import net.ljcomputing.sql.identifier.AbstractIdentifier;
 import net.ljcomputing.sql.identifier.Identifier;
+import net.ljcomputing.sql.strategy.FunctionStrategy;
 
 /**
- * Column SQL identifier.
+ * Interface defining a COLUMN identifier.
  * 
  * @author James G. Willmore
  *
  */
-public class Column extends AbstractIdentifier implements Identifier {
+public interface Column extends Identifier {
 
   /**
-   * Instantiates a new column.
+   * Sets the function.
    *
-   * @param name the name
+   * @param function the new function
    */
-  public Column(final String name) {
-    super(name);
-  }
+  void setFunction(FunctionStrategy function);
 
   /**
-   * Instantiates a new column.
+   * Checks for function.
    *
-   * @param name the name
-   * @param alias the alias
+   * @return true, if successful
    */
-  public Column(final String name, final String alias) {
-    super(name, alias);
-  }
+  boolean hasFunction();
+
+  /**
+   * Gets the function.
+   *
+   * @return the function
+   */
+  FunctionStrategy getFunction();
 }

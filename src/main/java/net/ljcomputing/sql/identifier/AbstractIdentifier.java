@@ -18,6 +18,8 @@ package net.ljcomputing.sql.identifier;
 
 import java.util.Objects;
 
+import net.ljcomputing.sql.collection.SqlFragmentCollection;
+
 /**
  * Abstract SQL identifier.
  * 
@@ -28,10 +30,10 @@ import java.util.Objects;
 public abstract class AbstractIdentifier implements Identifier {
 
   /** The name of the identifier. */
-  protected transient String name;
+  private transient String name;
 
   /** The alias. */
-  protected transient String alias;
+  private transient String alias;
 
   /**
    * Instantiates a new abstract identifier.
@@ -64,6 +66,7 @@ public abstract class AbstractIdentifier implements Identifier {
   /**
    * @see net.ljcomputing.sql.identifier.Identifier#hasAlias()
    */
+  @Override
   public boolean hasAlias() {
     return alias != null && !"".equals(alias);
   }
@@ -71,9 +74,20 @@ public abstract class AbstractIdentifier implements Identifier {
   /**
    * @see net.ljcomputing.sql.identifier.Identifier#getAlias()
    */
+  @Override
   public String getAlias() {
     return alias;
   }
+
+  /**
+   * @see net.ljcomputing.sql.identifier.Identifier#hasChildren()
+   */
+  public abstract boolean hasChildren();
+
+  /**
+   * @see net.ljcomputing.sql.identifier.Identifier#getChildren()
+   */
+  public abstract SqlFragmentCollection<? extends Identifier> getChildren();
 
   /**
    * @see java.lang.Object#hashCode()

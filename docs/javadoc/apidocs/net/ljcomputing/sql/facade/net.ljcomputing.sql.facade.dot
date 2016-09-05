@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.facade.SqlFacade
-	c102 [label=<<table title="net.ljcomputing.sql.facade.SqlFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlFacade.html">
+	c96 [label=<<table title="net.ljcomputing.sql.facade.SqlFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SqlFacade </td></tr>

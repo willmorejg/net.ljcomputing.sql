@@ -23,12 +23,34 @@ package net.ljcomputing.sql.literal;
  *
  */
 public enum Literal {
-  Space(' '), LeftParen('('), RightParen(')'), DoubleQuote('"'), SingleQuote('\''), Percent(
-      '%'), Ampersand('&'), Asterisk('*'), Slash('/'), Plus('+'), Minus('-'), Comma(','), Period(
-          '.'), Colon(':'), SemiColon(';'), LessThan('<'), GreaterThan('>'), Question(
-              '?'), LeftBracket('['), RightBracket(']'), Underline('_'), VerticalBar(
-                  '|'), Equals('='), LeftBrace('{'), RightBrace('}'), Circumflex('^');
-
+  Space(' '),
+  LeftParen('('),
+  RightParen(')'),
+  DoubleQuote('"'),
+  SingleQuote('\''),
+  Percent('%'),
+  Ampersand('&'),
+  Asterisk('*'),
+  Slash('/'),
+  Plus('+'),
+  Minus('-'),
+  Comma(','),
+  Period('.'),
+  Colon(':'),
+  SemiColon(';'),
+  LessThan('<'),
+  GreaterThan('>'),
+  Question('?'),
+  LeftBracket('['),
+  RightBracket(']'),
+  Underline('_'),
+  VerticalBar('|'),
+  Equals('='),
+  LeftBrace('{'),
+  RightBrace('}'),
+  Circumflex('^')
+  ;
+  
   /** The value. */
   private final char value;
 

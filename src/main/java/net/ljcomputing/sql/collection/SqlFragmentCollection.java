@@ -25,7 +25,7 @@ import java.util.Iterator;
  * @author James G. Willmore
  *
  */
-public interface SqlFragmentCollection<T> extends Iterator<T>, Iterable<T> {
+public interface SqlFragmentCollection<T> extends SqlFragmentIterator<T>, Iterator<T>, Iterable<T> {
 
   /**
    * Returns the number of elements in implementing class.

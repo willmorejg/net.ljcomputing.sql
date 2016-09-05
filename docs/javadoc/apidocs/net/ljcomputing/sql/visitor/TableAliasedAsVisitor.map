@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./AbstractAliasVisitor.html" title="net.ljcomputing.sql.visitor.AbstractAliasVisitor" alt="" coords="15,17,577,42"/>
-<area shape="rect" id="node1" href="./AbstractAliasVisitor.html" title="&lt;TABLE&gt;" alt="" coords="5,5,587,53"/>
-<area shape="rect" id="node2_1" href="./TableAliasedAsVisitor.html" title="net.ljcomputing.sql.visitor.TableAliasedAsVisitor" alt="" coords="227,113,365,138"/>
-<area shape="rect" id="node2" href="./TableAliasedAsVisitor.html" title="&lt;TABLE&gt;" alt="" coords="216,101,376,149"/>
-</map>

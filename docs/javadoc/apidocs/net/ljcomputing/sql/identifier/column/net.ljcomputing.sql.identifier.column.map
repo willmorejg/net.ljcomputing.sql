@@ -1,4 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./Column.html" title="net.ljcomputing.sql.identifier.column.Column" alt="" coords="15,17,76,42"/>
-<area shape="rect" id="node1" href="./Column.html" title="&lt;TABLE&gt;" alt="" coords="4,5,87,53"/>
+<area shape="rect" id="node1_0" href="./Column.html" title="net.ljcomputing.sql.identifier.column.Column" alt="" coords="29,11,109,53"/>
+<area shape="rect" id="node1" href="./Column.html" title="&lt;TABLE&gt;" alt="" coords="19,6,120,58"/>
+<area shape="rect" id="node2_1" href="./ColumnIdentifier.html" title="net.ljcomputing.sql.identifier.column.ColumnIdentifier" alt="" coords="15,118,124,143"/>
+<area shape="rect" id="node2" href="./ColumnIdentifier.html" title="&lt;TABLE&gt;" alt="" coords="4,107,135,155"/>
 </map>

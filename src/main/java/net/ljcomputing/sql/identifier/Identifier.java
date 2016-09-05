@@ -16,6 +16,9 @@
 
 package net.ljcomputing.sql.identifier;
 
+import net.ljcomputing.sql.collection.SqlFragmentCollection;
+import net.ljcomputing.sql.visitor.DottedVisitor;
+
 /**
  * Interface shared by all SQL identifier implementations.
  * 
@@ -44,4 +47,26 @@ public interface Identifier {
    * @return the alias
    */
   String getAlias();
+
+  /**
+   * Indicates if the identifier has child identifiers.
+   *
+   * @return true, if successful
+   */
+  boolean hasChildren();
+
+  /**
+   * Gets the child identifiers.
+   *
+   * @return the children
+   */
+  SqlFragmentCollection<? extends Identifier> getChildren();
+
+  /**
+   * To a SQL list fragment.
+   *
+   * @param visitor the visitor
+   * @return the string
+   */
+  String toSqlList(DottedVisitor visitor);
 }

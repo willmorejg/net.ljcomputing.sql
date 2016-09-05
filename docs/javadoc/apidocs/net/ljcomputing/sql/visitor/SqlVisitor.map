@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./SqlVisitor.html" title="net.ljcomputing.sql.visitor.SqlVisitor" alt="" coords="407,11,513,53"/>
-<area shape="rect" id="node1" href="./SqlVisitor.html" title="&lt;TABLE&gt;" alt="" coords="397,6,523,58"/>
-<area shape="rect" id="node2_1" href="./AbstractAliasVisitor.html" title="net.ljcomputing.sql.visitor.AbstractAliasVisitor" alt="" coords="15,118,577,143"/>
-<area shape="rect" id="node2" href="./AbstractAliasVisitor.html" title="&lt;TABLE&gt;" alt="" coords="5,107,587,155"/>
-<area shape="rect" id="node3_2" href="../collection/SqlFragmentCollection.html" title="net.ljcomputing.sql.collection.SqlFragmentCollection" alt="" coords="213,209,379,263"/>
-<area shape="rect" id="node3" href="../collection/SqlFragmentCollection.html" title="&lt;TABLE&gt;" alt="" coords="203,203,389,269"/>
-</map>

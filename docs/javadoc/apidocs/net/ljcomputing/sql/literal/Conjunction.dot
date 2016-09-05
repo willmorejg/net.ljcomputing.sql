@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.clause.Predicate
-	c675 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Predicate.html">
+	c597 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../clause/Predicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Predicate </td></tr>
@@ -18,13 +18,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../clause/Predicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.literal.Conjunction
-	c700 [label=<<table title="net.ljcomputing.sql.literal.Conjunction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Conjunction.html">
+	c621 [label=<<table title="net.ljcomputing.sql.literal.Conjunction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Conjunction.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> Conjunction </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Conjunction.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Predicate DEPEND net.ljcomputing.sql.literal.Conjunction
-	c675:p -> c700:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c597:p -> c621:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

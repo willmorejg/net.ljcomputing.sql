@@ -9,42 +9,71 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// net.ljcomputing.sql.identifier.table.Table
-	c400 [label=<<table title="net.ljcomputing.sql.identifier.table.Table" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./table/Table.html">
+	// net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c395 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../collection/SqlFragmentCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Table </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SqlFragmentCollection&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.collection </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../collection/SqlFragmentCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier
+	c404 [label=<<table title="net.ljcomputing.sql.identifier.schema.SchemaIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./schema/SchemaIdentifier.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SchemaIdentifier </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.schema </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./schema/SchemaIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.identifier.table.TableIdentifier
+	c405 [label=<<table title="net.ljcomputing.sql.identifier.table.TableIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./table/TableIdentifier.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TableIdentifier </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.table </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./table/Table.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+		</table>>, URL="./table/TableIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.identifier.AbstractIdentifier
-	c401 [label=<<table title="net.ljcomputing.sql.identifier.AbstractIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractIdentifier.html">
+	c406 [label=<<table title="net.ljcomputing.sql.identifier.AbstractIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractIdentifier </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.identifier.Identifier
-	c402 [label=<<table title="net.ljcomputing.sql.identifier.Identifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifier.html">
+	c407 [label=<<table title="net.ljcomputing.sql.identifier.Identifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Identifier </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Identifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.identifier.column.Column
-	c403 [label=<<table title="net.ljcomputing.sql.identifier.column.Column" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./column/Column.html">
+	// net.ljcomputing.sql.identifier.column.ColumnIdentifier
+	c411 [label=<<table title="net.ljcomputing.sql.identifier.column.ColumnIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./column/ColumnIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Column </td></tr>
+<tr><td align="center" balign="center"> ColumnIdentifier </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.column </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./column/Column.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	//net.ljcomputing.sql.identifier.table.Table extends net.ljcomputing.sql.identifier.AbstractIdentifier
-	c401:p -> c400:p [dir=back,arrowtail=empty];
-	//net.ljcomputing.sql.identifier.table.Table implements net.ljcomputing.sql.identifier.Identifier
-	c402:p -> c400:p [dir=back,arrowtail=empty,style=dashed];
+		</table>>, URL="./column/ColumnIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	//net.ljcomputing.sql.identifier.schema.SchemaIdentifier extends net.ljcomputing.sql.identifier.AbstractIdentifier
+	c406:p -> c404:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.identifier.schema.SchemaIdentifier implements net.ljcomputing.sql.identifier.Identifier
+	c407:p -> c404:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.identifier.table.TableIdentifier extends net.ljcomputing.sql.identifier.AbstractIdentifier
+	c406:p -> c405:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.identifier.table.TableIdentifier implements net.ljcomputing.sql.identifier.Identifier
+	c407:p -> c405:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.identifier.AbstractIdentifier implements net.ljcomputing.sql.identifier.Identifier
-	c402:p -> c401:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sql.identifier.column.Column extends net.ljcomputing.sql.identifier.AbstractIdentifier
-	c401:p -> c403:p [dir=back,arrowtail=empty];
-	//net.ljcomputing.sql.identifier.column.Column implements net.ljcomputing.sql.identifier.Identifier
-	c402:p -> c403:p [dir=back,arrowtail=empty,style=dashed];
+	c407:p -> c406:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.identifier.column.ColumnIdentifier extends net.ljcomputing.sql.identifier.AbstractIdentifier
+	c406:p -> c411:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.identifier.column.ColumnIdentifier implements net.ljcomputing.sql.identifier.Identifier
+	c407:p -> c411:p [dir=back,arrowtail=empty,style=dashed];
+	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c404:p -> c395:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.table.TableIdentifier DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c405:p -> c395:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.AbstractIdentifier DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c406:p -> c395:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.Identifier DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c407:p -> c395:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sql.identifier.column.ColumnIdentifier DEPEND net.ljcomputing.sql.collection.SqlFragmentCollection<T>
+	c411:p -> c395:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

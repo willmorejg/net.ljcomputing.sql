@@ -2,10 +2,14 @@ net.ljcomputing.sql.clause
 net.ljcomputing.sql.visitor
 net.ljcomputing.sql.collection
 net.ljcomputing.sql.facade
+net.ljcomputing.sql.composite
+net.ljcomputing.sql.identifier.schema
 net.ljcomputing.sql.identifier.table
 net.ljcomputing.sql.identifier
 net.ljcomputing.sql.identifier.column
+net.ljcomputing.sql.strategy
 net.ljcomputing.sql.builder
 net.ljcomputing.sql.flyweight
 net.ljcomputing.sql.keyword
+net.ljcomputing.sql.decorator
 net.ljcomputing.sql.literal
