@@ -79,10 +79,14 @@ public class Tester {
     final String sql3 = table1.toSqlList(new SqlFragmentListVisitor());
     final String sql4 = table11.toSqlList(new SqlFragmentListVisitor());
     
+    final SqlFragmentListVisitor colColectVisitor = new SqlFragmentListVisitor();
+    final String sql5 = colColectVisitor.toSqlFragment(columnCollections1);
+    
     LOGGER.debug("sql1: {}", sql1);
     LOGGER.debug("sql2: {}", sql2);
     LOGGER.debug("sql3: {}", sql3);
     LOGGER.debug("sql4: {}", sql4);
+    LOGGER.debug("sql5: {}", sql5);
     
     log("test0100Visitor", false);
   }

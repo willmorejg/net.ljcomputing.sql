@@ -16,6 +16,7 @@
 
 package net.ljcomputing.sql.visitor;
 
+import net.ljcomputing.sql.collection.ColumnCollection;
 import net.ljcomputing.sql.identifier.column.ColumnIdentifier;
 import net.ljcomputing.sql.identifier.schema.SchemaIdentifier;
 import net.ljcomputing.sql.identifier.table.TableIdentifier;
@@ -37,7 +38,7 @@ public interface DottedVisitor {
   String toSqlFragment(SchemaIdentifier identifier);
 
   /**
-   * Dotted identifier.
+   * To SQL list fragment.
    *
    * @param identifier the identifier
    * @return the string
@@ -45,10 +46,18 @@ public interface DottedVisitor {
   String toSqlFragment(TableIdentifier identifier);
 
   /**
-   * Dotted identifier.
+   * To SQL list fragment.
    *
    * @param identifier the identifier
    * @return the string
    */
   String toSqlFragment(ColumnIdentifier identifier);
+  
+  /**
+   * To SQL list fragment.
+   *
+   * @param identifiers the identifiers
+   * @return the string
+   */
+  String toSqlFragment(ColumnCollection identifiers);
 }

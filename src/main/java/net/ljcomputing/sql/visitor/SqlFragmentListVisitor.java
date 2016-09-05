@@ -18,6 +18,7 @@ package net.ljcomputing.sql.visitor;
 
 import java.util.Iterator;
 
+import net.ljcomputing.sql.collection.ColumnCollection;
 import net.ljcomputing.sql.collection.SqlFragmentCollection;
 import net.ljcomputing.sql.identifier.Identifier;
 import net.ljcomputing.sql.identifier.column.ColumnIdentifier;
@@ -41,7 +42,7 @@ public class SqlFragmentListVisitor implements DottedVisitor {
   @Override
   public String toSqlFragment(final SchemaIdentifier schema) {
     final StringBuilder buf = new StringBuilder();
-    recurse(buf, new StringBuilder(), schema, true);
+    recurse(buf, new StringBuilder(), schema, false);
     return buf.toString();
   }
 
@@ -52,7 +53,7 @@ public class SqlFragmentListVisitor implements DottedVisitor {
   @Override
   public String toSqlFragment(final TableIdentifier table) {
     final StringBuilder buf = new StringBuilder();
-    recurse(buf, new StringBuilder(), table, true);
+    recurse(buf, new StringBuilder(), table, false);
     return buf.toString();
   }
 
@@ -63,7 +64,24 @@ public class SqlFragmentListVisitor implements DottedVisitor {
   @Override
   public String toSqlFragment(final ColumnIdentifier column) {
     final StringBuilder buf = new StringBuilder();
-    recurse(buf, new StringBuilder(), column, true);
+    recurse(buf, new StringBuilder(), column, false);
+    return buf.toString();
+  }
+  
+  /**
+   * @see net.ljcomputing.sql.visitor.DottedVisitor
+   *    #toSqlFragment(net.ljcomputing.sql.collection.ColumnCollection)
+   */
+  public String toSqlFragment(final ColumnCollection identifiers) {
+    final StringBuilder buf = new StringBuilder();
+    final Iterator<ColumnIdentifier> columnIt = identifiers.iterator();
+    
+    while (columnIt.hasNext()) {
+      final ColumnIdentifier column = columnIt.next();
+      final boolean hasNext = columnIt.hasNext();
+      recurse(buf, new StringBuilder(), column, hasNext);
+    }
+
     return buf.toString();
   }
 
