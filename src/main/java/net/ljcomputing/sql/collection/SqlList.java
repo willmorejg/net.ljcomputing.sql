@@ -7,7 +7,7 @@ import net.ljcomputing.sql.identifier.Identifier;
  *
  * @param <T> the generic type
  */
-public interface SqlList<T extends Identifier> {
+public interface SqlList<T extends Identifier> extends SqlFragmentIterator<T> {
 
   /**
    * To SQL fragment.

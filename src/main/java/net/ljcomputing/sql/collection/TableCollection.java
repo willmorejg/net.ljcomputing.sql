@@ -19,7 +19,7 @@ package net.ljcomputing.sql.collection;
 import net.ljcomputing.sql.identifier.table.TableIdentifier;
 
 /**
- * SQL TABLE buffer.
+ * SQL TABLE collection.
  * 
  * @author James G. Willmore
  *
@@ -27,7 +27,7 @@ import net.ljcomputing.sql.identifier.table.TableIdentifier;
 public class TableCollection extends AbstractSqlList<TableIdentifier> {
 
   /**
-   * Instantiates a new table buffer.
+   * Instantiates a new table collection.
    *
    * @param tables the tables
    */

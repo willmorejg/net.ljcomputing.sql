@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.builder.SqlBuilder<T>
-	c203 [label=<<table title="net.ljcomputing.sql.builder.SqlBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlBuilder.html">
+	c283 [label=<<table title="net.ljcomputing.sql.builder.SqlBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SqlBuilder&lt;T&gt; </td></tr>

@@ -30,7 +30,7 @@ public abstract class AbstractSqlFragmentCollection<T> extends AbstractSqlFragme
     implements SqlFragmentCollection<T> {
 
   /**
-   * Instantiates a new abstract sql buffer.
+   * Instantiates a new abstract sql collection.
    *
    * @param elements the elements
    */

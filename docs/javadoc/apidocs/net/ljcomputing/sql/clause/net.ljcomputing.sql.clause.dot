@@ -9,19 +9,36 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// net.ljcomputing.sql.clause.DeleteClause
+	c0 [label=<<table title="net.ljcomputing.sql.clause.DeleteClause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DeleteClause.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DeleteClause </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DeleteClause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.clause.UpdateClause
+	c1 [label=<<table title="net.ljcomputing.sql.clause.UpdateClause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UpdateClause.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UpdateClause </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UpdateClause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.clause.Clause
-	c0 [label=<<table title="net.ljcomputing.sql.clause.Clause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Clause.html">
+	c2 [label=<<table title="net.ljcomputing.sql.clause.Clause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Clause.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Clause </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Clause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sql.clause.Predicate
-	c1 [label=<<table title="net.ljcomputing.sql.clause.Predicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Predicate.html">
+	// net.ljcomputing.sql.clause.AbstractSqlClause
+	c3 [label=<<table title="net.ljcomputing.sql.clause.AbstractSqlClause" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlClause.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Predicate </td></tr>
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSqlClause </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./Predicate.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+		</table>>, URL="./AbstractSqlClause.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	//net.ljcomputing.sql.clause.DeleteClause extends net.ljcomputing.sql.clause.AbstractSqlClause
+	c3:p -> c0:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.clause.UpdateClause extends net.ljcomputing.sql.clause.AbstractSqlClause
+	c3:p -> c1:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.clause.AbstractSqlClause implements net.ljcomputing.sql.clause.Clause
+	c2:p -> c3:p [dir=back,arrowtail=empty,style=dashed];
 }
 

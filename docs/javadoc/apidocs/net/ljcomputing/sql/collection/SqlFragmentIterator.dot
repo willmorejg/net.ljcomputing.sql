@@ -10,28 +10,37 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.collection.SqlFragmentIterator<T>
-	c869 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SqlFragmentIterator.html">
+	c1261 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SqlFragmentIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SqlFragmentIterator&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SqlFragmentIterator.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.AbstractSqlFragmentIterator<T>
-	c870 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlFragmentIterator.html">
+	c1262 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlFragmentIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSqlFragmentIterator&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractSqlFragmentIterator.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c871 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlFragmentCollection.html">
+	c1263 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlFragmentCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SqlFragmentCollection&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SqlFragmentCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sql.collection.SqlList<T extends net.ljcomputing.sql.identifier.Identifier>
+	c1267 [label=<<table title="net.ljcomputing.sql.collection.SqlList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlList.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SqlList&lt;T extends Identifier&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SqlList.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.collection.AbstractSqlFragmentIterator<T> implements net.ljcomputing.sql.collection.SqlFragmentIterator<T>
-	c869:p -> c870:p [dir=back,arrowtail=empty,style=dashed];
+	c1261:p -> c1262:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.collection.SqlFragmentCollection<T> implements net.ljcomputing.sql.collection.SqlFragmentIterator<T>
-	c869:p -> c871:p [dir=back,arrowtail=empty,style=dashed];
+	c1261:p -> c1263:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.collection.SqlList<T extends net.ljcomputing.sql.identifier.Identifier> implements net.ljcomputing.sql.collection.SqlFragmentIterator<T>
+	c1261:p -> c1267:p [dir=back,arrowtail=empty,style=dashed];
 }
 

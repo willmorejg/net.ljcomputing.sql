@@ -10,29 +10,29 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<T>
-	c712 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlFragmentCollection.html">
+	c1068 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlFragmentCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSqlFragmentCollection&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractSqlFragmentCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c715 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlFragmentCollection.html">
+	c1071 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlFragmentCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SqlFragmentCollection&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SqlFragmentCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.PredicateCollection
-	c720 [label=<<table title="net.ljcomputing.sql.collection.PredicateCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PredicateCollection.html">
+	c1076 [label=<<table title="net.ljcomputing.sql.collection.PredicateCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PredicateCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PredicateCollection </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PredicateCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<T> implements net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c715:p -> c712:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sql.collection.PredicateCollection extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<net.ljcomputing.sql.clause.Predicate>
-	c712:p -> c720:p [dir=back,arrowtail=empty];
+	c1071:p -> c1068:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sql.collection.PredicateCollection extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<net.ljcomputing.sql.expression.Predicate>
+	c1068:p -> c1076:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.collection.PredicateCollection implements net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c715:p -> c720:p [dir=back,arrowtail=empty,style=dashed];
+	c1071:p -> c1076:p [dir=back,arrowtail=empty,style=dashed];
 }
 

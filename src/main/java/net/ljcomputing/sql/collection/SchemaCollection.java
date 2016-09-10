@@ -19,7 +19,7 @@ package net.ljcomputing.sql.collection;
 import net.ljcomputing.sql.identifier.schema.SchemaIdentifier;
 
 /**
- * SQL SCHEMA buffer.
+ * SQL SCHEMA collection.
  * 
  * @author James G. Willmore
  *
@@ -27,7 +27,7 @@ import net.ljcomputing.sql.identifier.schema.SchemaIdentifier;
 public class SchemaCollection extends AbstractSqlList<SchemaIdentifier> {
 
   /**
-   * Instantiates a new schema buffer.
+   * Instantiates a new schema collection.
    *
    * @param tables the tables
    */

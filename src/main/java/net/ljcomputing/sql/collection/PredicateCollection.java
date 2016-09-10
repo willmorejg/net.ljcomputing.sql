@@ -16,10 +16,10 @@
 
 package net.ljcomputing.sql.collection;
 
-import net.ljcomputing.sql.clause.Predicate;
+import net.ljcomputing.sql.expression.Predicate;
 
 /**
- * SQL predicate buffer.
+ * SQL predicate collection.
  * 
  * @author James G. Willmore
  *
@@ -28,7 +28,7 @@ public class PredicateCollection extends AbstractSqlFragmentCollection<Predicate
     implements SqlFragmentCollection<Predicate> {
 
   /**
-   * Instantiates a new predicate buffer.
+   * Instantiates a new predicate collection.
    *
    * @param predicates the predicates
    */

@@ -23,7 +23,7 @@ import net.ljcomputing.sql.literal.Literal;
 import net.ljcomputing.sql.strategy.Function;
 
 /**
- * SQL COLUMN buffer.
+ * SQL COLUMN collection.
  * 
  * @author James G. Willmore
  *
@@ -32,7 +32,7 @@ public class ColumnCollection extends AbstractSqlList<ColumnIdentifier>
     implements SqlColumnList<ColumnIdentifier> {
 
   /**
-   * Instantiates a new column buffer.
+   * Instantiates a new column collection.
    *
    * @param columns the columns
    */

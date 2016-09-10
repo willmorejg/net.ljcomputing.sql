@@ -1,8 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./SqlFragmentIterator.html" title="net.ljcomputing.sql.collection.SqlFragmentIterator" alt="" coords="150,11,298,53"/>
-<area shape="rect" id="node1" href="./SqlFragmentIterator.html" title="&lt;TABLE&gt;" alt="" coords="139,6,309,58"/>
+<area shape="rect" id="node1_0" href="./SqlFragmentIterator.html" title="net.ljcomputing.sql.collection.SqlFragmentIterator" alt="" coords="262,11,410,53"/>
+<area shape="rect" id="node1" href="./SqlFragmentIterator.html" title="&lt;TABLE&gt;" alt="" coords="251,6,421,58"/>
 <area shape="rect" id="node2_1" href="./AbstractSqlFragmentIterator.html" title="net.ljcomputing.sql.collection.AbstractSqlFragmentIterator" alt="" coords="16,121,208,146"/>
 <area shape="rect" id="node2" href="./AbstractSqlFragmentIterator.html" title="&lt;TABLE&gt;" alt="" coords="5,109,219,157"/>
 <area shape="rect" id="node3_2" href="./SqlFragmentCollection.html" title="net.ljcomputing.sql.collection.SqlFragmentCollection" alt="" coords="253,113,419,154"/>
 <area shape="rect" id="node3" href="./SqlFragmentCollection.html" title="&lt;TABLE&gt;" alt="" coords="243,107,429,159"/>
+<area shape="rect" id="node4_3" href="./SqlList.html" title="net.ljcomputing.sql.collection.SqlList" alt="" coords="464,113,637,154"/>
+<area shape="rect" id="node4" href="./SqlList.html" title="&lt;TABLE&gt;" alt="" coords="453,107,648,159"/>
 </map>

@@ -1,6 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./Clause.html" title="net.ljcomputing.sql.clause.Clause" alt="" coords="16,11,96,53"/>
-<area shape="rect" id="node1" href="./Clause.html" title="&lt;TABLE&gt;" alt="" coords="5,6,107,58"/>
-<area shape="rect" id="node2_1" href="./Predicate.html" title="net.ljcomputing.sql.clause.Predicate" alt="" coords="141,11,221,53"/>
-<area shape="rect" id="node2" href="./Predicate.html" title="&lt;TABLE&gt;" alt="" coords="131,6,232,58"/>
+<area shape="rect" id="node1_0" href="./DeleteClause.html" title="net.ljcomputing.sql.clause.DeleteClause" alt="" coords="16,214,109,239"/>
+<area shape="rect" id="node1" href="./DeleteClause.html" title="&lt;TABLE&gt;" alt="" coords="5,203,120,251"/>
+<area shape="rect" id="node2_1" href="./UpdateClause.html" title="net.ljcomputing.sql.clause.UpdateClause" alt="" coords="155,214,253,239"/>
+<area shape="rect" id="node2" href="./UpdateClause.html" title="&lt;TABLE&gt;" alt="" coords="145,203,263,251"/>
+<area shape="rect" id="node3_2" href="./Clause.html" title="net.ljcomputing.sql.clause.Clause" alt="" coords="93,11,173,53"/>
+<area shape="rect" id="node3" href="./Clause.html" title="&lt;TABLE&gt;" alt="" coords="83,6,184,58"/>
+<area shape="rect" id="node4_3" href="./AbstractSqlClause.html" title="net.ljcomputing.sql.clause.AbstractSqlClause" alt="" coords="73,118,193,143"/>
+<area shape="rect" id="node4" href="./AbstractSqlClause.html" title="&lt;TABLE&gt;" alt="" coords="63,107,204,155"/>
 </map>

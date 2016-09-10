@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./DeleteClause.html" title="net.ljcomputing.sql.clause.DeleteClause" alt="" coords="16,223,109,249"/>
+<area shape="rect" id="node1" href="./DeleteClause.html" title="&lt;TABLE&gt;" alt="" coords="5,212,120,260"/>
+<area shape="rect" id="node2_1" href="./UpdateClause.html" title="net.ljcomputing.sql.clause.UpdateClause" alt="" coords="155,223,253,249"/>
+<area shape="rect" id="node2" href="./UpdateClause.html" title="&lt;TABLE&gt;" alt="" coords="145,212,263,260"/>
+<area shape="rect" id="node3_2" href="./Clause.html" title="net.ljcomputing.sql.clause.Clause" alt="" coords="164,11,244,53"/>
+<area shape="rect" id="node3" href="./Clause.html" title="&lt;TABLE&gt;" alt="" coords="153,6,255,58"/>
+<area shape="rect" id="node4_3" href="./AbstractSqlClause.html" title="net.ljcomputing.sql.clause.AbstractSqlClause" alt="" coords="144,118,264,143"/>
+<area shape="rect" id="node4" href="./AbstractSqlClause.html" title="&lt;TABLE&gt;" alt="" coords="133,107,275,155"/>
+<area shape="rect" id="node5_4" href="../identifier/Identifier.html" title="net.ljcomputing.sql.identifier.Identifier" alt="" coords="298,209,433,263"/>
+<area shape="rect" id="node5" href="../identifier/Identifier.html" title="&lt;TABLE&gt;" alt="" coords="287,203,443,269"/>
+</map>

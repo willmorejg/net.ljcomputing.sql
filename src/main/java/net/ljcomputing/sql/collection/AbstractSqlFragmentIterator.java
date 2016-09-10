@@ -33,20 +33,20 @@ import java.util.function.Consumer;
 @SuppressWarnings({ "PMD.AbstractClassWithoutAbstractMethod", "PMD.TooManyMethods" })
 public abstract class AbstractSqlFragmentIterator<T> implements SqlFragmentIterator<T> {
 
-  /** The elements of the buffer. */
+  /** The elements of the collection. */
   protected transient T[] elements;
 
   /** The capacity. */
   protected transient int capacity;
 
-  /** The current position of the buffer. */
+  /** The current position of the collection. */
   protected transient int position;
 
   /** The is reversed. */
   protected transient boolean isReversed;
 
   /**
-   * Instantiates a new abstract sql buffer.
+   * Instantiates a new abstract sql collection.
    *
    * @param elements the elements
    */

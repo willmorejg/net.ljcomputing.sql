@@ -23,4 +23,11 @@ package net.ljcomputing.sql.clause;
  *
  */
 public interface Clause {
+  
+  /**
+   * To SQL.
+   *
+   * @return the string
+   */
+  String toSql();
 }

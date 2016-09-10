@@ -1,5 +1,6 @@
 net.ljcomputing.sql.clause
 net.ljcomputing.sql.collection
+net.ljcomputing.sql.expression
 net.ljcomputing.sql.identifier.schema
 net.ljcomputing.sql.identifier.table
 net.ljcomputing.sql.identifier

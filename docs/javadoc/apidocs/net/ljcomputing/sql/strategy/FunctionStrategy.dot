@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.identifier.column.Column
-	c571 [label=<<table title="net.ljcomputing.sql.identifier.column.Column" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/column/Column.html">
+	c895 [label=<<table title="net.ljcomputing.sql.identifier.column.Column" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/column/Column.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Column </td></tr>
@@ -18,35 +18,35 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../identifier/column/Column.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.identifier.column.ColumnIdentifier
-	c572 [label=<<table title="net.ljcomputing.sql.identifier.column.ColumnIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/column/ColumnIdentifier.html">
+	c896 [label=<<table title="net.ljcomputing.sql.identifier.column.ColumnIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../identifier/column/ColumnIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ColumnIdentifier </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sql.identifier.column </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../identifier/column/ColumnIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.strategy.FunctionStrategy
-	c573 [label=<<table title="net.ljcomputing.sql.strategy.FunctionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FunctionStrategy.html">
+	c897 [label=<<table title="net.ljcomputing.sql.strategy.FunctionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FunctionStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> FunctionStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FunctionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.strategy.Function
-	c574 [label=<<table title="net.ljcomputing.sql.strategy.Function" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Function.html">
+	c898 [label=<<table title="net.ljcomputing.sql.strategy.Function" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Function.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Function </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Function.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.identifier.column.ColumnIdentifier implements net.ljcomputing.sql.identifier.column.Column
-	c571:p -> c572:p [dir=back,arrowtail=empty,style=dashed];
+	c895:p -> c896:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.strategy.FunctionStrategy implements net.ljcomputing.sql.strategy.Function
-	c574:p -> c573:p [dir=back,arrowtail=empty,style=dashed];
+	c898:p -> c897:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.sql.identifier.column.ColumnIdentifier NAVASSOC net.ljcomputing.sql.strategy.FunctionStrategy
-	c572:p -> c573:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c896:p -> c897:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sql.identifier.column.Column DEPEND net.ljcomputing.sql.strategy.FunctionStrategy
-	c571:p -> c573:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c895:p -> c897:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sql.identifier.column.ColumnIdentifier DEPEND net.ljcomputing.sql.strategy.FunctionStrategy
-	c572:p -> c573:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c896:p -> c897:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

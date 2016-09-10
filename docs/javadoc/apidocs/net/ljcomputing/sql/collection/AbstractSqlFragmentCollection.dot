@@ -10,45 +10,45 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<T>
-	c322 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractSqlFragmentCollection.html">
+	c492 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractSqlFragmentCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSqlFragmentCollection&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractSqlFragmentCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.AbstractSqlFragmentIterator<T>
-	c324 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlFragmentIterator.html">
+	c494 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlFragmentIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlFragmentIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSqlFragmentIterator&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractSqlFragmentIterator.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c325 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlFragmentCollection.html">
+	c495 [label=<<table title="net.ljcomputing.sql.collection.SqlFragmentCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SqlFragmentCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SqlFragmentCollection&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SqlFragmentCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.AbstractSqlList<T extends net.ljcomputing.sql.identifier.Identifier>
-	c327 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlList.html">
+	c497 [label=<<table title="net.ljcomputing.sql.collection.AbstractSqlList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSqlList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSqlList&lt;T extends Identifier&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractSqlList.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.collection.PredicateCollection
-	c330 [label=<<table title="net.ljcomputing.sql.collection.PredicateCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PredicateCollection.html">
+	c500 [label=<<table title="net.ljcomputing.sql.collection.PredicateCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PredicateCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PredicateCollection </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PredicateCollection.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<T> extends net.ljcomputing.sql.collection.AbstractSqlFragmentIterator<T>
-	c324:p -> c322:p [dir=back,arrowtail=empty];
+	c494:p -> c492:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<T> implements net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c325:p -> c322:p [dir=back,arrowtail=empty,style=dashed];
+	c495:p -> c492:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sql.collection.AbstractSqlList<T extends net.ljcomputing.sql.identifier.Identifier> extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<T>
-	c322:p -> c327:p [dir=back,arrowtail=empty];
-	//net.ljcomputing.sql.collection.PredicateCollection extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<net.ljcomputing.sql.clause.Predicate>
-	c322:p -> c330:p [dir=back,arrowtail=empty];
+	c492:p -> c497:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sql.collection.PredicateCollection extends net.ljcomputing.sql.collection.AbstractSqlFragmentCollection<net.ljcomputing.sql.expression.Predicate>
+	c492:p -> c500:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sql.collection.PredicateCollection implements net.ljcomputing.sql.collection.SqlFragmentCollection<T>
-	c325:p -> c330:p [dir=back,arrowtail=empty,style=dashed];
+	c495:p -> c500:p [dir=back,arrowtail=empty,style=dashed];
 }
 

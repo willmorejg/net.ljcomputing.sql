@@ -14,29 +14,41 @@
    limitations under the License.
  */
 
-package net.ljcomputing.sql.clause;
-
-import net.ljcomputing.sql.literal.Conjunction;
+package net.ljcomputing.sql.expression;
 
 /**
- * Predicate clause.
+ * SQL expression.
  * 
  * @author James G. Willmore
  *
  */
-public interface Predicate {
-
+public interface Expression {
+  
   /**
-   * Gets the conjunction.
+   * Gets the identifier.
    *
-   * @return the conjunction
+   * @return the identifier
    */
-  Conjunction getConjunction();
-
+  String getIdentifier();
+  
   /**
-   * Checks for a conjunction.
+   * Gets the operand.
    *
-   * @return true, if successful
+   * @return the operand
    */
-  boolean hasConjunction();
+  String getOperand();
+  
+  /**
+   * Gets the values.
+   *
+   * @return the values
+   */
+  Object[] getValues();
+  
+  /**
+   * To SQL.
+   *
+   * @return the string
+   */
+  String toSql();
 }

@@ -29,7 +29,7 @@ import net.ljcomputing.sql.identifier.Identifier;
  */
 public class TableIdentifier extends AbstractIdentifier implements Identifier {
 
-  /** The column buffer. */
+  /** The column collection. */
   private transient ColumnCollection columnCollection;
 
   /**

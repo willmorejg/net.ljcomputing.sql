@@ -22,6 +22,8 @@ import net.ljcomputing.sql.identifier.Identifier;
 import net.ljcomputing.sql.literal.Literal;
 
 /**
+ * Abstract implementation of a SQL list.
+ * 
  * @author James G. Willmore
  *
  */

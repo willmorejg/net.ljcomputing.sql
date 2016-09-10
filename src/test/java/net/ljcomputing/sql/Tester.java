@@ -22,9 +22,12 @@ import org.junit.runners.MethodSorters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import net.ljcomputing.sql.clause.DeleteClause;
+import net.ljcomputing.sql.clause.UpdateClause;
 import net.ljcomputing.sql.collection.ColumnCollection;
 import net.ljcomputing.sql.collection.SchemaCollection;
 import net.ljcomputing.sql.collection.TableCollection;
+import net.ljcomputing.sql.expression.EqualsExpression;
 import net.ljcomputing.sql.identifier.column.ColumnIdentifier;
 import net.ljcomputing.sql.identifier.schema.SchemaIdentifier;
 import net.ljcomputing.sql.identifier.table.TableIdentifier;
@@ -48,11 +51,12 @@ public class Tester {
   }
 
   /**
-   * Test 01 - Equals.
+   * Test 01 - SQL list.
    */
   @Test
-  public void test0100Visitor() {
-    log("test0100Visitor", true);
+  public void test0100List() {
+    final String testName = "test0100List";
+    log(testName, true);
 
     final ColumnIdentifier col1 = new ColumnIdentifier("COLUMN_1");
     final ColumnIdentifier col11 = new ColumnIdentifier("COLUMN_11", "C1");
@@ -81,6 +85,71 @@ public class Tester {
     LOGGER.debug("sql-2: {}", tableCollections1.toSqlList());
     LOGGER.debug("sql-3: {}", columnCollections1.toSqlList());
     
-    log("test0100Visitor", false);
+    log(testName, false);
+  }
+
+  /**
+   * Test 02 - SQL list.
+   */
+  @Test
+  public void test0200Clause() {
+    final String testName = "test0200Clause";
+    log(testName, true);
+
+    final ColumnIdentifier col1 = new ColumnIdentifier("COLUMN_1");
+    final ColumnIdentifier col11 = new ColumnIdentifier("COLUMN_11", "C1");
+    col11.setFunction(FunctionStrategy.Max);
+    final ColumnIdentifier col12 = new ColumnIdentifier("COLUMN_12", "C2");
+    
+    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11, col12);
+    
+    final TableIdentifier table1 = new TableIdentifier("TABLE_1", "T1", columnCollections1);
+    
+    final TableCollection tableCollections1 = new TableCollection(table1);
+    
+    final SchemaIdentifier schema1 = new SchemaIdentifier("SCHEMA1", tableCollections1);
+    
+    final DeleteClause deleteClause1 = new DeleteClause(schema1);
+    final DeleteClause deleteClause2 = new DeleteClause(table1);
+    
+    final UpdateClause updateClause1 = new UpdateClause(schema1);
+    final UpdateClause updateClause2 = new UpdateClause(table1);
+
+    LOGGER.debug("sql-1: {}", deleteClause1.toSql());
+    LOGGER.debug("sql-2: {}", deleteClause2.toSql());
+    LOGGER.debug("sql-3: {}", updateClause1.toSql());
+    LOGGER.debug("sql-4: {}", updateClause2.toSql());
+    
+    log(testName, false);
+  }
+
+  /**
+   * Test 03 - SQL expression.
+   */
+  @Test
+  public void test0300Expression() {
+    final String testName = "test0300Expression";
+    log(testName, true);
+
+    final ColumnIdentifier col1 = new ColumnIdentifier("COLUMN_1");
+    final ColumnIdentifier col11 = new ColumnIdentifier("COLUMN_11", "C1");
+    col11.setFunction(FunctionStrategy.Max);
+    final ColumnIdentifier col12 = new ColumnIdentifier("COLUMN_12", "C2");
+    
+    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11, col12);
+    
+    final TableIdentifier table1 = new TableIdentifier("TABLE_1", "T1", columnCollections1);
+    
+    final TableCollection tableCollections1 = new TableCollection(table1);
+    
+    final SchemaIdentifier schema1 = new SchemaIdentifier("SCHEMA1", tableCollections1);
+    
+    final Object[] values1 = new Object[]{null, 'a'};
+    
+    final EqualsExpression equalsExpression1 = new EqualsExpression(col1, values1);
+
+    LOGGER.debug("sql-1: {}", equalsExpression1.toSql());
+    
+    log(testName, false);
   }
 }

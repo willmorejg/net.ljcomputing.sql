@@ -15,7 +15,7 @@
  */
 
 /**
- * Package containing buffer implementations.
+ * Package containing collection implementations.
  * 
  * @author James G. Willmore
  *
