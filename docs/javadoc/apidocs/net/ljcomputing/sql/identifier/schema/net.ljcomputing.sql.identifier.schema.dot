@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.identifier.schema.SchemaIdentifier
-	c125 [label=<<table title="net.ljcomputing.sql.identifier.schema.SchemaIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SchemaIdentifier.html">
+	c65 [label=<<table title="net.ljcomputing.sql.identifier.schema.SchemaIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SchemaIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SchemaIdentifier </td></tr>
 		</table></td></tr>

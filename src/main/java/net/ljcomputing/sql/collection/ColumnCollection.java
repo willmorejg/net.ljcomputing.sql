@@ -16,7 +16,11 @@
 
 package net.ljcomputing.sql.collection;
 
+import net.ljcomputing.sql.identifier.Identifier;
 import net.ljcomputing.sql.identifier.column.ColumnIdentifier;
+import net.ljcomputing.sql.keyword.Keywords;
+import net.ljcomputing.sql.literal.Literal;
+import net.ljcomputing.sql.strategy.Function;
 
 /**
  * SQL COLUMN buffer.
@@ -24,8 +28,8 @@ import net.ljcomputing.sql.identifier.column.ColumnIdentifier;
  * @author James G. Willmore
  *
  */
-public class ColumnCollection extends AbstractSqlFragmentCollection<ColumnIdentifier>
-    implements SqlFragmentCollection<ColumnIdentifier> {
+public class ColumnCollection extends AbstractSqlList<ColumnIdentifier>
+    implements SqlColumnList<ColumnIdentifier> {
 
   /**
    * Instantiates a new column buffer.
@@ -35,4 +39,57 @@ public class ColumnCollection extends AbstractSqlFragmentCollection<ColumnIdenti
   public ColumnCollection(final ColumnIdentifier... columns) {
     super(columns);
   }
+
+  /**
+   * @see net.ljcomputing.sql.collection.SqlList
+   *    #recurse(java.lang.StringBuilder, java.lang.StringBuilder, 
+   *        net.ljcomputing.sql.identifier.Identifier, boolean)
+   */
+  @Override
+  public final void recurse(final StringBuilder result, final StringBuilder parents,
+      final Identifier identifier, final boolean addComma) {
+    final ColumnIdentifier column = (ColumnIdentifier) identifier;
+    wrapFunction(result, parents, column);
+    addAlias(result, parents, column);
+
+    if (addComma) {
+      result.append(Literal.Comma).append(Literal.Space);
+    }
+  }
+  
+  /**
+   * @see net.ljcomputing.sql.collection.SqlColumnList
+   *    #wrapFunction(java.lang.StringBuilder, java.lang.StringBuilder, 
+   *        net.ljcomputing.sql.identifier.column.ColumnIdentifier)
+   */
+  @Override
+  public void wrapFunction(final StringBuilder result, final StringBuilder parents,
+      final ColumnIdentifier column) {
+    final String idName = column.getName();
+
+    if (column.hasFunction()) {
+      final StringBuilder value = parents.append(idName);
+      final String idValue = value.toString();
+      final Function function = column.getFunction();
+      final String wrappedValue = function.toSql(idValue);
+      result.append(wrappedValue);
+    } else {
+      result.append(parents).append(idName);
+    }
+  }
+
+  /**
+   * @see net.ljcomputing.sql.collection.SqlColumnList
+   *    #addAlias(java.lang.StringBuilder, java.lang.StringBuilder, 
+   *        net.ljcomputing.sql.identifier.column.ColumnIdentifier)
+   */
+  @Override
+  public void addAlias(final StringBuilder result, final StringBuilder parents,
+      final ColumnIdentifier column) {
+    if (column.hasAlias()) {
+      final String alias = column.getAlias();
+      result.append(Literal.Space).append(Keywords.As).append(Literal.Space).append(alias);
+    }
+  }
+
 }

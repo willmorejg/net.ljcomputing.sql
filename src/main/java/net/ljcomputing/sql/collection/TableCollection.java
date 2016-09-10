@@ -24,8 +24,7 @@ import net.ljcomputing.sql.identifier.table.TableIdentifier;
  * @author James G. Willmore
  *
  */
-public class TableCollection extends AbstractSqlFragmentCollection<TableIdentifier>
-    implements SqlFragmentCollection<TableIdentifier> {
+public class TableCollection extends AbstractSqlList<TableIdentifier> {
 
   /**
    * Instantiates a new table buffer.

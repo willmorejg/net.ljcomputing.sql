@@ -17,7 +17,6 @@
 package net.ljcomputing.sql.identifier;
 
 import net.ljcomputing.sql.collection.SqlFragmentCollection;
-import net.ljcomputing.sql.visitor.DottedVisitor;
 
 /**
  * Interface shared by all SQL identifier implementations.
@@ -61,12 +60,4 @@ public interface Identifier {
    * @return the children
    */
   SqlFragmentCollection<? extends Identifier> getChildren();
-
-  /**
-   * To a SQL list fragment.
-   *
-   * @param visitor the visitor
-   * @return the string
-   */
-  String toSqlList(DottedVisitor visitor);
 }

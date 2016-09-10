@@ -20,7 +20,6 @@ import net.ljcomputing.sql.collection.SqlFragmentCollection;
 import net.ljcomputing.sql.identifier.AbstractIdentifier;
 import net.ljcomputing.sql.identifier.Identifier;
 import net.ljcomputing.sql.strategy.FunctionStrategy;
-import net.ljcomputing.sql.visitor.DottedVisitor;
 
 /**
  * Column SQL identifier.
@@ -90,14 +89,5 @@ public class ColumnIdentifier extends AbstractIdentifier implements Identifier, 
   @Override
   public SqlFragmentCollection<? extends Identifier> getChildren() {
     return null;
-  }
-
-  /**
-   * @see net.ljcomputing.sql.identifier.Identifier
-   *    #toSqlList(net.ljcomputing.sql.visitor.DottedVisitor)
-   */
-  @Override
-  public String toSqlList(final DottedVisitor visitor) {
-    return visitor.toSqlFragment(this);
   }
 }

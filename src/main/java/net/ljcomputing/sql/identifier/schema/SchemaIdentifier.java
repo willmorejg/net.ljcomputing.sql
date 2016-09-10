@@ -20,7 +20,6 @@ import net.ljcomputing.sql.collection.SqlFragmentCollection;
 import net.ljcomputing.sql.collection.TableCollection;
 import net.ljcomputing.sql.identifier.AbstractIdentifier;
 import net.ljcomputing.sql.identifier.Identifier;
-import net.ljcomputing.sql.visitor.DottedVisitor;
 
 /**
  * Schema SQL identifier.
@@ -79,14 +78,5 @@ public class SchemaIdentifier extends AbstractIdentifier implements Identifier {
   @Override
   public SqlFragmentCollection<? extends Identifier> getChildren() {
     return tableCollection;
-  }
-
-  /**
-   * @see net.ljcomputing.sql.identifier.Identifier
-   *    #toSqlList(net.ljcomputing.sql.visitor.DottedVisitor)
-   */
-  @Override
-  public String toSqlList(final DottedVisitor visitor) {
-    return visitor.toSqlFragment(this);
   }
 }

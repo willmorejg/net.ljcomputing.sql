@@ -10,20 +10,20 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sql.strategy.FunctionStrategy
-	c671 [label=<<table title="net.ljcomputing.sql.strategy.FunctionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FunctionStrategy.html">
+	c547 [label=<<table title="net.ljcomputing.sql.strategy.FunctionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FunctionStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> FunctionStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FunctionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sql.strategy.Function
-	c672 [label=<<table title="net.ljcomputing.sql.strategy.Function" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Function.html">
+	c548 [label=<<table title="net.ljcomputing.sql.strategy.Function" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Function.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Function </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Function.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sql.strategy.FunctionStrategy implements net.ljcomputing.sql.strategy.Function
-	c672:p -> c671:p [dir=back,arrowtail=empty,style=dashed];
+	c548:p -> c547:p [dir=back,arrowtail=empty,style=dashed];
 }
 

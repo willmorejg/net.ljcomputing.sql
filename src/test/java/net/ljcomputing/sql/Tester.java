@@ -23,12 +23,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import net.ljcomputing.sql.collection.ColumnCollection;
+import net.ljcomputing.sql.collection.SchemaCollection;
 import net.ljcomputing.sql.collection.TableCollection;
 import net.ljcomputing.sql.identifier.column.ColumnIdentifier;
 import net.ljcomputing.sql.identifier.schema.SchemaIdentifier;
 import net.ljcomputing.sql.identifier.table.TableIdentifier;
 import net.ljcomputing.sql.strategy.FunctionStrategy;
-import net.ljcomputing.sql.visitor.SqlFragmentListVisitor;
 
 /**
  * JUnit tests.
@@ -57,8 +57,9 @@ public class Tester {
     final ColumnIdentifier col1 = new ColumnIdentifier("COLUMN_1");
     final ColumnIdentifier col11 = new ColumnIdentifier("COLUMN_11", "C1");
     col11.setFunction(FunctionStrategy.Max);
+    final ColumnIdentifier col12 = new ColumnIdentifier("COLUMN_12", "C2");
     
-    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11);
+    final ColumnCollection columnCollections1 = new ColumnCollection(col1, col11, col12);
 
     final ColumnIdentifier col2 = new ColumnIdentifier("COLUMN_2");
     final ColumnIdentifier col21 = new ColumnIdentifier("COLUMN_21", "C2");
@@ -73,20 +74,12 @@ public class Tester {
     
     final SchemaIdentifier schema1 = new SchemaIdentifier("SCHEMA1", tableCollections1);
     final SchemaIdentifier schema2 = new SchemaIdentifier("SCHEMA2", tableCollections11);
+    
+    final SchemaCollection schemaCollections1 = new SchemaCollection(schema1, schema2);
 
-    final String sql1 = schema1.toSqlList(new SqlFragmentListVisitor());
-    final String sql2 = schema2.toSqlList(new SqlFragmentListVisitor());
-    final String sql3 = table1.toSqlList(new SqlFragmentListVisitor());
-    final String sql4 = table11.toSqlList(new SqlFragmentListVisitor());
-    
-    final SqlFragmentListVisitor colColectVisitor = new SqlFragmentListVisitor();
-    final String sql5 = colColectVisitor.toSqlFragment(columnCollections1);
-    
-    LOGGER.debug("sql1: {}", sql1);
-    LOGGER.debug("sql2: {}", sql2);
-    LOGGER.debug("sql3: {}", sql3);
-    LOGGER.debug("sql4: {}", sql4);
-    LOGGER.debug("sql5: {}", sql5);
+    LOGGER.debug("sql-1: {}", schemaCollections1.toSqlList());
+    LOGGER.debug("sql-2: {}", tableCollections1.toSqlList());
+    LOGGER.debug("sql-3: {}", columnCollections1.toSqlList());
     
     log("test0100Visitor", false);
   }

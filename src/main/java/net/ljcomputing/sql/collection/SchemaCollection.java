@@ -14,10 +14,24 @@
    limitations under the License.
  */
 
+package net.ljcomputing.sql.collection;
+
+import net.ljcomputing.sql.identifier.schema.SchemaIdentifier;
+
 /**
- * Package containing SQL fragment facades.
+ * SQL SCHEMA buffer.
  * 
  * @author James G. Willmore
  *
  */
-package net.ljcomputing.sql.facade;
+public class SchemaCollection extends AbstractSqlList<SchemaIdentifier> {
+
+  /**
+   * Instantiates a new schema buffer.
+   *
+   * @param tables the tables
+   */
+  public SchemaCollection(final SchemaIdentifier... tables) {
+    super(tables);
+  }
+}

@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./SqlColumnList.html" title="net.ljcomputing.sql.collection.SqlColumnList" alt="" coords="16,113,232,154"/>
+<area shape="rect" id="node1" href="./SqlColumnList.html" title="&lt;TABLE&gt;" alt="" coords="5,107,243,159"/>
+<area shape="rect" id="node2_1" href="./ColumnCollection.html" title="net.ljcomputing.sql.collection.ColumnCollection" alt="" coords="65,219,183,245"/>
+<area shape="rect" id="node2" href="./ColumnCollection.html" title="&lt;TABLE&gt;" alt="" coords="55,208,193,256"/>
+<area shape="rect" id="node4_2" href="../identifier/Identifier.html" title="net.ljcomputing.sql.identifier.Identifier" alt="" coords="163,310,298,365"/>
+<area shape="rect" id="node4" href="../identifier/Identifier.html" title="&lt;TABLE&gt;" alt="" coords="153,305,309,370"/>
+<area shape="rect" id="node5_3" href="../identifier/column/ColumnIdentifier.html" title="net.ljcomputing.sql.identifier.column.ColumnIdentifier" alt="" coords="31,425,199,463"/>
+<area shape="rect" id="node5" href="../identifier/column/ColumnIdentifier.html" title="&lt;TABLE&gt;" alt="" coords="20,419,209,469"/>
+<area shape="rect" id="node3_4" href="./SqlList.html" title="net.ljcomputing.sql.collection.SqlList" alt="" coords="116,11,289,53"/>
+<area shape="rect" id="node3" href="./SqlList.html" title="&lt;TABLE&gt;" alt="" coords="105,6,300,58"/>
+</map>
